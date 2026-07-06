@@ -1,0 +1,1588 @@
+<!doctype html>
+<html lang="az">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+      Global Oil &amp; Gas Innovations – Neft-Qaz Sənayesi Üçün İnnovativ Servis
+      Həlləri
+    </title>
+    <meta
+      name="description"
+      content="Global Oil & Gas Innovations LLP – Qazaxıstanda neft-qaz sənayesi üçün innovativ mühəndis həlləri və patentləşdirilmiş texnologiyalar hazırlayan neft-servis şirkəti."
+    />
+    <meta
+      name="keywords"
+      content="Global Oil Gas Innovations, neft-servis, NKT qorunması, karotaj, ağıllı nasos, Qazaxıstan, Aktau"
+    />
+
+    <!-- Favicons -->
+    <link href="assets/img/global.png" rel="icon" />
+    <link href="assets/img/global.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900&family=Raleway:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap + Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Main CSS -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <style>
+      /* =====================================================
+         INDEX PAGE – DESIGN SYSTEM (same tokens as all pages)
+      ===================================================== */
+
+      /* ── Hero ─────────────────────────────────────────── */
+      .hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 140px 0 100px;
+        overflow: hidden;
+      }
+
+      .hero .hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 9, 16, 0.92) 0%,
+          rgba(13, 31, 45, 0.8) 60%,
+          rgba(0, 9, 16, 0.65) 100%
+        );
+        z-index: 1;
+      }
+
+      .hero .container {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero h1 {
+        font-family: var(--heading-font);
+        font-size: clamp(40px, 6vw, 72px);
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.1;
+        margin-bottom: 24px;
+      }
+
+      .hero h1 span {
+        color: var(--accent-color);
+      }
+
+      .hero p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 18px;
+        max-width: 640px;
+        line-height: 1.75;
+        margin-bottom: 0;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-top: 36px;
+      }
+
+      .hero-buttons .btn-hero-primary {
+        background: var(--accent-color);
+        color: #000;
+        font-family: var(--nav-font);
+        font-size: 15px;
+        font-weight: 700;
+        padding: 14px 32px;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: 0.3s;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .hero-buttons .btn-hero-primary:hover {
+        background: #ca8a04;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 28px rgba(250, 204, 21, 0.35);
+      }
+
+      .hero-buttons .btn-hero-outline {
+        background: transparent;
+        color: #fff;
+        font-family: var(--nav-font);
+        font-size: 15px;
+        font-weight: 600;
+        padding: 13px 32px;
+        border-radius: 6px;
+        text-decoration: none;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        transition: 0.3s;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .hero-buttons .btn-hero-outline:hover {
+        border-color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .hero-features {
+        display: flex;
+        gap: 32px;
+        flex-wrap: wrap;
+        margin-top: 44px;
+      }
+
+      .hero-features .feat-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: rgba(255, 255, 255, 0.75);
+        font-family: var(--nav-font);
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .hero-features .feat-item i {
+        color: var(--accent-color);
+        font-size: 16px;
+      }
+
+      /* hero scroll hint */
+      .hero-scroll {
+        position: absolute;
+        bottom: 36px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        color: rgba(255, 255, 255, 0.4);
+        font-family: var(--nav-font);
+        font-size: 11px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .hero-scroll i {
+        font-size: 20px;
+        animation: bounceDown 1.6s ease-in-out infinite;
+      }
+
+      .hero-scroll:hover {
+        color: var(--accent-color);
+      }
+
+      @keyframes bounceDown {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(6px);
+        }
+      }
+
+      /* ── Section shared helpers ───────────────────────── */
+      .sec-tag {
+        display: inline-block;
+        font-family: var(--nav-font);
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--accent-color);
+        margin-bottom: 12px;
+      }
+
+      /* ── About section ────────────────────────────────── */
+      .about-section {
+        padding: 90px 0;
+      }
+
+      .about-section h2 {
+        font-family: var(--heading-font);
+        font-size: clamp(26px, 3vw, 38px);
+        font-weight: 800;
+        color: var(--heading-color);
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+
+      .about-section p {
+        color: var(--default-color);
+        font-size: 15px;
+        line-height: 1.85;
+        margin-bottom: 16px;
+      }
+
+      .about-image {
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+        position: relative;
+      }
+
+      .about-image img {
+        width: 100%;
+        height: 440px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+
+      .about-image:hover img {
+        transform: scale(1.03);
+      }
+
+      /* accent side badge */
+      .about-badge {
+        position: absolute;
+        bottom: 28px;
+        right: -16px;
+        background: var(--accent-color);
+        color: #000;
+        font-family: var(--heading-font);
+        font-size: 13px;
+        font-weight: 700;
+        padding: 14px 22px;
+        border-radius: 10px;
+        box-shadow: 0 8px 28px rgba(250, 204, 21, 0.4);
+        z-index: 2;
+        text-align: center;
+        line-height: 1.3;
+      }
+
+      .about-badge .big {
+        font-size: 26px;
+        display: block;
+        font-weight: 900;
+      }
+
+      .btn-about {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 8px;
+        font-family: var(--nav-font);
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--heading-color);
+        text-decoration: none;
+        border-bottom: 2px solid var(--accent-color);
+        padding-bottom: 3px;
+        transition: 0.3s;
+      }
+
+      .btn-about:hover {
+        color: var(--accent-color);
+        gap: 12px;
+      }
+
+      /* ── Industries section ───────────────────────────── */
+      .industries-section {
+        padding: 90px 0;
+        background: #f1f4fa;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 52px;
+      }
+
+      .section-header h2 {
+        font-family: var(--heading-font);
+        font-size: clamp(26px, 3vw, 36px);
+        font-weight: 800;
+        color: var(--heading-color);
+        margin-bottom: 14px;
+      }
+
+      .section-header p {
+        color: var(--default-color);
+        font-size: 15px;
+        max-width: 560px;
+        margin: 0 auto;
+        line-height: 1.7;
+      }
+
+      .industry-card {
+        background: #fff;
+        border-radius: 14px;
+        padding: 32px 28px;
+        height: 100%;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+        border: 1.5px solid transparent;
+        transition: 0.35s;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .industry-card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--accent-color);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: 0.35s;
+      }
+
+      .industry-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.11);
+        border-color: rgba(250, 204, 21, 0.25);
+      }
+
+      .industry-card:hover::after {
+        transform: scaleX(1);
+      }
+
+      .industry-icon {
+        font-size: 36px;
+        color: var(--accent-color);
+        display: block;
+        margin-bottom: 18px;
+        transition: 0.3s;
+      }
+
+      .industry-card:hover .industry-icon {
+        transform: scale(1.1);
+      }
+
+      .industry-card h4 {
+        font-family: var(--heading-font);
+        font-size: 19px;
+        font-weight: 700;
+        color: var(--heading-color);
+        margin-bottom: 10px;
+      }
+
+      .industry-card p {
+        font-size: 14px;
+        color: var(--default-color);
+        line-height: 1.65;
+        margin-bottom: 18px;
+      }
+
+      .industry-card a {
+        font-family: var(--nav-font);
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--heading-color);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        border-bottom: 1.5px solid var(--accent-color);
+        padding-bottom: 2px;
+        transition: 0.3s;
+      }
+
+      .industry-card a:hover {
+        color: var(--accent-color);
+        gap: 10px;
+      }
+
+      /* ── Partner / Why Us section ─────────────────────── */
+      .partner-section {
+        padding: 90px 0;
+      }
+
+      .partner-section h2 {
+        font-family: var(--heading-font);
+        font-size: clamp(26px, 3vw, 38px);
+        font-weight: 800;
+        color: var(--heading-color);
+        margin-bottom: 18px;
+        line-height: 1.2;
+      }
+
+      .partner-section h2,
+      .partner-section strong {
+        color: white;
+      }
+
+      .partner-section p {
+        color: white;
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      .partner-section > .container > .row > .col-lg-6:first-child p {
+        color: var(--default-color);
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 32px;
+      }
+
+      .feature {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(39, 61, 78, 0.08);
+      }
+
+      .feature:last-child {
+        border: none;
+      }
+
+      .feature-icon-wrap {
+        width: 46px;
+        height: 46px;
+        background: rgba(250, 204, 21, 0.1);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: var(--accent-color);
+        flex-shrink: 0;
+        transition: 0.3s;
+      }
+
+      .feature:hover .feature-icon-wrap {
+        background: var(--accent-color);
+        color: #000;
+      }
+
+      .feature strong {
+        font-family: var(--heading-font);
+        font-size: 15px;
+        font-weight: 700;
+        color: white;
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      .feature p {
+        font-size: 13px;
+        color: white;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      /* stats grid */
+      .stats-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .stat-card {
+        background: var(--heading-color);
+        border-radius: 14px;
+        padding: 32px 24px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        transition: 0.3s;
+      }
+
+      .stat-card::before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        right: -30px;
+        width: 100px;
+        height: 100px;
+        background: rgba(250, 204, 21, 0.07);
+        border-radius: 50%;
+      }
+
+      .stat-card:hover {
+        transform: translateY(-4px);
+      }
+
+      .stat-card .stat-icon {
+        font-size: 28px;
+        color: var(--accent-color);
+        display: block;
+        margin-bottom: 12px;
+      }
+
+      .stat-card h3 {
+        font-family: var(--heading-font);
+        font-size: 36px;
+        font-weight: 900;
+        color: #fff;
+        margin-bottom: 4px;
+        line-height: 1;
+      }
+
+      .stat-card p {
+        font-family: var(--nav-font);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        color: rgba(255, 255, 255, 0.55);
+        margin: 0;
+      }
+
+      /* ── Trusted Partners slider ──────────────────────── */
+      .trusted-section {
+        padding: 70px 0;
+        background: #f1f4fa;
+        overflow: hidden;
+      }
+
+      .trusted-section .section-header {
+        margin-bottom: 44px;
+      }
+
+      .partners-swiper .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 30px;
+        filter: grayscale(100%);
+        opacity: 0.5;
+        transition: 0.4s;
+      }
+
+      .partners-swiper .swiper-slide:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+
+      .partners-swiper .swiper-slide img {
+        max-height: 60px;
+        width: auto;
+        object-fit: contain;
+      }
+
+      /* ── CTA section ──────────────────────────────────── */
+      .cta-section {
+        padding: 90px 0;
+        background: #fff;
+      }
+
+      .cta-box {
+        background: var(--heading-color);
+        border-radius: 16px;
+        padding: 60px 52px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-box::before {
+        content: "";
+        position: absolute;
+        right: -80px;
+        top: -80px;
+        width: 320px;
+        height: 320px;
+        background: rgba(250, 204, 21, 0.07);
+        border-radius: 50%;
+      }
+
+      .cta-box::after {
+        content: "";
+        position: absolute;
+        right: 60px;
+        bottom: -100px;
+        width: 220px;
+        height: 220px;
+        background: rgba(250, 204, 21, 0.04);
+        border-radius: 50%;
+      }
+
+      .cta-text {
+        position: relative;
+        z-index: 2;
+      }
+
+      .cta-text h3 {
+        font-family: var(--heading-font);
+        font-size: clamp(22px, 3vw, 30px);
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 10px;
+        line-height: 1.25;
+      }
+
+      .cta-text p {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 14px;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 2;
+      }
+
+      .btn-primary {
+        background: var(--accent-color);
+        color: #000;
+        font-family: var(--nav-font);
+        font-size: 14px;
+        font-weight: 700;
+        padding: 13px 28px;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: 0.3s;
+        border: none;
+        display: inline-block;
+      }
+
+      .btn-primary:hover {
+        background: #ca8a04;
+        color: #000;
+        transform: translateY(-2px);
+      }
+
+      .btn-outline-dark {
+        background: transparent;
+        color: #fff;
+        font-family: var(--nav-font);
+        font-size: 14px;
+        font-weight: 600;
+        padding: 12px 28px;
+        border-radius: 6px;
+        text-decoration: none;
+        border: 2px solid rgba(255, 255, 255, 0.35);
+        transition: 0.3s;
+        display: inline-block;
+      }
+
+      .btn-outline-dark:hover {
+        border-color: #fff;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      /* ── Footer ───────────────────────────────────────── */
+      .footer {
+        background: #0d1a26;
+        color: rgba(255, 255, 255, 0.65);
+        padding: 60px 0 0;
+        font-size: 14px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        gap: 40px;
+        padding-bottom: 48px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .footer-col h4 {
+        color: #fff;
+        font-family: var(--heading-font);
+        margin-bottom: 16px;
+      }
+      .footer-col h5 {
+        color: #fff;
+        font-size: 15px;
+        font-family: var(--heading-font);
+        margin-bottom: 16px;
+      }
+      .footer-col p {
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+      .footer-col ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer-col ul li {
+        padding: 5px 0;
+        color: rgba(255, 255, 255, 0.55);
+        transition: 0.3s;
+      }
+      .footer-col ul li a {
+        color: rgba(255, 255, 255, 0.55);
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .footer-col ul li a:hover,
+      .footer-col ul li:hover {
+        color: var(--accent-color);
+      }
+      .socials a {
+        color: #fff;
+        font-size: 18px;
+        margin-right: 14px;
+        transition: 0.3s;
+      }
+      .socials a:hover {
+        color: var(--accent-color);
+      }
+      .footer-bottom {
+        padding: 20px 0;
+      }
+      .footer-copy {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 13px;
+        color: #cbd5e1;
+      }
+      .footer-copy p {
+        margin: 0;
+      }
+      .credit {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .credit a {
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      /* scroll top */
+      #scroll-top {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        width: 42px;
+        height: 42px;
+        background: var(--accent-color);
+        border-radius: 50%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        text-decoration: none;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+        transition: 0.3s;
+      }
+
+      #scroll-top.active {
+        display: flex;
+      }
+      #scroll-top::after {
+        content: "↑";
+        color: #000;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1;
+      }
+      #scroll-top:hover {
+        background: #ca8a04;
+        transform: translateY(-3px);
+      }
+
+      /* ── Responsive ───────────────────────────────────── */
+      @media (max-width: 992px) {
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .cta-box {
+          flex-direction: column;
+          text-align: center;
+          padding: 44px 32px;
+        }
+        .cta-buttons {
+          justify-content: center;
+        }
+        .stats-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .about-badge {
+          right: 12px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          padding: 120px 0 80px;
+          min-height: auto;
+        }
+        .hero h1 {
+          font-size: 38px;
+        }
+        .hero-features {
+          gap: 20px;
+        }
+        .hero-scroll {
+          display: none;
+        }
+        .about-image img {
+          height: 300px;
+        }
+        .about-badge {
+          display: none;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .cta-box {
+          padding: 32px 20px;
+        }
+        .cta-text h3 {
+          font-size: 22px;
+        }
+        .cta-buttons {
+          flex-direction: column;
+          width: 100%;
+        }
+        .cta-buttons a {
+          text-align: center;
+        }
+        .hero-buttons {
+          flex-direction: column;
+        }
+        .hero-buttons a {
+          text-align: center;
+        }
+        .stats-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="index-page">
+    <!-- ══ Header ══════════════════════════════════════════ -->
+    <header id="header" class="header fixed-top">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-between"
+      >
+        <div class="d-flex align-items-center">
+          <div class="logo-box me-2">
+            <img
+              src="assets/img/global_white.png"
+              alt="Global Oil & Gas Innovations Logo"
+              style="height: 46px; width: auto"
+            />
+          </div>
+        </div>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li>
+              <a href="index.html" class="active" data-i18n="nav.home"
+                >Ana Səhifə</a
+              >
+            </li>
+            <li><a href="about.html" data-i18n="nav.about">Haqqımızda</a></li>
+            <!-- <li>
+              <a href="products.html" data-i18n="nav.products">Məhsullar</a>
+            </li> -->
+            <li>
+              <a href="services.html" data-i18n="nav.services">Xidmətlər</a>
+            </li>
+            <li><a href="contact.html" data-i18n="nav.contact">Əlaqə</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <div class="d-flex align-items-center">
+          <div class="lang-switcher d-none d-lg-flex me-3">
+            <button class="lang-selected" type="button">
+              <span class="fi fi-az lang-flag"></span>
+              <span class="lang-name">AZ</span>
+              <i class="bi bi-chevron-down lang-chevron"></i>
+            </button>
+            <div class="lang-dropdown">
+              <button class="lang-option" data-lang="az" type="button">
+                <span class="fi fi-az lang-flag"></span>
+                <span>Azərbaycan</span>
+              </button>
+              <button class="lang-option" data-lang="en" type="button">
+                <span class="fi fi-gb lang-flag"></span>
+                <span>English</span>
+              </button>
+              <button class="lang-option" data-lang="ru" type="button">
+                <span class="fi fi-ru lang-flag"></span>
+                <span>Русский</span>
+              </button>
+            </div>
+          </div>
+          <span class="me-4 phone d-none d-lg-inline">
+            <i class="bi bi-telephone" style="padding-right: 5px"></i> +7 778
+            385 71 35
+          </span>
+          <a class="btn btn-warning" href="contact.html" data-i18n="nav.cta"
+            >Qiymət Təklifi İstəyin</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- ══ Hero ════════════════════════════════════════════ -->
+      <section id="hero" class="hero section dark-background">
+        <img src="assets/img/background.png" class="hero-bg" alt="" />
+
+        <div class="container">
+          <h1 data-i18n-html="idx.hero.title_html">
+            Neft-Qaz Sənayesində <br />İnnovativ Servis <br />
+            <span>Həlləri.</span>
+          </h1>
+
+          <p data-i18n-html="idx.hero.desc">
+            Neft-qaz sənayesi üçün innovativ mühəndis həlləri və
+            patentləşdirilmiş texnologiyalar hazırlayan neft-servis şirkətiyik.
+            Quyu diaqnostikası, avadanlıqların qorunması və hasilat
+            proseslərinin avtomatlaşdırılması üzrə ixtisaslaşırıq.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="contact.html" class="btn-hero-primary">
+              <span data-i18n="idx.hero.cta1">Bizimlə Əlaqə Saxlayın</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+            <a href="services.html" class="btn-hero-outline">
+              <i class="bi bi-grid-3x3-gap"></i>
+              <span data-i18n="idx.hero.cta2">Xidmət</span>
+            </a>
+          </div>
+
+          <div class="hero-features">
+            <div class="feat-item">
+              <i class="bi bi-check-circle-fill"></i>
+              <span data-i18n="idx.hero.feat1"
+                >Patentləşdirilmiş Texnologiya</span
+              >
+            </div>
+            <div class="feat-item">
+              <i class="bi bi-check-circle-fill"></i>
+              <span data-i18n="idx.hero.feat2">24/7 Dəstək</span>
+            </div>
+            <div class="feat-item">
+              <i class="bi bi-check-circle-fill"></i>
+              <span data-i18n="idx.hero.feat3">Keyfiyyət Prioritetdir</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#about" class="hero-scroll">
+          <i class="bi bi-chevron-down"></i>
+          <span data-i18n="idx.hero.scroll">Aşağı</span>
+        </a>
+      </section>
+
+      <!-- ══ About Section ═══════════════════════════════════ -->
+      <section id="about" class="about-section" data-aos="fade-up">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="50">
+              <div class="about-image">
+                <img
+                  src="assets/img/meeting.jpeg"
+                  alt="Global Oil &amp; Gas Innovations komanda görüşü"
+                />
+                <div class="about-badge">
+                  <span class="big">10+</span>
+                  <span data-i18n="idx.about.badge">İl Təcrübə</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+              <span class="sec-tag" data-i18n="idx.about.tag">Biz Kimik?</span>
+              <h2 data-i18n="idx.about.title">
+                Neft-Qaz Sektoru Üçün İnnovativ və Patentli Texnologiyalar
+              </h2>
+
+              <p data-i18n-html="idx.about.desc1">
+                Global Oil & Gas Innovations neft-qaz sənayesi üçün innovativ
+                mühəndis həlləri və patentləşdirilmiş texnologiyalar hazırlayan
+                neft-servis şirkətidir. Fəaliyyətimizin əsası Azərbaycanda
+                qoyulmuş, əldə olunan texniki təcrübə isə Qazaxıstan bazarında
+                lokallaşdırılaraq Global brendi altında inkişaf etdirilmişdir.
+              </p>
+
+              <p data-i18n-html="idx.about.desc2">
+                Şirkətimiz neft və qaz quyularının diaqnostikası, avadanlıqların
+                qorunması, hasilat proseslərinin optimallaşdırılması və sənaye
+                müəssisələri üçün texnoloji servis həllərinin tətbiqi üzrə
+                ixtisaslaşır.
+              </p>
+
+              <a href="about.html" class="btn-about">
+                <span data-i18n="idx.about.lnk">Haqqımızda Daha Ətraflı</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ Industries Section ══════════════════════════════ -->
+      <section class="industries-section" data-aos="fade-up">
+        <div class="container">
+          <div class="section-header">
+            <span class="sec-tag" data-i18n="idx.industries.tag"
+              >Sənaye Sahələri</span
+            >
+            <h2 data-i18n="idx.industries.title">
+              Xidmət Göstərdiyimiz Sənaye Sahələri
+            </h2>
+            <p data-i18n-html="idx.industries.desc">
+              Patentləşdirilmiş texnologiyalarla neft-qaz sənayesinin əsas
+              tələbatlarını qarşılayırıq.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
+              <div class="industry-card">
+                <i class="bi bi-shield-lock-fill industry-icon"></i>
+                <h4 data-i18n="idx.ind1.title">NKT və Muftaların Qorunması</h4>
+                <p data-i18n-html="idx.ind1.desc">
+                  Nasos-kompressor boruları və muftalar üçün qoruyucu
+                  texnologiyalar.
+                </p>
+                <a href="service-nkt-protection.html"
+                  ><span data-i18n="idx.ind.link">Ətraflı</span>
+                  <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="industry-card">
+                <i class="bi bi-camera-video-fill industry-icon"></i>
+                <h4 data-i18n="idx.ind2.title">
+                  Neft Quyularının Geofiziki Tədqiqi — Karotaj
+                </h4>
+                <p data-i18n-html="idx.ind2.desc">
+                  Quyudaxili videoinspeksiya sistemləri ilə dəqiq diaqnostika və
+                  erkən problem aşkarlanması.
+                </p>
+                <a href="service-camera-diagnostics.html"
+                  ><span data-i18n="idx.ind.link">Ətraflı</span>
+                  <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <div class="industry-card">
+                <i class="bi bi-gear-wide-connected industry-icon"></i>
+                <h4 data-i18n="idx.ind3.title">Ağıllı Nasos Stansiyaları</h4>
+                <p data-i18n-html="idx.ind3.desc">
+                  SCADA və süni intellekt əsaslı avtomatlaşdırma ilə hasilat
+                  məhsuldarlığının artırılması.
+                </p>
+                <a href="service-smart-pump.html"
+                  ><span data-i18n="idx.ind.link">Ətraflı</span>
+                  <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="partner-section">
+        <div class="container partner-grid">
+          <div class="partner-left">
+            <h2 data-i18n="idx.partner.title">
+              Niyə Global Oil &amp; Gas Innovations ilə Tərəfdaşlıq Etməlisiniz?
+            </h2>
+
+            <p data-i18n-html="idx.partner.desc">
+              Neft-qaz sənayesində etibarlılıq və dəqiqlik həyati əhəmiyyət
+              daşıyır. Biz hər layihəyə mühəndis dəqiqliyi, texnoloji
+              etibarlılıq və nəticəyə yönəlmiş yanaşma ilə yanaşırıq.
+            </p>
+
+            <div class="features">
+              <div class="feature">
+                <i class="bi bi-shield-check feature-icon"></i>
+                <div>
+                  <strong data-i18n="idx.partner.f1">Mühəndis Dəqiqliyi</strong>
+                  <p data-i18n-html="idx.partner.f1d">
+                    Hər layihədə texniki dəqiqlik və məsuliyyətli yanaşma.
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature">
+                <i class="bi bi-globe feature-icon"></i>
+                <div>
+                  <strong data-i18n="idx.partner.f2"
+                    >Patentləşdirilmiş Texnologiyalar</strong
+                  >
+                  <p data-i18n-html="idx.partner.f2d">
+                    Azərbaycan və Qazaxıstan bazarlarında sınanmış innovativ
+                    həllər.
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature">
+                <i class="bi bi-truck feature-icon"></i>
+                <div>
+                  <strong data-i18n="idx.partner.f3"
+                    >Sahədə Sürətli Tətbiq</strong
+                  >
+                  <p data-i18n-html="idx.partner.f3d">
+                    Quyuların dayanma müddətini minimuma endirən operativ
+                    tətbiq.
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature">
+                <i class=""
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-leaf"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M1.4 1.7c.216.289.65.84 1.725 1.274 1.093.44 2.884.774 5.834.528l.37-.023c1.823-.06 3.117.598 3.956 1.579C14.16 6.082 14.5 7.41 14.5 8.5c0 .58-.032 1.285-.229 1.997q.198.248.382.54c.756 1.2 1.19 2.563 1.348 3.966a1 1 0 0 1-1.98.198c-.13-.97-.397-1.913-.868-2.77C12.173 13.386 10.565 14 8 14c-1.854 0-3.32-.544-4.45-1.435-1.125-.887-1.89-2.095-2.391-3.383C.16 6.62.16 3.646.509 1.902L.73.806zm-.05 1.39c-.146 1.609-.008 3.809.74 5.728.457 1.17 1.13 2.213 2.079 2.961.942.744 2.185 1.22 3.83 1.221 2.588 0 3.91-.66 4.609-1.445-1.789-2.46-4.121-1.213-6.342-2.68-.74-.488-1.735-1.323-1.844-2.308-.023-.214.237-.274.38-.112 1.4 1.6 3.573 1.757 5.59 2.045 1.227.215 2.21.526 3.033 1.158.058-.39.075-.782.075-1.158 0-.91-.288-1.988-.975-2.792-.626-.732-1.622-1.281-3.167-1.229l-.316.02c-3.05.253-5.01-.08-6.291-.598a5.3 5.3 0 0 1-1.4-.811"
+                    /></svg
+                ></i>
+                <div>
+                  <strong data-i18n="idx.partner.f4"
+                    >Davamlı və Təhlükəsiz Həllər</strong
+                  >
+                  <p data-i18n-html="idx.partner.f4d">
+                    Təhlükəsizlik və ekoloji tələblərə tam uyğun texnoloji
+                    tətbiqlər.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="partner-stats">
+            <div class="stat">
+              <i class="bi bi-award stat-icon"></i>
+              <h3>10+</h3>
+              <p data-i18n="idx.stat1">İl Təcrübə</p>
+            </div>
+
+            <div class="stat">
+              <i class="bi bi-file-earmark-check stat-icon"></i>
+              <h3>100%</h3>
+              <p data-i18n="idx.stat2">Təsdiqlənmiş Aktlar</p>
+            </div>
+
+            <div class="stat">
+              <i class="bi bi-graph-up-arrow stat-icon"></i>
+              <h3>Real</h3>
+              <p data-i18n="idx.stat3">Tətbiq Nəticələri</p>
+            </div>
+
+            <div class="stat">
+              <i class="bi bi-headset stat-icon"></i>
+              <h3>24/7</h3>
+              <p data-i18n="idx.stat4">Dəstək</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ Trusted Partners ════════════════════════════════ -->
+      <section class="trusted-section" data-aos="fade-up">
+        <div class="container">
+          <div class="section-header">
+            <span class="sec-tag" data-i18n="idx.trusted.tag"
+              >Tərəfdaşlarımız</span
+            >
+            <h2 data-i18n="idx.trusted.title">Etibarlı Tərəfdaşlarımız</h2>
+            <p data-i18n-html="idx.trusted.desc">
+              Biz sənaye liderləri ilə əməkdaşlıqdan qürur duyuruq və yüksək
+              keyfiyyətli texnoloji həllər və xidmətlər təqdim edirik.
+            </p>
+          </div>
+        </div>
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper partners-swiper">
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-1.png"
+                  class="img-fluid"
+                  alt="Partner 1"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-2.png"
+                  class="img-fluid"
+                  alt="Partner 2"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-3.png"
+                  class="img-fluid"
+                  alt="Partner 3"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-4.png"
+                  class="img-fluid"
+                  alt="Partner 4"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-5.png"
+                  class="img-fluid"
+                  alt="Partner 5"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-6.png"
+                  class="img-fluid"
+                  alt="Partner 6"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-7.png"
+                  class="img-fluid"
+                  alt="Partner 7"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-8.png"
+                  class="img-fluid"
+                  alt="Partner 8"
+                />
+              </div>
+              <!-- duplicates for infinite loop -->
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-1.png"
+                  class="img-fluid"
+                  alt="Partner 1"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-2.png"
+                  class="img-fluid"
+                  alt="Partner 2"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-3.png"
+                  class="img-fluid"
+                  alt="Partner 3"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-4.png"
+                  class="img-fluid"
+                  alt="Partner 4"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-5.png"
+                  class="img-fluid"
+                  alt="Partner 5"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-6.png"
+                  class="img-fluid"
+                  alt="Partner 6"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-7.png"
+                  class="img-fluid"
+                  alt="Partner 6"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/clients/client-8.png"
+                  class="img-fluid"
+                  alt="Partner 6"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ CTA ════════════════════════════════════════════ -->
+      <section class="cta-section">
+        <div class="container" data-aos="fade-up">
+          <div class="cta-box">
+            <div class="cta-text">
+              <h3 data-i18n="idx.cta.title">
+                Neft-Qaz Layihənizi Optimallaşdırmağa Hazırsınız?
+              </h3>
+              <p data-i18n-html="idx.cta.desc">
+                Quyularınızın diaqnostikası, avadanlıqların qorunması və hasilat
+                proseslərinin optimallaşdırılması üçün bu gün komandamızla əlaqə
+                saxlayın.
+              </p>
+            </div>
+            <div class="cta-buttons">
+              <a
+                href="contact.html"
+                class="btn-primary"
+                data-i18n="idx.cta.btn1"
+                >Əlaqə Saxlayın</a
+              >
+              <a
+                href="services.html"
+                class="btn-outline-dark"
+                data-i18n="idx.cta.btn2"
+                >Xidmətlərimizə Baxın</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ══ Footer ══════════════════════════════════════════ -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h4>GLOBAL OIL &amp; GAS INNOVATIONS</h4>
+          <p data-i18n-html="footer.about_desc">
+            Neft-qaz sənayesi üçün innovativ mühəndis həlləri və
+            patentləşdirilmiş texnologiyalar hazırlayan neft-servis şirkəti.
+          </p>
+          <div class="socials">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5 data-i18n="footer.quick_links">Tez Əlaqələr</h5>
+          <ul>
+            <li>
+              <a href="index.html" data-i18n="footer.home">Əsas Səhifə</a>
+            </li>
+            <li>
+              <a href="about.html" data-i18n="footer.about">Haqqımızda</a>
+            </li>
+            <li>
+              <a href="products.html" data-i18n="footer.products">Məhsullar</a>
+            </li>
+            <li>
+              <a href="services.html" data-i18n="footer.services">Xidmətlər</a>
+            </li>
+            <li>
+              <a href="contact.html" data-i18n="footer.contact_link">Əlaqə</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 data-i18n="footer.industries">Əsas Sənaye Sahələri</h5>
+          <ul>
+            <li data-i18n="footer.oil_gas">NKT və muftaların qorunması</li>
+            <li data-i18n="footer.petrochemicals">
+              Quyuların geofiziki tədqiqi (Karotaj)
+            </li>
+            <li data-i18n="footer.manufacturing">Ağıllı Nasos Stansiyaları</li>
+            <li data-i18n="footer.oil_extraction">
+              Texniki Dəstək və Konsultasiya
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 data-i18n="footer.contact_title">Əlaqə</h5>
+          <ul>
+            <li>
+              130000, Qazaxıstan Respublikası,<br />Mangistau vilayəti, Aktau
+              şəhəri
+            </li>
+            <li>Aktau, Qazaxıstan</li>
+            <li>+7 778 385 71 35</li>
+            <li>
+              <a href="mailto:office@globaloilgas.kz">office@globaloilgas.kz</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-copy">
+          <p>
+            © Copyright 2026 Global Oil & Gas Innovations. All Rights Reserved
+          </p>
+          <p class="credit">
+            Created by:
+            <a href="https://penne.media">
+              <img
+                src="assets/img/penne_transparent.png"
+                alt="Penne Media"
+                style="height: 40px; width: auto"
+              />
+              <strong style="color: #fff">Penne Media</strong>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top"></a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 700,
+        easing: "ease-in-out",
+        once: true,
+        mirror: false,
+      });
+
+      /* Header scroll tint */
+      (function () {
+        const header = document.getElementById("header");
+        function onScroll() {
+          header.classList.toggle("scrolled", window.scrollY > 10);
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+      })();
+
+      /* Scroll-to-top */
+      (function () {
+        const btn = document.getElementById("scroll-top");
+        window.addEventListener("scroll", () => {
+          btn.classList.toggle("active", window.scrollY > 300);
+        });
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      })();
+
+      /* Mobile nav toggle */
+      (function () {
+        const toggle = document.querySelector(".mobile-nav-toggle");
+        if (!toggle) return;
+        toggle.addEventListener("click", () => {
+          document.body.classList.toggle("mobile-nav-active");
+          toggle.classList.toggle("bi-list");
+          toggle.classList.toggle("bi-x");
+        });
+      })();
+
+      /* Partners Swiper */
+      new Swiper(".partners-swiper", {
+        loop: true,
+        speed: 800,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        freeMode: true,
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        breakpoints: {
+          0: { slidesPerView: 2 },
+          480: { slidesPerView: 3 },
+          768: { slidesPerView: 4 },
+          992: { slidesPerView: 5 },
+          1200: { slidesPerView: 6 },
+        },
+      });
+    </script>
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/lang.js"></script>
+  </body>
+</html>

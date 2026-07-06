@@ -1,0 +1,1105 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>NKT üçün polimer-kompozit örtük sistemi</title>
+    <meta
+      name="description"
+      content="Видеоинспекция скважин в реальном времени – без подъёма НКТ. Коррозия, деформация, приток песка."
+    />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Raleway:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <style>
+      /* ── Hero ─────────────────────────────────────────── */
+      .hero-product {
+        position: relative;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        padding: 140px 0 90px;
+        overflow: hidden;
+      }
+      .hero-product .hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+      .hero-product::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 9, 16, 0.92) 0%,
+          rgba(13, 31, 45, 0.8) 100%
+        );
+        z-index: 1;
+      }
+      .hero-product .container {
+        position: relative;
+        z-index: 2;
+      }
+      .hero-product h1 {
+        font-family: var(--heading-font);
+        font-size: clamp(34px, 5vw, 58px);
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.12;
+        margin-bottom: 18px;
+      }
+      .hero-product h1 span {
+        color: var(--accent-color);
+      }
+      .hero-product p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 17px;
+        max-width: 620px;
+        line-height: 1.75;
+      }
+      .breadcrumb-bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--nav-font);
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 28px;
+      }
+      .breadcrumb-bar a {
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .breadcrumb-bar a:hover {
+        color: var(--accent-color);
+      }
+      .breadcrumb-bar .sep {
+        color: rgba(255, 255, 255, 0.3);
+      }
+      .breadcrumb-bar .current {
+        color: var(--accent-color);
+      }
+      .hero-btns {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-top: 32px;
+      }
+      .btn-primary {
+        background: var(--accent-color);
+        color: #000;
+        font-family: var(--nav-font);
+        font-size: 14px;
+        font-weight: 700;
+        padding: 13px 28px;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: 0.3s;
+        border: none;
+        display: inline-block;
+      }
+      .btn-primary:hover {
+        background: #ca8a04;
+        color: #000;
+        transform: translateY(-2px);
+      }
+      .btn-outline-light-c {
+        background: transparent;
+        color: #fff;
+        font-family: var(--nav-font);
+        font-size: 14px;
+        font-weight: 600;
+        padding: 12px 28px;
+        border-radius: 6px;
+        text-decoration: none;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        transition: 0.3s;
+        display: inline-block;
+      }
+      .btn-outline-light-c:hover {
+        border-color: #fff;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      /* ── Shared section tokens ────────────────────────── */
+      .sec-tag {
+        display: inline-block;
+        font-family: var(--nav-font);
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--accent-color);
+        margin-bottom: 12px;
+      }
+      .section-h2 {
+        font-family: var(--heading-font);
+        font-size: clamp(24px, 3vw, 36px);
+        font-weight: 800;
+        color: var(--heading-color);
+        margin-bottom: 16px;
+        line-height: 1.2;
+      }
+      .section-h2-white {
+        font-family: var(--heading-font);
+        font-size: clamp(24px, 3vw, 36px);
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 16px;
+        line-height: 1.2;
+      }
+      .section-p {
+        color: var(--default-color);
+        font-size: 15px;
+        line-height: 1.8;
+      }
+      .section-p-white {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      /* ── Problem section ──────────────────────────────── */
+      .problem-section {
+        padding: 80px 0;
+        background: #f1f4fa;
+      }
+      .problem-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 28px 24px;
+        height: 100%;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+        border-left: 4px solid #e74c3c;
+        transition: 0.3s;
+      }
+      .problem-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.11);
+      }
+      .problem-card .icon {
+        font-size: 30px;
+        color: #e74c3c;
+        margin-bottom: 14px;
+        display: block;
+      }
+      .problem-card h5 {
+        font-family: var(--heading-font);
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--heading-color);
+        margin-bottom: 8px;
+      }
+      .problem-card p {
+        font-size: 14px;
+        color: var(--default-color);
+        margin: 0;
+        line-height: 1.65;
+      }
+
+      /* ── Solution / feature strip ─────────────────────── */
+      .solution-section {
+        padding: 80px 0;
+      }
+      .solution-image {
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+      }
+      .solution-image img {
+        width: 100%;
+        height: 700px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s;
+      }
+      .solution-image:hover img {
+        transform: scale(1.03);
+      }
+      .detect-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .detect-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(39, 61, 78, 0.07);
+        font-size: 14px;
+        color: var(--default-color);
+        line-height: 1.6;
+      }
+      .detect-list li:last-child {
+        border: none;
+      }
+      .detect-list li i {
+        color: var(--accent-color);
+        margin-top: 2px;
+        flex-shrink: 0;
+        font-size: 15px;
+      }
+
+      /* ── Feature cards ────────────────────────────────── */
+      .features-section {
+        padding: 80px 0;
+        background: #f1f4fa;
+      }
+      .feat-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 28px 24px;
+        height: 100%;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+        border: 1.5px solid transparent;
+        transition: 0.35s;
+        position: relative;
+        overflow: hidden;
+      }
+      .feat-card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--accent-color);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: 0.35s;
+      }
+      .feat-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.11);
+        border-color: rgba(250, 204, 21, 0.25);
+      }
+      .feat-card:hover::after {
+        transform: scaleX(1);
+      }
+      .feat-card .icon-wrap {
+        width: 52px;
+        height: 52px;
+        background: rgba(250, 204, 21, 0.1);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: var(--accent-color);
+        margin-bottom: 16px;
+        transition: 0.3s;
+      }
+      .feat-card:hover .icon-wrap {
+        background: var(--accent-color);
+        color: #000;
+      }
+      .feat-card h5 {
+        font-family: var(--heading-font);
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--heading-color);
+        margin-bottom: 8px;
+      }
+      .feat-card p {
+        font-size: 14px;
+        color: var(--default-color);
+        margin: 0;
+        line-height: 1.65;
+      }
+      .feat-card .spec-val {
+        font-family: var(--heading-font);
+        font-size: 26px;
+        font-weight: 900;
+        color: var(--accent-color);
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      /* ── Case studies ─────────────────────────────────── */
+      .cases-section {
+        padding: 80px 0;
+        background: var(--heading-color);
+      }
+      .case-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 14px;
+        padding: 32px 28px;
+        height: 100%;
+        transition: 0.35s;
+        position: relative;
+        overflow: hidden;
+      }
+      .case-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--accent-color);
+      }
+      .case-card:hover {
+        background: rgba(255, 255, 255, 0.09);
+        transform: translateY(-5px);
+      }
+      .case-card .case-num {
+        font-family: var(--heading-font);
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--accent-color);
+        margin-bottom: 12px;
+        display: block;
+      }
+      .case-card h5 {
+        font-family: var(--heading-font);
+        font-size: 17px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 14px;
+      }
+      .case-row {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 12px;
+      }
+      .case-box {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 14px 12px;
+        text-align: center;
+      }
+      .case-box .lbl {
+        font-family: var(--nav-font);
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        color: rgba(255, 255, 255, 0.4);
+        display: block;
+        margin-bottom: 4px;
+      }
+      .case-box .val {
+        font-family: var(--heading-font);
+        font-size: 18px;
+        font-weight: 800;
+        color: #fff;
+        display: block;
+      }
+      .case-box.accent .val {
+        color: var(--accent-color);
+      }
+      .case-card p {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 14px;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      /* ── Tech specs table ─────────────────────────────── */
+      .specs-section {
+        background: var(--heading-color);
+        padding: 70px 0;
+        color: #fff;
+      }
+      .specs-section .section-tag {
+        font-family: var(--nav-font);
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--accent-color);
+        display: block;
+        margin-bottom: 10px;
+      }
+      .spec-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+      .spec-table th {
+        background: rgba(250, 204, 21, 0.15);
+        color: var(--accent-color);
+        font-family: var(--nav-font);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        padding: 12px 16px;
+        text-align: left;
+        border-bottom: 2px solid rgba(250, 204, 21, 0.3);
+      }
+      .spec-table td {
+        padding: 12px 16px;
+        color: rgba(255, 255, 255, 0.8);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .spec-table tr:last-child td {
+        border-bottom: none;
+      }
+      .spec-table tr:hover td {
+        background: rgba(255, 255, 255, 0.04);
+        color: #fff;
+      }
+
+      /* ── CTA ──────────────────────────────────────────── */
+      .cta-section {
+        padding: 80px 0;
+        background: #f1f4fa;
+      }
+      .cta-box {
+        background: var(--heading-color);
+        border-radius: 16px;
+        padding: 56px 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-box::before {
+        content: "";
+        position: absolute;
+        right: -80px;
+        top: -80px;
+        width: 300px;
+        height: 300px;
+        background: rgba(250, 204, 21, 0.07);
+        border-radius: 50%;
+      }
+      .cta-box::after {
+        content: "";
+        position: absolute;
+        right: 60px;
+        bottom: -100px;
+        width: 200px;
+        height: 200px;
+        background: rgba(250, 204, 21, 0.05);
+        border-radius: 50%;
+      }
+      .cta-text h3 {
+        font-family: var(--heading-font);
+        font-size: 28px;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+      .cta-text p {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0;
+      }
+      .cta-buttons {
+        display: flex;
+        gap: 14px;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 2;
+      }
+      .btn-outline-dark {
+        background: transparent;
+        color: #fff;
+        font-family: var(--nav-font);
+        font-size: 14px;
+        font-weight: 600;
+        padding: 12px 28px;
+        border-radius: 6px;
+        text-decoration: none;
+        border: 2px solid rgba(255, 255, 255, 0.35);
+        transition: 0.3s;
+        display: inline-block;
+      }
+      .btn-outline-dark:hover {
+        border-color: #fff;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      /* ── Footer ───────────────────────────────────────── */
+      .footer {
+        background: #0d1a26;
+        color: rgba(255, 255, 255, 0.65);
+        padding: 60px 0 0;
+        font-size: 14px;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        gap: 40px;
+        padding-bottom: 48px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .footer-col h4 {
+        color: #fff;
+        font-family: var(--heading-font);
+        margin-bottom: 16px;
+      }
+      .footer-col h5 {
+        color: #fff;
+        font-size: 15px;
+        font-family: var(--heading-font);
+        margin-bottom: 16px;
+      }
+      .footer-col p {
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+      .footer-col ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer-col ul li {
+        padding: 5px 0;
+        color: rgba(255, 255, 255, 0.55);
+        transition: 0.3s;
+      }
+      .footer-col ul li a {
+        color: rgba(255, 255, 255, 0.55);
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .footer-col ul li a:hover {
+        color: var(--accent-color);
+      }
+      .socials a {
+        color: #fff;
+        font-size: 18px;
+        margin-right: 14px;
+        transition: 0.3s;
+      }
+      .socials a:hover {
+        color: var(--accent-color);
+      }
+      .footer-bottom {
+        padding: 20px 0;
+      }
+      .footer-copy {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 13px;
+        color: #cbd5e1;
+      }
+      .footer-copy p {
+        margin: 0;
+      }
+      .credit a {
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      #scroll-top {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        width: 42px;
+        height: 42px;
+        background: var(--accent-color);
+        border-radius: 50%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        text-decoration: none;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+        transition: 0.3s;
+      }
+      #scroll-top.active {
+        display: flex;
+      }
+      #scroll-top::after {
+        content: "↑";
+        color: #000;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1;
+      }
+      #scroll-top:hover {
+        background: #ca8a04;
+        transform: translateY(-3px);
+      }
+
+      @media (max-width: 992px) {
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .cta-box {
+          flex-direction: column;
+          text-align: center;
+          padding: 40px 28px;
+        }
+        .cta-buttons {
+          justify-content: center;
+        }
+      }
+      @media (max-width: 768px) {
+        .hero-product {
+          padding: 110px 0 60px;
+          min-height: auto;
+        }
+        .solution-image img {
+          height: 280px;
+        }
+      }
+      @media (max-width: 575px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .cta-box {
+          padding: 32px 20px;
+        }
+        .cta-buttons {
+          flex-direction: column;
+          width: 100%;
+        }
+        .cta-buttons a {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ══ Header ══════════════════════════════════════════ -->
+    <header id="header" class="header fixed-top">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-between"
+      >
+        <div class="d-flex align-items-center">
+          <div class="logo-box me-2">
+            <img
+              src="assets/img/global_white.png"
+              alt="Global Oil & Gas Innovations Logo"
+              style="height: 46px; width: auto"
+            />
+          </div>
+        </div>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Ana Səhifə</a></li>
+            <li><a href="about.html">Haqqımızda</a></li>
+            <li><a href="products.html" class="active">Məhsullar</a></li>
+            <li><a href="services.html">Xidmətlər</a></li>
+            <li><a href="contact.html">Əlaqə</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+        <div class="d-flex align-items-center">
+          <span class="me-4 phone d-none d-lg-inline"
+            ><i class="bi bi-telephone" style="padding-right: 5px"></i> +7 778 385 71 35</span
+          >
+          <a class="btn btn-warning" href="contact.html"
+            >Qiymət Təklifi İstəyin</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ══ HERO ════════════════════════════════════════════ -->
+      <section class="hero-product dark-background">
+        <img src="assets/img/background.png" class="hero-bg" alt="" />
+        <div class="container">
+          <div class="breadcrumb-bar">
+            <a href="index.html">Ana Səhifə</a><span class="sep">/</span>
+            <a href="products.html">Məhsullar</a><span class="sep">/</span>
+            <span class="current">Polimer-kompozit örtük</span>
+          </div>
+          <span class="badge bg-warning text-dark mb-4">NKT HƏLLƏRİ</span>
+          <h1>NKT üçün <span>polimer-kompozit örtük</span><br />sistemi</h1>
+
+          <p>
+            NKT-nin xidmət müddətini 20-25 dəfə artırın. Korroziya, sürtünmə,
+            parafin və qum təsirinə qarşı tam qoruma.
+          </p>
+          <div class="hero-btns">
+            <a href="contact.html" class="btn-primary">
+              Təklif əldə et <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+            <a href="contact.html?type=report" class="btn-outline-light-c">
+              Case study əldə et
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ PROBLEM ══════════════════════════════════════════ -->
+      <section class="problem-section" data-aos="fade-up">
+        <div class="container">
+          <div class="text-center mb-5">
+            <span class="sec-tag">Problem</span>
+            <h2 class="section-h2">NKT nasazlıqları - böyük maliyyə itkisi</h2>
+            <p class="section-p mx-auto" style="max-width: 580px">
+              Korroziya, sürtünmə və çöküntülər NKT-nin tez sıradan çıxmasına
+              səbəb olur. Bu isə tez-tez təmir, hasilat itkisi və yüksək xərclər
+              deməkdir.
+            </p>
+          </div>
+          <div class="row g-4">
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
+              <div class="problem-card">
+                <i class="bi bi-droplet-half icon"></i>
+                <h5>Korroziya</h5>
+                <p>
+                  NKT aqressiv mühitdə sürətlə aşınır və deşilmələr yaranır.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="problem-card">
+                <i class="bi bi-sliders icon"></i>
+                <h5>Parafin və duz</h5>
+                <p>Keçid sahəsi daralır, hasilat azalır.</p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <div class="problem-card">
+                <i class="bi bi-gear-wide-connected icon"></i>
+                <h5>Mexaniki aşınma</h5>
+                <p>Ştanqların sürtünməsi borunu sıradan çıxarır.</p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="problem-card">
+                <i class="bi bi-tools icon"></i>
+                <h5>Tez-tez təmir</h5>
+                <p>30-90 gün arası fasilələrlə təmir tələb olunur.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ SOLUTION ═════════════════════════════════════════ -->
+      <section class="solution-section" data-aos="fade-up">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="50">
+              <div class="solution-image">
+                <img src="assets/img/cam2.jpeg" alt="Quyu videoinspeksiyası" />
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+              <span class="sec-tag">Həll</span>
+              <h2 class="section-h2">NKT üçün innovativ qoruyucu örtük</h2>
+              <p class="section-p mb-4">
+                Xüsusi polimer-kompozit örtük NKT-ni korroziya, sürtünmə və
+                çöküntülərdən qoruyur. Bu, avadanlığın ömrünü dramatik şəkildə
+                artırır.
+              </p>
+              <p class="section-p mb-4">
+                <strong>Sistem nələr vəd edir::</strong>
+              </p>
+              <ul class="detect-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i> Korroziyaya qarşı tam
+                  izolyasiya
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i> Sürtünmənin
+                  azaldılması
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i> Parafin və duz
+                  yığılmasının qarşısı
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i> Qum və aşınmaya qarşı
+                  davamlılıq
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i> NKT xidmət müddətinin
+                  uzadılması
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ KEY SPECS GRID ══════════════════════════════════ -->
+      <section class="features-section" data-aos="fade-up">
+        <div class="container">
+          <div class="text-center mb-5">
+            <span class="sec-tag">Nəticələr</span>
+            <h2 class="section-h2">Real performans göstəriciləri</h2>
+          </div>
+          <div class="row g-4">
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
+              <div class="feat-card text-center">
+                <div class="icon-wrap mx-auto">
+                  <i class="bi bi-arrow-up-right-circle"></i>
+                </div>
+                <span class="spec-val">20-25x</span>
+                <h5>Xidmət müddəti</h5>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="feat-card text-center">
+                <div class="icon-wrap mx-auto">
+                  <i class="bi bi-tools"></i>
+                </div>
+                <span class="spec-val">90%</span>
+                <h5>Təmirin azaldılması</h5>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <div class="feat-card text-center">
+                <div class="icon-wrap mx-auto">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+                <span class="spec-val">0</span>
+                <h5>Sızma halları</h5>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="feat-card text-center">
+                <div class="icon-wrap mx-auto">
+                  <i class="bi bi-clock-history"></i>
+                </div>
+                <span class="spec-val">300+</span>
+                <h5>Gün fasiləsiz iş</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ TECH SPECS TABLE ════════════════════════════════ -->
+      <section class="specs-section" data-aos="fade-up">
+        <div class="container">
+          <div class="row align-items-start g-5">
+            <div class="col-lg-4">
+              <span class="section-tag">Spesifikasiyalar</span>
+              <h2 class="section-h2-white">Texniki xüsusiyyətlər</h2>
+              <p class="section-p-white">
+                Sistem ağır quyu şəraitləri üçün hazırlanıb və NKT-nin əksər
+                konfiqurasiyaları ilə uyğundur.
+              </p>
+              <a href="contact.html" class="btn-primary mt-3">
+                Texniki pasport əldə et
+              </a>
+            </div>
+            <div class="col-lg-8">
+              <table class="spec-table">
+                <thead>
+                  <tr>
+                    <th>Parametr</th>
+                    <th>Dəyər</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Material</td>
+                    <td>Polimer-kompozit (PPA + neylon + ebonit)</td>
+                  </tr>
+                  <tr>
+                    <td>Qoruma</td>
+                    <td>Korroziya, sürtünmə, parafin, qum</td>
+                  </tr>
+                  <tr>
+                    <td>Tətbiq sahəsi</td>
+                    <td>NKT daxili səthi</td>
+                  </tr>
+                  <tr>
+                    <td>Uyğunluq</td>
+                    <td>Bütün standart NKT ölçüləri</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ CTA ════════════════════════════════════════════ -->
+      <section class="cta-section">
+        <div class="container" data-aos="fade-up">
+          <div class="cta-box">
+            <div class="cta-text">
+              <h3>NKT-nizi qoruyun və xərcləri azaldın</h3>
+              <p>
+                Mühəndislərimiz sistemi sizə canlı göstərəcək və quyunuza uyğun
+                texniki təklif hazırlayacaq.
+              </p>
+            </div>
+            <div class="cta-buttons">
+              <a href="contact.html" class="btn-primary">Təklif əldə et</a>
+              <a href="products.html" class="btn-outline-dark"
+                >Bütün məhsullar</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ══ Footer ══════════════════════════════════════════ -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h4>GLOBAL OIL &amp; GAS INNOVATIONS</h4>
+          <p>
+            Neft-qaz sənayesi üçün innovativ mühəndis həlləri və
+            patentləşdirilmiş texnologiyalar hazırlayan neft-servis şirkəti.
+          </p>
+          <div class="socials">
+            <a href="#"><i class="bi bi-linkedin"></i></a
+            ><a href="#"><i class="bi bi-facebook"></i></a
+            ><a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Tez Əlaqələr</h5>
+          <ul>
+            <li><a href="index.html">Əsas Səhifə</a></li>
+            <li><a href="about.html">Haqqımızda</a></li>
+            <li><a href="products.html">Məhsullar</a></li>
+            <li><a href="services.html">Xidmətlər</a></li>
+            <li><a href="contact.html">Əlaqə</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Əsas Sənaye Sahələri</h5>
+          <ul>
+            <li>NKT və muftaların qorunması</li>
+            <li>Quyuların geofiziki tədqiqi (Karotaj)</li>
+            <li>Ağıllı Nasos Stansiyaları</li>
+            <li>Texniki Dəstək və Konsultasiya</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Əlaqə</h5>
+          <ul>
+            <li>
+              130000, Qazaxıstan Respublikası,<br />Mangistau vilayəti, Aktau
+              şəhəri
+            </li>
+            <li>+7 778 385 71 35</li>
+            <li>
+              <a href="mailto:office@globaloilgas.kz"
+                >office@globaloilgas.kz</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-copy">
+          <p>© Copyright 2026 Global Oil & Gas Innovations. All Rights Reserved</p>
+          <p class="credit">
+            <a href="https://penne.media"
+              ><img
+                src="assets/img/penne_transparent.png"
+                alt="Penne Media"
+                style="height: 40px; width: auto"
+              /><strong style="color: #fff">Penne Media</strong></a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <a href="#" id="scroll-top"></a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 700, easing: "ease-in-out", once: true });
+      (function () {
+        const h = document.getElementById("header");
+        function s() {
+          h.classList.toggle("scrolled", window.scrollY > 10);
+        }
+        window.addEventListener("scroll", s, { passive: true });
+        s();
+      })();
+      (function () {
+        const b = document.getElementById("scroll-top");
+        window.addEventListener("scroll", () => {
+          b.classList.toggle("active", window.scrollY > 300);
+        });
+        b.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      })();
+      (function () {
+        const t = document.querySelector(".mobile-nav-toggle");
+        if (!t) return;
+        t.addEventListener("click", () => {
+          document.body.classList.toggle("mobile-nav-active");
+          t.classList.toggle("bi-list");
+          t.classList.toggle("bi-x");
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1220 @@
+<!doctype html>
+<html lang="az">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Xidmətlər – Global Oil &amp; Gas Innovations</title>
+    <meta
+      name="description"
+      content="Global Oil & Gas Innovations xidmətləri – NKT qorunması, quyuların geofiziki tədqiqi (karotaj), ağıllı nasos stansiyaları və texniki dəstək."
+    />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900&family=Raleway:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap + Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Main CSS -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <style>
+      /* =====================================================
+         SERVICES PAGE – STYLES (mirrors products.html tokens)
+      ===================================================== */
+
+      /* ── Hero ─────────────────────────────────────────── */
+      .hero-services {
+        position: relative;
+        min-height: 55vh;
+        display: flex;
+        align-items: center;
+        padding: 140px 0 80px;
+        overflow: hidden;
+      }
+
+      .hero-services .hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+
+      .hero-services::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 9, 16, 0.9) 0%,
+          rgba(13, 31, 45, 0.78) 100%
+        );
+        z-index: 1;
+      }
+
+      .hero-services .container {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-services h1 {
+        font-family: var(--heading-font);
+        font-size: clamp(36px, 5vw, 58px);
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.15;
+        margin-bottom: 18px;
+      }
+
+      .hero-services h1 span {
+        color: var(--accent-color);
+      }
+
+      .hero-services p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 17px;
+        max-width: 620px;
+        line-height: 1.7;
+      }
+
+      /* breadcrumb */
+      .breadcrumb-bar {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--nav-font);
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 28px;
+      }
+
+      .breadcrumb-bar a {
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .breadcrumb-bar a:hover {
+        color: var(--accent-color);
+      }
+      .breadcrumb-bar .sep {
+        color: rgba(255, 255, 255, 0.3);
+      }
+      .breadcrumb-bar .current {
+        color: var(--accent-color);
+      }
+
+      /* ── Services section ─────────────────────────────── */
+      .services-section {
+        padding: 80px 0;
+      }
+
+      .sec-tag {
+        font-family: var(--nav-font);
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--accent-color);
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .services-section h2 {
+        font-family: var(--heading-font);
+        font-size: clamp(26px, 3vw, 36px);
+        font-weight: 800;
+        color: var(--heading-color);
+        margin-bottom: 14px;
+      }
+
+      .services-section .subtext {
+        color: var(--default-color);
+        font-size: 15px;
+        max-width: 580px;
+        margin: 0 auto;
+        line-height: 1.7;
+      }
+
+      /* service cards */
+      .service-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+        padding: 32px 28px 28px;
+        height: 100%;
+        transition: 0.35s;
+        border: 1.5px solid transparent;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .service-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: var(--accent-color);
+        opacity: 0;
+        transition: 0.35s;
+      }
+
+      .service-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+        border-color: rgba(250, 204, 21, 0.3);
+      }
+
+      .service-card:hover::before {
+        opacity: 1;
+      }
+
+      .service-card .icon-wrap {
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+        background: rgba(250, 204, 21, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: var(--accent-color);
+        margin-bottom: 20px;
+        transition: 0.35s;
+      }
+
+      .service-card:hover .icon-wrap {
+        background: var(--accent-color);
+        color: #000;
+      }
+
+      .service-card h3 {
+        font-family: var(--heading-font);
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--heading-color);
+        margin-bottom: 12px;
+      }
+
+      .service-card p {
+        font-size: 14px;
+        color: var(--default-color);
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      .service-card .learn-more {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 18px;
+        font-family: var(--nav-font);
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--heading-color);
+        text-decoration: none;
+        border-bottom: 1.5px solid var(--accent-color);
+        padding-bottom: 2px;
+        transition: 0.3s;
+      }
+
+      .service-card .learn-more:hover {
+        color: var(--accent-color);
+        gap: 10px;
+      }
+
+      /* ── Process section ──────────────────────────────── */
+      .process-section {
+        padding: 80px 0;
+        background: #f1f4fa;
+      }
+
+      .process-section h2 {
+        font-family: var(--heading-font);
+        font-size: 34px;
+        font-weight: 800;
+        color: var(--heading-color);
+        margin-bottom: 48px;
+        text-align: center;
+      }
+
+      .process-step {
+        text-align: center;
+        position: relative;
+        padding: 0 16px;
+      }
+
+      .process-step .step-num {
+        width: 64px;
+        height: 64px;
+        background: var(--heading-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-family: var(--heading-font);
+        font-size: 22px;
+        font-weight: 800;
+        color: var(--accent-color);
+        position: relative;
+        z-index: 1;
+      }
+
+      .process-step h5 {
+        font-family: var(--heading-font);
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--heading-color);
+        margin-bottom: 8px;
+      }
+
+      .process-step p {
+        font-size: 13px;
+        color: #888;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      /* connector line */
+      .process-row {
+        position: relative;
+      }
+
+      .process-row::before {
+        content: "";
+        position: absolute;
+        top: 32px;
+        left: calc(12.5% + 32px);
+        right: calc(12.5% + 32px);
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          var(--accent-color),
+          rgba(250, 204, 21, 0.2)
+        );
+        z-index: 0;
+      }
+
+      /* ── Highlight dark section ───────────────────────── */
+      .highlight-section {
+        padding: 80px 0;
+        background: var(--heading-color);
+      }
+
+      .highlight-section .sec-tag {
+        color: var(--accent-color);
+      }
+
+      .highlight-section h2 {
+        font-family: var(--heading-font);
+        font-size: clamp(26px, 3vw, 36px);
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 20px;
+      }
+
+      .highlight-section p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 14px;
+      }
+
+      .feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 32px;
+      }
+
+      .feature-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 14px;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      .feature-list li:last-child {
+        border: none;
+      }
+
+      .feature-list li i {
+        color: var(--accent-color);
+        margin-top: 2px;
+        flex-shrink: 0;
+        font-size: 15px;
+      }
+
+      .highlight-image {
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      }
+
+      .highlight-image img {
+        width: 100%;
+        height: 440px;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* ── CTA Section ──────────────────────────────────── */
+      .cta-section {
+        padding: 80px 0;
+        background: #f1f4fa;
+      }
+
+      .cta-box {
+        background: var(--heading-color);
+        border-radius: 16px;
+        padding: 56px 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-box::before {
+        content: "";
+        position: absolute;
+        right: -80px;
+        top: -80px;
+        width: 300px;
+        height: 300px;
+        background: rgba(250, 204, 21, 0.07);
+        border-radius: 50%;
+      }
+
+      .cta-box::after {
+        content: "";
+        position: absolute;
+        right: 60px;
+        bottom: -100px;
+        width: 200px;
+        height: 200px;
+        background: rgba(250, 204, 21, 0.05);
+        border-radius: 50%;
+      }
+
+      .cta-text h3 {
+        font-family: var(--heading-font);
+        font-size: 28px;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+
+      .cta-text p {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 14px;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 2;
+      }
+
+      .btn-primary {
+        background: var(--accent-color);
+        color: #000;
+        font-family: var(--nav-font);
+        font-size: 14px;
+        font-weight: 700;
+        padding: 13px 28px;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: 0.3s;
+        border: none;
+        display: inline-block;
+      }
+
+      .btn-primary:hover {
+        background: #ca8a04;
+        color: #000;
+        transform: translateY(-2px);
+      }
+
+      .btn-outline-dark {
+        background: transparent;
+        color: #fff;
+        font-family: var(--nav-font);
+        font-size: 14px;
+        font-weight: 600;
+        padding: 12px 28px;
+        border-radius: 6px;
+        text-decoration: none;
+        border: 2px solid rgba(255, 255, 255, 0.35);
+        transition: 0.3s;
+        display: inline-block;
+      }
+
+      .btn-outline-dark:hover {
+        border-color: #fff;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      /* ── Footer ───────────────────────────────────────── */
+      .footer {
+        background: #0d1a26;
+        color: rgba(255, 255, 255, 0.65);
+        padding: 60px 0 0;
+        font-size: 14px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        gap: 40px;
+        padding-bottom: 48px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .footer-col h4 {
+        color: #fff;
+        font-family: var(--heading-font);
+        margin-bottom: 16px;
+      }
+      .footer-col h5 {
+        color: #fff;
+        font-size: 15px;
+        font-family: var(--heading-font);
+        margin-bottom: 16px;
+      }
+      .footer-col p {
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+      .footer-col ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer-col ul li {
+        padding: 5px 0;
+        color: rgba(255, 255, 255, 0.55);
+        transition: 0.3s;
+      }
+      .footer-col ul li a {
+        color: rgba(255, 255, 255, 0.55);
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .footer-col ul li a:hover,
+      .footer-col ul li:hover {
+        color: var(--accent-color);
+      }
+      .socials a {
+        color: #fff;
+        font-size: 18px;
+        margin-right: 14px;
+        transition: 0.3s;
+      }
+      .socials a:hover {
+        color: var(--accent-color);
+      }
+      .footer-bottom {
+        padding: 20px 0;
+      }
+      .footer-copy {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 13px;
+        color: #cbd5e1;
+      }
+      .footer-copy p {
+        margin: 0;
+      }
+      .credit {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .credit a {
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      /* scroll top */
+      #scroll-top {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        width: 42px;
+        height: 42px;
+        background: var(--accent-color);
+        border-radius: 50%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        text-decoration: none;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+        transition: 0.3s;
+      }
+
+      #scroll-top.active {
+        display: flex;
+      }
+      #scroll-top::after {
+        content: "↑";
+        color: #000;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1;
+      }
+      #scroll-top:hover {
+        background: #ca8a04;
+        transform: translateY(-3px);
+      }
+
+      /* ── Responsive ───────────────────────────────────── */
+      @media (max-width: 992px) {
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .cta-box {
+          flex-direction: column;
+          text-align: center;
+          padding: 40px 28px;
+        }
+        .cta-buttons {
+          justify-content: center;
+        }
+        .process-row::before {
+          display: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-services {
+          padding: 110px 0 60px;
+          min-height: auto;
+        }
+        .highlight-image img {
+          height: 260px;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .cta-box {
+          padding: 32px 20px;
+        }
+        .cta-text h3 {
+          font-size: 22px;
+        }
+        .cta-buttons {
+          flex-direction: column;
+          width: 100%;
+        }
+        .cta-buttons a {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="services-page">
+    <!-- ══ Header ══════════════════════════════════════════ -->
+    <header id="header" class="header fixed-top">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-between"
+      >
+        <div class="d-flex align-items-center">
+          <div class="logo-box me-2">
+            <img
+              src="assets/img/global_white.png"
+              alt="Global Oil & Gas Innovations Logo"
+              style="height: 46px; width: auto"
+            />
+          </div>
+        </div>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Ana Səhifə</a></li>
+            <li><a href="about.html" data-i18n="nav.about">Haqqımızda</a></li>
+            <!-- <li>
+              <a href="products.html" data-i18n="nav.products">Məhsullar</a>
+            </li> -->
+            <li>
+              <a href="services.html" class="active" data-i18n="nav.services"
+                >Xidmətlər</a
+              >
+            </li>
+            <li><a href="contact.html" data-i18n="nav.contact">Əlaqə</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <div class="d-flex align-items-center">
+          <div class="lang-switcher d-none d-lg-flex me-3">
+            <button class="lang-selected" type="button">
+              <span class="fi fi-az lang-flag"></span>
+              <span class="lang-name">AZ</span>
+              <i class="bi bi-chevron-down lang-chevron"></i>
+            </button>
+            <div class="lang-dropdown">
+              <button class="lang-option" data-lang="az" type="button">
+                <span class="fi fi-az lang-flag"></span>
+                <span>Azərbaycan</span>
+              </button>
+              <button class="lang-option" data-lang="en" type="button">
+                <span class="fi fi-gb lang-flag"></span>
+                <span>English</span>
+              </button>
+              <button class="lang-option" data-lang="ru" type="button">
+                <span class="fi fi-ru lang-flag"></span>
+                <span>Русский</span>
+              </button>
+            </div>
+          </div>
+          <span class="me-4 phone d-none d-lg-inline">
+            <i class="bi bi-telephone" style="padding-right: 5px"></i> +7 778
+            385 71 35
+          </span>
+          <a class="btn btn-warning" href="contact.html" data-i18n="nav.cta"
+            >Qiymət Təklifi İstəyin</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- ══ Hero ════════════════════════════════════════════ -->
+      <section class="hero-services section dark-background">
+        <img src="assets/img/background.png" class="hero-bg" alt="" />
+
+        <div class="container">
+          <div class="breadcrumb-bar">
+            <a href="index.html" data-i18n="bc.home">Ana Səhifə</a>
+            <span class="sep">/</span>
+            <span class="current" data-i18n="svc.bc.current">Xidmətlər</span>
+          </div>
+
+          <span
+            class="badge bg-warning text-dark mb-4"
+            data-i18n="svc.hero.badge"
+            >XİDMƏTLƏRİMİZ</span
+          >
+
+          <h1 data-i18n-html="svc.hero.title_html">
+            İnnovativ <span>Neft-Servis</span><br />Həlləri
+          </h1>
+
+          <p data-i18n-html="svc.hero.desc">
+            Global Oil & Gas Innovations quyu diaqnostikasından avadanlıqların
+            qorunmasına və hasilat proseslərinin avtomatlaşdırılmasına qədər
+            peşəkar texnoloji xidmətlər göstərir. Komandamız hər mərhələdə
+            yanınızdadır.
+          </p>
+        </div>
+      </section>
+
+      <!-- ══ Services Grid ═══════════════════════════════════ -->
+      <section class="services-section">
+        <div class="container">
+          <div class="text-center mb-5" data-aos="fade-up">
+            <span class="sec-tag" data-i18n="svc.sec.tag"
+              >Nə Təqdim Edirik</span
+            >
+            <h2 data-i18n="svc.sec.title">Əsas Xidmətlərimiz</h2>
+            <p class="subtext" data-i18n-html="svc.sec.desc">
+              Aşağıdakı xidmətlər peşəkar komanda və müasir avadanlıqlarla tam
+              dəstəklə təmin edilir.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
+              <div class="service-card">
+                <div class="icon-wrap">
+                  <i class="bi bi-shield-lock-fill"></i>
+                </div>
+                <h3 data-i18n="svc.card1.h3">
+                  Nasos-kompressor boruları və muftalar üçün qoruyucu
+                  texnologiyalar
+                </h3>
+                <p data-i18n-html="svc.card1.p">
+                  NKT-lərin daxili səthinə tətbiq olunan xüsusi polimer-kompozit
+                  qoruyucu örtük boruların korroziyadan, AÇPC yığılmasından və
+                  aşınmadan qorunmasını təmin edərək onların istismar müddətini
+                  artırır.
+                </p>
+                <a href="service-nkt-protection.html" class="learn-more"
+                  ><span data-i18n="svc.card.link">Daha çoxu</span>
+                  <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="service-card">
+                <div class="icon-wrap">
+                  <i class="bi bi-camera-video-fill"></i>
+                </div>
+                <h3 data-i18n="svc.card2.h3">
+                  Neft quyularının geofiziki tədqiqi - Karotaj
+                </h3>
+                <p data-i18n-html="svc.card2.p">
+                  Neft quyularında NKT və istismar kəmərinin texniki
+                  vəziyyətinin yüksək dəqiqlikli quyudaxili videoinspeksiya
+                  sistemləri ilə dəqiq diaqnostikası və erkən problem
+                  aşkarlanması.
+                </p>
+                <a href="service-camera-diagnostics.html" class="learn-more"
+                  ><span data-i18n="svc.card.link">Daha çoxu</span>
+                  <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <div class="service-card">
+                <div class="icon-wrap">
+                  <i class="bi bi-gear-wide-connected"></i>
+                </div>
+                <h3 data-i18n="svc.card3.h3">Ağıllı Nasos Stansiyaları</h3>
+                <p data-i18n-html="svc.card3.p">
+                  Ağıllı stansiya — süni intellekt və SCADA texnologiyaları
+                  əsasında ştanqlı dərinlik nasos qurğularının
+                  avtomatlaşdırılması, real vaxt rejimində monitorinqi və
+                  hasilat məhsuldarlığının artırılması üçün müasir idarəetmə
+                  sistemi.
+                </p>
+                <a href="service-smart-pump.html" class="learn-more"
+                  ><span data-i18n="svc.card.link">Daha çoxu</span>
+                  <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- hidden — not applicable to Global Oil & Gas Innovations, kept for future use
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
+              <div class="service-card">
+                <div class="icon-wrap"><i class="bi bi-hammer"></i></div>
+                <h3 data-i18n="svc.card4.h3">
+                  Daşların və Materialların Emalı
+                </h3>
+                <p data-i18n-html="svc.card4.p">
+                  Barit, mərmər və digər sənaye materiallarının yüksək həcmli
+                  üyüdülməsi və emalı üçün xüsusi həllər.
+                </p>
+                <a href="service-material-processing.html" class="learn-more"
+                  ><span data-i18n="svc.card.link">Daha çoxu</span>
+                  <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="service-card">
+                <div class="icon-wrap"><i class="bi bi-truck-flatbed"></i></div>
+                <h3 data-i18n="svc.card5.h3">Avadanlıq Təchizatı</h3>
+                <p data-i18n-html="svc.card5.p">
+                  Neft-servis və sənaye sektoru üçün beynəlxalq standartlara
+                  uyğun keyfiyyətli avadanlıq, ehtiyat hissələri və
+                  aksessuarlar.
+                </p>
+                <a href="service-equipment-supply.html" class="learn-more"
+                  ><span data-i18n="svc.card.link">Daha çoxu</span>
+                  <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+            -->
+
+            <div
+              class="col-lg-4 col-md-6 mx-auto"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <div class="service-card">
+                <div class="icon-wrap"><i class="bi bi-headset"></i></div>
+                <h3 data-i18n="svc.card6.h3">
+                  Texniki Dəstək &amp; Konsultasiya
+                </h3>
+                <p data-i18n-html="svc.card6.p">
+                  Quyuların diaqnostikası, avadanlıqların qorunması və hasilat
+                  proseslərinin optimallaşdırılması üzrə mühəndis səviyyəli
+                  texniki dəstək və konsultasiya.
+                </p>
+                <a href="service-technical-support.html" class="learn-more"
+                  ><span data-i18n="svc.card.link">Daha çoxu</span>
+                  <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ Process ═════════════════════════════════════════ -->
+      <section class="process-section" data-aos="fade-up">
+        <div class="container">
+          <div class="text-center mb-5">
+            <span class="sec-tag" data-i18n="svc.how.tag">Necə İşləyirik</span>
+            <h2 data-i18n="svc.how.title">İş Prosesimiz</h2>
+          </div>
+
+          <div class="row g-4 process-row">
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
+              <div class="process-step">
+                <div class="step-num">01</div>
+                <h5 data-i18n="svc.step1">Texniki Qiymətləndirmə</h5>
+                <p data-i18n-html="svc.step1.p">
+                  Müştərinin ehtiyaclarını və mövcud istehsalat problemini
+                  texniki baxımdan qiymətləndiririk.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="process-step">
+                <div class="step-num">02</div>
+                <h5 data-i18n="svc.step2">Texnoloji Həllin Seçimi</h5>
+                <p data-i18n-html="svc.step2.p">
+                  Problemin həlli üçün ən uyğun innovativ texnologiyanı müəyyən
+                  edirik.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <div class="process-step">
+                <div class="step-num">03</div>
+                <h5 data-i18n="svc.step3">Sahədə Tətbiq</h5>
+                <p data-i18n-html="svc.step3.p">
+                  Seçilmiş texnologiyanın sahə şəraitində tətbiqini həyata
+                  keçiririk.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="process-step">
+                <div class="step-num">04</div>
+                <h5 data-i18n="svc.step4">Nəticənin Təsdiqi</h5>
+                <p data-i18n-html="svc.step4.p">
+                  Effektivliyi real nəticələr və təsdiqlənmiş aktlarla təsdiq
+                  edirik.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ Highlight: Oil-service (hidden — kept for future use) ══
+      <section class="highlight-section" data-aos="fade-up">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="50">
+              <span class="sec-tag" data-i18n="svc.pkg.tag"
+                >Neft-Servis Paketi</span
+              >
+              <h2 data-i18n="svc.pkg.title">Tam Servis Dövrü</h2>
+              <p data-i18n-html="svc.pkg.desc">
+                Materialların tədarükündən həllərin obyektə tətbiqinə qədər tam
+                servis xidmətlərini bir çatı altında birləşdiririk.
+              </p>
+
+              <ul class="feature-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span data-i18n="svc.pkg.f1"
+                    >NKT korroziya qorunma sistemlərinin qurulması</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span data-i18n="svc.pkg.f2"
+                    >Kameralı quyu diaqnostikası və hesabat</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span data-i18n="svc.pkg.f3"
+                    >Avtomatik nasos sistemi quraşdırılması</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span data-i18n="svc.pkg.f4"
+                    >Sənaye material emalı (barit, mərmər)</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span data-i18n="svc.pkg.f5"
+                    >Ehtiyat hissələri və texniki dəstək</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span data-i18n="svc.pkg.f6"
+                    >ISO 9001:2015 sertifikatlı keyfiyyət prosesi</span
+                  >
+                </li>
+              </ul>
+
+              <a href="contact.html" class="btn-primary" data-i18n="svc.pkg.btn"
+                >Xidmət Tələb Edin</a
+              >
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+              <div class="highlight-image">
+                <img src="assets/img/ind2.jpg" alt="Neft-Servis Xidmətlər" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <!-- ══ CTA ════════════════════════════════════════════ -->
+      <!-- <section class="cta-section">
+        <div class="container" data-aos="fade-up">
+          <div class="cta-box">
+            <div class="cta-text">
+              <h3 data-i18n="svc.cta.title">Xidmətimizə Ehtiyacınız Var?</h3>
+              <p data-i18n-html="svc.cta.p">
+                Neft-servis, avadanlıqların qorunması və ya texniki
+                konsultasiya üçün komandamızla əlaqə saxlayın.
+              </p>
+            </div>
+            <div class="cta-buttons">
+              <a
+                href="contact.html"
+                class="btn-primary"
+                data-i18n="svc.cta.btn1"
+                >Əlaqə Saxlayın</a
+              >
+              <a
+                href="about.html"
+                class="btn-outline-dark"
+                data-i18n="svc.cta.btn2"
+                >Haqqımızda</a
+              >
+            </div>
+          </div>
+        </div>
+      </section> -->
+    </main>
+
+    <!-- ══ Footer ══════════════════════════════════════════ -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h4>GLOBAL OIL &amp; GAS INNOVATIONS</h4>
+          <p data-i18n-html="footer.about_desc">
+            Neft-qaz sənayesi üçün innovativ mühəndis həlləri və
+            patentləşdirilmiş texnologiyalar hazırlayan neft-servis şirkəti.
+          </p>
+          <div class="socials">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5 data-i18n="footer.quick_links">Tez Əlaqələr</h5>
+          <ul>
+            <li>
+              <a href="index.html" data-i18n="footer.home">Əsas Səhifə</a>
+            </li>
+            <li>
+              <a href="about.html" data-i18n="footer.about">Haqqımızda</a>
+            </li>
+            <li>
+              <a href="products.html" data-i18n="footer.products">Məhsullar</a>
+            </li>
+            <li>
+              <a href="services.html" data-i18n="footer.services">Xidmətlər</a>
+            </li>
+            <li>
+              <a href="contact.html" data-i18n="footer.contact_link">Əlaqə</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 data-i18n="footer.industries">Əsas Sənaye Sahələri</h5>
+          <ul>
+            <li data-i18n="footer.oil_gas">NKT və muftaların qorunması</li>
+            <li data-i18n="footer.petrochemicals">
+              Quyuların geofiziki tədqiqi (Karotaj)
+            </li>
+            <li data-i18n="footer.manufacturing">Ağıllı Nasos Stansiyaları</li>
+            <li data-i18n="footer.oil_extraction">
+              Texniki Dəstək və Konsultasiya
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 data-i18n="footer.contact_title">Əlaqə</h5>
+          <ul>
+            <li>
+              130000, Qazaxıstan Respublikası,<br />Mangistau vilayəti, Aktau
+              şəhəri
+            </li>
+            <li>Aktau, Qazaxıstan</li>
+            <li>+7 778 385 71 35</li>
+            <li>
+              <a href="mailto:office@globaloilgas.kz">office@globaloilgas.kz</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-copy">
+          <p>
+            © Copyright 2026 Global Oil & Gas Innovations. All Rights Reserved
+          </p>
+          <p class="credit">
+            Created by:
+            <a href="https://penne.media">
+              <img
+                src="assets/img/penne_transparent.png"
+                alt="Penne Media"
+                style="height: 40px; width: auto"
+              />
+              <strong style="color: #fff">Penne Media</strong>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top"></a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 700,
+        easing: "ease-in-out",
+        once: true,
+        mirror: false,
+      });
+
+      (function () {
+        const header = document.getElementById("header");
+        function onScroll() {
+          header.classList.toggle("scrolled", window.scrollY > 10);
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+      })();
+
+      (function () {
+        const btn = document.getElementById("scroll-top");
+        window.addEventListener("scroll", () => {
+          btn.classList.toggle("active", window.scrollY > 300);
+        });
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      })();
+
+      (function () {
+        const toggle = document.querySelector(".mobile-nav-toggle");
+        if (!toggle) return;
+        toggle.addEventListener("click", () => {
+          document.body.classList.toggle("mobile-nav-active");
+          toggle.classList.toggle("bi-list");
+          toggle.classList.toggle("bi-x");
+        });
+      })();
+    </script>
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/lang.js"></script>
+  </body>
+</html>

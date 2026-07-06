@@ -1,0 +1,1110 @@
+<!doctype html>
+<html lang="az">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Avadanlıq Təchizatı – Global Oil &amp; Gas Innovations</title>
+    <meta
+      name="description"
+      content="Neft-servis və sənaye sektoru üçün beynəlxalq standartlara uyğun avadanlıq, ehtiyat hissələri və aksessuarlar."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Raleway:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <style>
+      .hero-product {
+        position: relative;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        padding: 140px 0 90px;
+        overflow: hidden;
+      }
+      .hero-product .hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+      .hero-product::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 9, 16, 0.92) 0%,
+          rgba(13, 31, 45, 0.8) 100%
+        );
+        z-index: 1;
+      }
+      .hero-product .container {
+        position: relative;
+        z-index: 2;
+      }
+      .hero-product h1 {
+        font-family: var(--heading-font);
+        font-size: clamp(34px, 5vw, 58px);
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.12;
+        margin-bottom: 18px;
+      }
+      .hero-product h1 span {
+        color: var(--accent-color);
+      }
+      .hero-product p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 17px;
+        max-width: 620px;
+        line-height: 1.75;
+      }
+      .breadcrumb-bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--nav-font);
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 28px;
+      }
+      .breadcrumb-bar a {
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .breadcrumb-bar a:hover {
+        color: var(--accent-color);
+      }
+      .breadcrumb-bar .sep {
+        color: rgba(255, 255, 255, 0.3);
+      }
+      .breadcrumb-bar .current {
+        color: var(--accent-color);
+      }
+      .hero-btns {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-top: 32px;
+      }
+      .btn-primary {
+        background: var(--accent-color);
+        color: #000;
+        font-family: var(--nav-font);
+        font-size: 14px;
+        font-weight: 700;
+        padding: 13px 28px;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: 0.3s;
+        border: none;
+        display: inline-block;
+      }
+      .btn-primary:hover {
+        background: #ca8a04;
+        color: #000;
+        transform: translateY(-2px);
+      }
+      .btn-outline-light-c {
+        background: transparent;
+        color: #fff;
+        font-family: var(--nav-font);
+        font-size: 14px;
+        font-weight: 600;
+        padding: 12px 28px;
+        border-radius: 6px;
+        text-decoration: none;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        transition: 0.3s;
+        display: inline-block;
+      }
+      .btn-outline-light-c:hover {
+        border-color: #fff;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .sec-tag {
+        display: inline-block;
+        font-family: var(--nav-font);
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--accent-color);
+        margin-bottom: 12px;
+      }
+      .section-h2 {
+        font-family: var(--heading-font);
+        font-size: clamp(24px, 3vw, 36px);
+        font-weight: 800;
+        color: var(--heading-color);
+        margin-bottom: 16px;
+        line-height: 1.2;
+      }
+      .section-h2-white {
+        font-family: var(--heading-font);
+        font-size: clamp(24px, 3vw, 36px);
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 16px;
+        line-height: 1.2;
+      }
+      .section-p {
+        color: var(--default-color);
+        font-size: 15px;
+        line-height: 1.8;
+      }
+      .section-p-white {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 15px;
+        line-height: 1.8;
+      }
+      .categories-section {
+        padding: 80px 0;
+        background: #f1f4fa;
+      }
+      .cat-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 32px 26px;
+        height: 100%;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+        border: 1.5px solid transparent;
+        transition: 0.35s;
+        position: relative;
+        overflow: hidden;
+      }
+      .cat-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: var(--accent-color);
+        opacity: 0;
+        transition: 0.3s;
+      }
+      .cat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+        border-color: rgba(250, 204, 21, 0.25);
+      }
+      .cat-card:hover::before {
+        opacity: 1;
+      }
+      .cat-card .icon-wrap {
+        width: 52px;
+        height: 52px;
+        background: rgba(250, 204, 21, 0.1);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: var(--accent-color);
+        margin-bottom: 18px;
+        transition: 0.3s;
+      }
+      .cat-card:hover .icon-wrap {
+        background: var(--accent-color);
+        color: #000;
+      }
+      .cat-card h5 {
+        font-family: var(--heading-font);
+        font-size: 17px;
+        font-weight: 700;
+        color: var(--heading-color);
+        margin-bottom: 10px;
+      }
+      .cat-card p {
+        font-size: 14px;
+        color: var(--default-color);
+        line-height: 1.65;
+        margin-bottom: 14px;
+      }
+      .cat-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .cat-card ul li {
+        font-size: 13px;
+        color: #666;
+        padding: 4px 0;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+      }
+      .cat-card ul li:last-child {
+        border: none;
+      }
+      .cat-card ul li::before {
+        content: "";
+        width: 5px;
+        height: 5px;
+        background: var(--accent-color);
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      .solution-section {
+        padding: 80px 0;
+      }
+      .detect-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .detect-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(39, 61, 78, 0.07);
+        font-size: 14px;
+        color: var(--default-color);
+        line-height: 1.6;
+      }
+      .detect-list li:last-child {
+        border: none;
+      }
+      .detect-list li i {
+        color: var(--accent-color);
+        margin-top: 2px;
+        flex-shrink: 0;
+        font-size: 15px;
+      }
+      .solution-image {
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+      }
+      .solution-image img {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s;
+      }
+      .solution-image:hover img {
+        transform: scale(1.03);
+      }
+      .process-section {
+        padding: 80px 0;
+        background: var(--heading-color);
+      }
+      .process-item {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        padding: 22px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        margin-bottom: 14px;
+        transition: 0.3s;
+      }
+      .process-item:last-child {
+        margin-bottom: 0;
+      }
+      .process-item:hover {
+        background: rgba(255, 255, 255, 0.09);
+      }
+      .p-num {
+        width: 40px;
+        height: 40px;
+        background: rgba(250, 204, 21, 0.15);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--heading-font);
+        font-size: 16px;
+        font-weight: 800;
+        color: var(--accent-color);
+        flex-shrink: 0;
+      }
+      .process-item h6 {
+        font-family: var(--heading-font);
+        font-size: 15px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 3px;
+      }
+      .process-item p {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.6);
+        margin: 0;
+        line-height: 1.6;
+      }
+      .certs-section {
+        padding: 80px 0;
+        background: #f1f4fa;
+      }
+      .cert-item {
+        background: #fff;
+        border-radius: 12px;
+        padding: 24px 20px;
+        height: 100%;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+        border-left: 4px solid var(--accent-color);
+        transition: 0.3s;
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+      }
+      .cert-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+      }
+      .cert-item i {
+        font-size: 26px;
+        color: var(--accent-color);
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .cert-item h6 {
+        font-family: var(--heading-font);
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--heading-color);
+        margin-bottom: 4px;
+      }
+      .cert-item p {
+        font-size: 13px;
+        color: #888;
+        margin: 0;
+        line-height: 1.5;
+      }
+      .cta-section {
+        padding: 80px 0;
+        background: #fff;
+      }
+      .cta-box {
+        background: var(--heading-color);
+        border-radius: 16px;
+        padding: 56px 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-box::before {
+        content: "";
+        position: absolute;
+        right: -80px;
+        top: -80px;
+        width: 300px;
+        height: 300px;
+        background: rgba(250, 204, 21, 0.07);
+        border-radius: 50%;
+      }
+      .cta-box::after {
+        content: "";
+        position: absolute;
+        right: 60px;
+        bottom: -100px;
+        width: 200px;
+        height: 200px;
+        background: rgba(250, 204, 21, 0.05);
+        border-radius: 50%;
+      }
+      .cta-text h3 {
+        font-family: var(--heading-font);
+        font-size: 28px;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+      .cta-text p {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0;
+      }
+      .cta-buttons {
+        display: flex;
+        gap: 14px;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 2;
+      }
+      .btn-outline-dark {
+        background: transparent;
+        color: #fff;
+        font-family: var(--nav-font);
+        font-size: 14px;
+        font-weight: 600;
+        padding: 12px 28px;
+        border-radius: 6px;
+        text-decoration: none;
+        border: 2px solid rgba(255, 255, 255, 0.35);
+        transition: 0.3s;
+        display: inline-block;
+      }
+      .btn-outline-dark:hover {
+        border-color: #fff;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .footer {
+        background: #0d1a26;
+        color: rgba(255, 255, 255, 0.65);
+        padding: 60px 0 0;
+        font-size: 14px;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        gap: 40px;
+        padding-bottom: 48px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .footer-col h4,
+      .footer-col h5 {
+        color: #fff;
+        font-family: var(--heading-font);
+        margin-bottom: 16px;
+      }
+      .footer-col h5 {
+        font-size: 15px;
+      }
+      .footer-col p {
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+      .footer-col ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer-col ul li {
+        padding: 5px 0;
+        color: rgba(255, 255, 255, 0.55);
+      }
+      .footer-col ul li a {
+        color: rgba(255, 255, 255, 0.55);
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .footer-col ul li a:hover {
+        color: var(--accent-color);
+      }
+      .socials a {
+        color: #fff;
+        font-size: 18px;
+        margin-right: 14px;
+        transition: 0.3s;
+      }
+      .socials a:hover {
+        color: var(--accent-color);
+      }
+      .footer-bottom {
+        padding: 20px 0;
+      }
+      .footer-copy {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 13px;
+        color: #cbd5e1;
+      }
+      .footer-copy p {
+        margin: 0;
+      }
+      .credit a {
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      #scroll-top {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        width: 42px;
+        height: 42px;
+        background: var(--accent-color);
+        border-radius: 50%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        text-decoration: none;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+        transition: 0.3s;
+      }
+      #scroll-top.active {
+        display: flex;
+      }
+      #scroll-top::after {
+        content: "↑";
+        color: #000;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1;
+      }
+      #scroll-top:hover {
+        background: #ca8a04;
+        transform: translateY(-3px);
+      }
+      @media (max-width: 992px) {
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .cta-box {
+          flex-direction: column;
+          text-align: center;
+          padding: 40px 28px;
+        }
+        .cta-buttons {
+          justify-content: center;
+        }
+      }
+      @media (max-width: 768px) {
+        .hero-product {
+          padding: 110px 0 60px;
+          min-height: auto;
+        }
+        .solution-image img {
+          height: 280px;
+        }
+      }
+      @media (max-width: 575px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .cta-box {
+          padding: 32px 20px;
+        }
+        .cta-buttons {
+          flex-direction: column;
+          width: 100%;
+        }
+        .cta-buttons a {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header" class="header fixed-top">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-between"
+      >
+        <div class="d-flex align-items-center">
+          <div class="logo-box me-2">
+            <img
+              src="assets/img/global_white.png"
+              alt="Global Oil & Gas Innovations Logo"
+              style="height: 46px; width: auto"
+            />
+          </div>
+        </div>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Ana Səhifə</a></li>
+            <li><a href="about.html">Haqqımızda</a></li>
+            <li><a href="products.html">Məhsullar</a></li>
+            <li><a href="services.html" class="active">Xidmətlər</a></li>
+            <li><a href="contact.html">Əlaqə</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+        <div class="d-flex align-items-center">
+          <span class="me-4 phone d-none d-lg-inline"
+            ><i class="bi bi-telephone" style="padding-right: 5px"></i> +7 778 385 71 35</span
+          ><a class="btn btn-warning" href="contact.html"
+            >Qiymət Təklifi İstəyin</a
+          >
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero-product dark-background">
+        <img src="assets/img/background.png" class="hero-bg" alt="" />
+        <div class="container">
+          <div class="breadcrumb-bar">
+            <a href="index.html">Ana Səhifə</a><span class="sep">/</span
+            ><a href="services.html">Xidmətlər</a><span class="sep">/</span
+            ><span class="current">Avadanlıq Təchizatı</span>
+          </div>
+          <span class="badge bg-warning text-dark mb-4"
+            >AVADANLIQ TƏCHİZATI</span
+          >
+          <h1>
+            Beynəlxalq Standartlara<br />Uyğun <span>Sənaye Avadanlığı</span>
+          </h1>
+          <p>
+            Neft-servis, kimya, istehsalat sektoru üçün sertifikatlı avadanlıq,
+            ehtiyat hissələri və aksessuarlar. Qazaxıstan, Rusiya, Avropa, Çin
+            istehsalçılarından birbaşa təchizat.
+          </p>
+          <div class="hero-btns">
+            <a href="contact.html" class="btn-primary"
+              >Sorğu Göndərin <i class="bi bi-arrow-right ms-1"></i
+            ></a>
+            <a href="products.html" class="btn-outline-light-c"
+              >Məhsul Kataloqu</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="categories-section" data-aos="fade-up">
+        <div class="container">
+          <div class="text-center mb-5">
+            <span class="sec-tag">Avadanlıq Kateqoriyaları</span>
+            <h2 class="section-h2">Geniş Çeşidli Sənaye Avadanlığı</h2>
+            <p class="section-p mx-auto" style="max-width: 580px">
+              SOCAR və iri sənaye müəssisələrinə xidmət göstərən geniş avadanlıq
+              çeşidi — bir pəncərədən tam həll.
+            </p>
+          </div>
+          <div class="row g-4">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
+              <div class="cat-card">
+                <div class="icon-wrap"><i class="bi bi-gear-fill"></i></div>
+                <h5>Neft-Servis Avadanlığı</h5>
+                <p>
+                  ŞGN sistemləri, ehtiyat hissələri, nasoslar, kontroler
+                  stansiyaları və sahə avadanlığı.
+                </p>
+                <ul>
+                  <li>ŞGN Nasos sistemləri</li>
+                  <li>İdarəetmə stansiyaları</li>
+                  <li>NKT borular və muftalar</li>
+                  <li>Paker avadanlıqları</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="cat-card">
+                <div class="icon-wrap"><i class="bi bi-pipe"></i></div>
+                <h5>Boru və Armatur</h5>
+                <p>
+                  Yüksək təzyiq və temperatura davamlı boru sistemləri,
+                  klapanlar və fitinqlər.
+                </p>
+                <ul>
+                  <li>CS / SS / HDPE borular</li>
+                  <li>API 6D / API 608 klapanlar</li>
+                  <li>Flanş və fitinqlər</li>
+                  <li>ASME / EN standartlı</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <div class="cat-card">
+                <div class="icon-wrap"><i class="bi bi-fan"></i></div>
+                <h5>Nasos və Kompressorlar</h5>
+                <p>
+                  Sənaye, kimyəvi və abraziv mühit üçün müxtəlif tip nasos
+                  sistemləri.
+                </p>
+                <ul>
+                  <li>Mərkəzdənqaçma nasoslar</li>
+                  <li>Dişli və membran nasoslar</li>
+                  <li>ATEX sertifikatlı seçimlər</li>
+                  <li>Axın: 1–1000 m³/saat</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
+              <div class="cat-card">
+                <div class="icon-wrap"><i class="bi bi-tools"></i></div>
+                <h5>Ehtiyat Hissələri</h5>
+                <p>
+                  Kritik avadanlıq üçün orijinal və uyğun ehtiyat hissələri —
+                  sürətli çatdırılma ilə.
+                </p>
+                <ul>
+                  <li>Mexaniki seallar</li>
+                  <li>O-ring və qazlama</li>
+                  <li>Döşəmə örtükləri</li>
+                  <li>Yataq və birləşdiricilər</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="cat-card">
+                <div class="icon-wrap"><i class="bi bi-shield-lock"></i></div>
+                <h5>Mühafizə Vasitələri</h5>
+                <p>
+                  Kimyəvi, mexaniki və istilik risklərindən qoruyan CE ISO
+                  sertifikatlı PPE dəstləri.
+                </p>
+                <ul>
+                  <li>Kimyəvi müqavimətli əlcəklər</li>
+                  <li>Qoruyucu geyimlər</li>
+                  <li>Respiratorlar və üz qoruyucular</li>
+                  <li>Toplu və fərdi sifariş</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <div class="cat-card">
+                <div class="icon-wrap"><i class="bi bi-box-seam"></i></div>
+                <h5>Saxlama Sistemləri</h5>
+                <p>
+                  Kimyəvi maddələrin təhlükəsiz saxlanması üçün sertifikatlı
+                  konteyner çeşidi.
+                </p>
+                <ul>
+                  <li>HDPE / PP konteynerler</li>
+                  <li>UN sertifikatlı</li>
+                  <li>20L – 1000L (IBC)</li>
+                  <li>ADR nəqliyyat uyğun</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="solution-section" data-aos="fade-up">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="50">
+              <div class="solution-image">
+                <img
+                  src="assets/img/ind3.jpg"
+                  alt="Avadanlıq təchizat prosesi"
+                />
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+              <span class="sec-tag">Üstünlüyümüz</span>
+              <h2 class="section-h2">Qlobal Şəbəkə, Lokal Dəstək</h2>
+              <p class="section-p mb-4">
+                Qazaxıstan, Özbəkistan, Türkmənistan, Rusiya, Çin və Avropa
+                ölkələrindəki etibarlı istehsalçılardan birbaşa təchizat — yerli
+                dəstəklə.
+              </p>
+              <ul class="detect-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <strong>Birbaşa istehsalçı əlaqəsi:</strong> Vasitəçisiz
+                  qiymətlər, sürətli çatdırılma
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <strong>INCOTERMS uyğunluğu:</strong> DDP, FCA, CIF —
+                  istədiyiniz şərtdə çatdırılma
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <strong>Sertifikat dəstəyi:</strong> COA, MTR, Third-Party
+                  Inspection mövcuddur
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <strong>Stokda mövcud:</strong> Əsas məhsullar Bakıda stokda
+                  saxlanır
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <strong>Fərdi sifariş:</strong> Kataloqda olmayan avadanlıq
+                  üçün xüsusi axtarış
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <strong>Texniki dəstək:</strong> Seçim, quraşdırma və istismar
+                  məsləhəti
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="process-section" data-aos="fade-up">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-5">
+              <span class="sec-tag" style="color: var(--accent-color)"
+                >Proses</span
+              >
+              <h2 class="section-h2-white">Sifarişdən Çatdırılmaya</h2>
+              <p class="section-p-white">
+                Sorğunuzdan başlayaraq avadanlığın qapınıza çatdırılmasına qədər
+                hər addımda şəffaf kommunikasiya.
+              </p>
+            </div>
+            <div class="col-lg-7">
+              <div class="process-item">
+                <div class="p-num">01</div>
+                <div>
+                  <h6>Sorğu Qəbulu</h6>
+                  <p>
+                    Texniki spesifikasiya, miqdar, çatdırılma şərtlərini
+                    bildirin.
+                  </p>
+                </div>
+              </div>
+              <div class="process-item">
+                <div class="p-num">02</div>
+                <div>
+                  <h6>Mənbə Araşdırması</h6>
+                  <p>
+                    Qlobal şəbəkəmizdən ən uyğun istehsalçı müəyyənləşdirilir.
+                  </p>
+                </div>
+              </div>
+              <div class="process-item">
+                <div class="p-num">03</div>
+                <div>
+                  <h6>Qiymət Təklifi</h6>
+                  <p>
+                    Rəqabətli qiymət, çatdırılma müddəti və sertifikatlar ilə
+                    birlikdə.
+                  </p>
+                </div>
+              </div>
+              <div class="process-item">
+                <div class="p-num">04</div>
+                <div>
+                  <h6>Keyfiyyət Nəzarəti</h6>
+                  <p>
+                    Göndərişdən əvvəl sertifikat yoxlaması — COA, MTR,
+                    Third-Party Inspection.
+                  </p>
+                </div>
+              </div>
+              <div class="process-item">
+                <div class="p-num">05</div>
+                <div>
+                  <h6>Çatdırılma</h6>
+                  <p>
+                    INCOTERMS şərtlərinə uyğun, bütün sənədlər tam olaraq
+                    çatdırılır.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="certs-section" data-aos="fade-up">
+        <div class="container">
+          <div class="text-center mb-5">
+            <span class="sec-tag">Sertifikatlar</span>
+            <h2 class="section-h2">Beynəlxalq Standartlara Uyğunluq</h2>
+          </div>
+          <div class="row g-4">
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
+              <div class="cert-item">
+                <i class="bi bi-patch-check-fill"></i>
+                <div>
+                  <h6>ISO 9001:2015</h6>
+                  <p>Keyfiyyət idarəetmə sistemi sertifikatı</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="cert-item">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <div>
+                  <h6>API Standartları</h6>
+                  <p>API 6D, API 608, API 13A uyğunluq</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <div class="cert-item">
+                <i class="bi bi-globe2"></i>
+                <div>
+                  <h6>ASME / EN / GOST</h6>
+                  <p>Beynəlxalq boru və armatur standartları</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="cert-item">
+                <i class="bi bi-award-fill"></i>
+                <div>
+                  <h6>ATEX Sertifikatı</h6>
+                  <p>Partlayış təhlükəli mühit üçün avadanlıq</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container" data-aos="fade-up">
+          <div class="cta-box">
+            <div class="cta-text">
+              <h3>Avadanlıq Sorğusu Göndərin</h3>
+              <p>
+                Texniki tələblərinizi, miqdarı və çatdırılma şərtlərini bildirin
+                — ən sərfəli təklifi hazırlayacağıq.
+              </p>
+            </div>
+            <div class="cta-buttons">
+              <a href="contact.html" class="btn-primary">Sorğu Göndərin</a
+              ><a href="products.html" class="btn-outline-dark"
+                >Kataloqa Baxın</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h4>GLOBAL OIL &amp; GAS INNOVATIONS</h4>
+          <p>Neft-qaz sənayesi üçün innovativ neft-servis şirkəti.</p>
+          <div class="socials">
+            <a href="#"><i class="bi bi-linkedin"></i></a
+            ><a href="#"><i class="bi bi-facebook"></i></a
+            ><a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Tez Əlaqələr</h5>
+          <ul>
+            <li><a href="index.html">Əsas Səhifə</a></li>
+            <li><a href="about.html">Haqqımızda</a></li>
+            <li><a href="products.html">Məhsullar</a></li>
+            <li><a href="services.html">Xidmətlər</a></li>
+            <li><a href="contact.html">Əlaqə</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Sənaye Sahələri</h5>
+          <ul>
+            <li>NKT və muftaların qorunması</li>
+            <li>Quyuların geofiziki tədqiqi (Karotaj)</li>
+            <li>Ağıllı Nasos Stansiyaları</li>
+            <li>Texniki Dəstək və Konsultasiya</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Əlaqə</h5>
+          <ul>
+            <li>
+              130000, Qazaxıstan Respublikası,<br />Mangistau vilayəti, Aktau
+              şəhəri
+            </li>
+            <li>+7 778 385 71 35</li>
+            <li>
+              <a href="mailto:office@globaloilgas.kz"
+                >office@globaloilgas.kz</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-copy">
+          <p>© Copyright 2026 Global Oil & Gas Innovations. All Rights Reserved</p>
+          <p class="credit">
+            <a href="https://penne.media"
+              ><img
+                src="assets/img/penne_transparent.png"
+                alt="Penne Media"
+                style="height: 40px; width: auto"
+              /><strong style="color: #fff">Penne Media</strong></a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <a href="#" id="scroll-top"></a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 700, easing: "ease-in-out", once: true });
+      (function () {
+        const h = document.getElementById("header");
+        function s() {
+          h.classList.toggle("scrolled", window.scrollY > 10);
+        }
+        window.addEventListener("scroll", s, { passive: true });
+        s();
+      })();
+      (function () {
+        const b = document.getElementById("scroll-top");
+        window.addEventListener("scroll", () => {
+          b.classList.toggle("active", window.scrollY > 300);
+        });
+        b.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      })();
+      (function () {
+        const t = document.querySelector(".mobile-nav-toggle");
+        if (!t) return;
+        t.addEventListener("click", () => {
+          document.body.classList.toggle("mobile-nav-active");
+          t.classList.toggle("bi-list");
+          t.classList.toggle("bi-x");
+        });
+      })();
+    </script>
+  </body>
+</html>

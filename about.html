@@ -1,0 +1,1355 @@
+<!doctype html>
+<html lang="az">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Haqqımızda – Global Oil &amp; Gas Innovations</title>
+    <meta
+      name="description"
+      content="Global Oil & Gas Innovations haqqında – missiya, görüş, dəyərlər və neft-servis texnologiyaları."
+    />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900&family=Raleway:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap + Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Main CSS -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <style>
+      /* =====================================================
+         ABOUT PAGE – STYLES (mirrors products.html tokens)
+      ===================================================== */
+
+      /* ── Hero ─────────────────────────────────────────── */
+      .hero-about {
+        position: relative;
+        min-height: 55vh;
+        display: flex;
+        align-items: center;
+        padding: 140px 0 80px;
+        overflow: hidden;
+      }
+
+      .hero-about .hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+
+      .hero-about::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 9, 16, 0.9) 0%,
+          rgba(13, 31, 45, 0.78) 100%
+        );
+        z-index: 1;
+      }
+
+      .hero-about .container {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-about h1 {
+        font-family: var(--heading-font);
+        font-size: clamp(36px, 5vw, 58px);
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.15;
+        margin-bottom: 18px;
+      }
+
+      .hero-about h1 span {
+        color: var(--accent-color);
+      }
+
+      .hero-about p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 17px;
+        max-width: 620px;
+        line-height: 1.7;
+      }
+
+      /* breadcrumb */
+      .breadcrumb-bar {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--nav-font);
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 28px;
+      }
+
+      .breadcrumb-bar a {
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .breadcrumb-bar a:hover {
+        color: var(--accent-color);
+      }
+      .breadcrumb-bar .sep {
+        color: rgba(255, 255, 255, 0.3);
+      }
+      .breadcrumb-bar .current {
+        color: var(--accent-color);
+      }
+
+      /* ── About content sections ───────────────────────── */
+      .about-section {
+        padding: 80px 0;
+      }
+
+      .about-section.alt-bg {
+        background: #f1f4fa;
+      }
+
+      .section-label {
+        display: inline-block;
+        font-family: var(--nav-font);
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--accent-color);
+        margin-bottom: 14px;
+      }
+
+      .about-section h2 {
+        font-family: var(--heading-font);
+        font-size: clamp(24px, 3vw, 34px);
+        font-weight: 800;
+        color: var(--heading-color);
+        margin-bottom: 20px;
+      }
+
+      .about-section p {
+        color: var(--default-color);
+        font-size: 15px;
+        line-height: 1.85;
+        margin-bottom: 16px;
+      }
+
+      .about-image {
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.13);
+        position: relative;
+      }
+
+      .about-image::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 3px solid var(--accent-color);
+        border-radius: 14px;
+        z-index: 1;
+        opacity: 0;
+        transition: 0.4s;
+      }
+
+      .about-image:hover::before {
+        opacity: 1;
+      }
+
+      .about-image img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+
+      .about-image:hover img {
+        transform: scale(1.03);
+      }
+
+      /* accent bar left */
+      .about-text-block {
+        position: relative;
+        padding-left: 24px;
+        border-left: 4px solid var(--accent-color);
+        margin: 24px 0;
+      }
+
+      /* stat chips */
+      .stat-chips {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 32px;
+      }
+
+      .stat-chip {
+        background: #fff;
+        border-radius: 10px;
+        padding: 18px 24px;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+        border-top: 3px solid var(--accent-color);
+        text-align: center;
+        min-width: 110px;
+      }
+
+      .stat-chip .num {
+        font-family: var(--heading-font);
+        font-size: 26px;
+        font-weight: 800;
+        color: var(--heading-color);
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+
+      .stat-chip .lbl {
+        font-family: var(--nav-font);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #888;
+      }
+
+      /* ── Mission / Values section ─────────────────────── */
+      .mission-section {
+        padding: 80px 0;
+        background: var(--heading-color);
+      }
+
+      .mission-section .sec-tag {
+        font-family: var(--nav-font);
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--accent-color);
+        display: block;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .mission-section h2 {
+        font-family: var(--heading-font);
+        font-size: 34px;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 48px;
+        text-align: center;
+      }
+
+      .mission-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 14px;
+        padding: 36px 28px;
+        height: 100%;
+        text-align: center;
+        transition: 0.35s;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .mission-card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--accent-color);
+        transform: scaleX(0);
+        transition: 0.35s;
+        transform-origin: left;
+      }
+
+      .mission-card:hover {
+        background: rgba(255, 255, 255, 0.09);
+        transform: translateY(-6px);
+      }
+
+      .mission-card:hover::after {
+        transform: scaleX(1);
+      }
+
+      .mission-card .icon-wrap {
+        width: 64px;
+        height: 64px;
+        background: rgba(250, 204, 21, 0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 26px;
+        color: var(--accent-color);
+        transition: 0.35s;
+      }
+
+      .mission-card:hover .icon-wrap {
+        background: var(--accent-color);
+        color: #000;
+      }
+
+      .mission-card h4 {
+        font-family: var(--heading-font);
+        font-size: 19px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 14px;
+      }
+
+      .mission-card p {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 14px;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      /* ── Certifications strip ─────────────────────────── */
+      .cert-section {
+        padding: 60px 0;
+        background: #f1f4fa;
+      }
+
+      .cert-section .cert-label {
+        font-family: var(--nav-font);
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--accent-color);
+        display: block;
+        margin-bottom: 8px;
+        text-align: center;
+      }
+
+      .cert-section h3 {
+        font-family: var(--heading-font);
+        font-size: 26px;
+        font-weight: 800;
+        color: var(--heading-color);
+        margin-bottom: 36px;
+        text-align: center;
+      }
+
+      .cert-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px 24px;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+        border-left: 4px solid var(--accent-color);
+        height: 100%;
+        transition: 0.3s;
+      }
+
+      .cert-item:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .cert-item i {
+        font-size: 28px;
+        color: var(--accent-color);
+        flex-shrink: 0;
+      }
+
+      .cert-item h5 {
+        font-family: var(--heading-font);
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--heading-color);
+        margin: 0 0 4px;
+      }
+
+      .cert-item p {
+        font-size: 13px;
+        color: #888;
+        margin: 0;
+      }
+
+      /* ── CTA Section ──────────────────────────────────── */
+      .cta-section {
+        padding: 80px 0;
+        background: #fff;
+      }
+
+      .cta-box {
+        background: var(--heading-color);
+        border-radius: 16px;
+        padding: 56px 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-box::before {
+        content: "";
+        position: absolute;
+        right: -80px;
+        top: -80px;
+        width: 300px;
+        height: 300px;
+        background: rgba(250, 204, 21, 0.07);
+        border-radius: 50%;
+      }
+
+      .cta-box::after {
+        content: "";
+        position: absolute;
+        right: 60px;
+        bottom: -100px;
+        width: 200px;
+        height: 200px;
+        background: rgba(250, 204, 21, 0.05);
+        border-radius: 50%;
+      }
+
+      .cta-text h3 {
+        font-family: var(--heading-font);
+        font-size: 28px;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+
+      .cta-text p {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 14px;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 2;
+      }
+
+      .btn-primary {
+        background: var(--accent-color);
+        color: #000;
+        font-family: var(--nav-font);
+        font-size: 14px;
+        font-weight: 700;
+        padding: 13px 28px;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: 0.3s;
+        border: none;
+        display: inline-block;
+      }
+
+      .btn-primary:hover {
+        background: #ca8a04;
+        color: #000;
+        transform: translateY(-2px);
+      }
+
+      .btn-outline-dark {
+        background: transparent;
+        color: #fff;
+        font-family: var(--nav-font);
+        font-size: 14px;
+        font-weight: 600;
+        padding: 12px 28px;
+        border-radius: 6px;
+        text-decoration: none;
+        border: 2px solid rgba(255, 255, 255, 0.35);
+        transition: 0.3s;
+        display: inline-block;
+      }
+
+      .btn-outline-dark:hover {
+        border-color: #fff;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      /* ── Footer ───────────────────────────────────────── */
+      .footer {
+        background: #0d1a26;
+        color: rgba(255, 255, 255, 0.65);
+        padding: 60px 0 0;
+        font-size: 14px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        gap: 40px;
+        padding-bottom: 48px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .footer-col h4 {
+        color: #fff;
+        font-family: var(--heading-font);
+        margin-bottom: 16px;
+      }
+      .footer-col h5 {
+        color: #fff;
+        font-size: 15px;
+        font-family: var(--heading-font);
+        margin-bottom: 16px;
+      }
+      .footer-col p {
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+
+      .footer-col ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-col ul li {
+        padding: 5px 0;
+        color: rgba(255, 255, 255, 0.55);
+        transition: 0.3s;
+      }
+
+      .footer-col ul li a {
+        color: rgba(255, 255, 255, 0.55);
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .footer-col ul li a:hover,
+      .footer-col ul li:hover {
+        color: var(--accent-color);
+      }
+
+      .socials a {
+        color: #fff;
+        font-size: 18px;
+        margin-right: 14px;
+        transition: 0.3s;
+      }
+      .socials a:hover {
+        color: var(--accent-color);
+      }
+
+      .footer-bottom {
+        padding: 20px 0;
+      }
+
+      .footer-copy {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 13px;
+        color: #cbd5e1;
+      }
+
+      .footer-copy p {
+        margin: 0;
+      }
+      .credit {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .credit a {
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      /* scroll top */
+      #scroll-top {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        width: 42px;
+        height: 42px;
+        background: var(--accent-color);
+        border-radius: 50%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        text-decoration: none;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+        transition: 0.3s;
+      }
+
+      #scroll-top.active {
+        display: flex;
+      }
+      #scroll-top::after {
+        content: "↑";
+        color: #000;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1;
+      }
+      #scroll-top:hover {
+        background: #ca8a04;
+        transform: translateY(-3px);
+      }
+
+      /* ── Responsive ───────────────────────────────────── */
+      @media (max-width: 992px) {
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .cta-box {
+          flex-direction: column;
+          text-align: center;
+          padding: 40px 28px;
+        }
+        .cta-buttons {
+          justify-content: center;
+        }
+        .stat-chips {
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-about {
+          padding: 110px 0 60px;
+          min-height: auto;
+        }
+        .about-image img {
+          height: 280px;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .cta-box {
+          padding: 32px 20px;
+        }
+        .cta-text h3 {
+          font-size: 22px;
+        }
+        .cta-buttons {
+          flex-direction: column;
+          width: 100%;
+        }
+        .cta-buttons a {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="about-page">
+    <!-- ══ Header ══════════════════════════════════════════ -->
+    <header id="header" class="header fixed-top">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-between"
+      >
+        <div class="d-flex align-items-center">
+          <div class="logo-box me-2">
+            <img
+              src="assets/img/global_white.png"
+              alt="Global Oil & Gas Innovations Logo"
+              style="height: 46px; width: auto"
+            />
+          </div>
+        </div>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Ana Səhifə</a></li>
+            <li>
+              <a href="about.html" class="active" data-i18n="nav.about"
+                >Haqqımızda</a
+              >
+            </li>
+            <!-- <li><a href="products.html" data-i18n="nav.products">Məhsullar</a></li> -->
+            <li>
+              <a href="services.html" data-i18n="nav.services">Xidmətlər</a>
+            </li>
+            <li><a href="contact.html" data-i18n="nav.contact">Əlaqə</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <div class="d-flex align-items-center">
+          <div class="lang-switcher d-none d-lg-flex me-3">
+            <button class="lang-selected" type="button">
+              <span class="fi fi-az lang-flag"></span>
+              <span class="lang-name">AZ</span>
+              <i class="bi bi-chevron-down lang-chevron"></i>
+            </button>
+            <div class="lang-dropdown">
+              <button class="lang-option" data-lang="az" type="button">
+                <span class="fi fi-az lang-flag"></span>
+                <span>Azərbaycan</span>
+              </button>
+              <button class="lang-option" data-lang="en" type="button">
+                <span class="fi fi-gb lang-flag"></span>
+                <span>English</span>
+              </button>
+              <button class="lang-option" data-lang="ru" type="button">
+                <span class="fi fi-ru lang-flag"></span>
+                <span>Русский</span>
+              </button>
+            </div>
+          </div>
+          <span class="me-4 phone d-none d-lg-inline">
+            <i class="bi bi-telephone" style="padding-right: 5px"></i> +7 778
+            385 71 35
+          </span>
+          <a class="btn btn-warning" href="contact.html" data-i18n="nav.cta"
+            >Qiymət Təklifi İstəyin</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- ══ Hero ════════════════════════════════════════════ -->
+      <section class="hero-about section dark-background">
+        <img src="assets/img/background.png" class="hero-bg" alt="" />
+
+        <div class="container">
+          <div class="breadcrumb-bar">
+            <a href="index.html" data-i18n="bc.home">Ana Səhifə</a>
+            <span class="sep">/</span>
+            <span class="current" data-i18n="about.bc.current">Haqqımızda</span>
+          </div>
+
+          <span
+            class="badge bg-warning text-dark mb-4"
+            data-i18n="about.hero.badge"
+            >HAQQIMIZDA</span
+          >
+
+          <h1 data-i18n-html="about.hero.title">
+            Neft-Qaz Sənayesində <span>Etibarlı Tərəfdaş</span>
+          </h1>
+
+          <p data-i18n-html="about.hero.desc">
+            Neft-qaz sənayesi üçün innovativ mühəndis həlləri və
+            patentləşdirilmiş texnologiyalar hazırlayan neft-servis şirkətiyik.
+          </p>
+        </div>
+      </section>
+
+      <!-- ══ Company Overview ════════════════════════════════ -->
+      <section class="about-section" data-aos="fade-up">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="50">
+              <div class="about-image">
+                <img
+                  src="assets/img/ind1.jpg"
+                  alt="Global Oil &amp; Gas Innovations şirkəti"
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+              <span class="section-label" data-i18n="about.who.label"
+                >Biz Kimik?</span
+              >
+              <h2 data-i18n="about.who.h2">
+                Global Oil &amp; Gas Innovations Haqqında
+              </h2>
+
+              <div class="about-text-block">
+                <p data-i18n-html="about.who.p1">
+                  Global Oil & Gas Innovations neft-qaz sənayesi üçün innovativ
+                  mühəndis həlləri və patentləşdirilmiş texnologiyalar
+                  hazırlayan neft-servis şirkətidir. Şirkətin fəaliyyət
+                  fəlsəfəsi real istehsalat problemlərinin texnoloji yanaşma ilə
+                  həllinə, quyuların daha effektiv istismarına və neft hasilatı
+                  proseslərinin optimallaşdırılmasına əsaslanır.
+                </p>
+              </div>
+
+              <p data-i18n-html="about.who.p2">
+                Fəaliyyətimizin əsası Azərbaycanda qoyulmuşdur. Burada
+                formalaşan mühəndislik təcrübəsi, praktiki neft-servis bilikləri
+                və tətbiq olunmuş texnoloji həllər Qazaxıstan bazarında
+                lokallaşdırılaraq Global Oil & Gas Innovations brendi altında
+                inkişaf etdirilmişdir.
+              </p>
+
+              <p data-i18n-html="about.who.p3">
+                Şirkətimiz quyuların texniki vəziyyətinin daha dəqiq
+                qiymətləndirilməsi, istismar zamanı yaranan problemlərin
+                vaxtında aşkarlanması və avadanlıqların istismar müddətinin
+                uzadılması üçün müasir texnologiyalar tətbiq edir. Bu həllər
+                müştərilərimizə əməliyyat xərclərini azaltmağa və hasilat
+                prosesində daha dayanıqlı nəticələr əldə etməyə kömək edir.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Logistics (hidden — not applicable to Global Oil & Gas Innovations, kept for future use)
+      <section class="about-section alt-bg" data-aos="fade-up">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div
+              class="col-lg-6 order-lg-2"
+              data-aos="fade-left"
+              data-aos-delay="50"
+            >
+              <div
+                id="logisticsCarousel"
+                class="carousel slide about-image"
+                data-bs-ride="carousel"
+                data-bs-interval="3000"
+                style="
+                  border-radius: 14px;
+                  overflow: hidden;
+                  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.13);
+                  position: relative;
+                "
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="assets/img/ship.jpg"
+                      alt="Logistika 1"
+                      style="
+                        width: 100%;
+                        height: 400px;
+                        object-fit: cover;
+                        display: block;
+                      "
+                    />
+                  </div>
+                  <div class="carousel-item active">
+                    <img
+                      src="assets/img/plane.png"
+                      alt="Logistika 1"
+                      style="
+                        width: 100%;
+                        height: 400px;
+                        object-fit: cover;
+                        display: block;
+                      "
+                    />
+                  </div>
+
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/train.jpg"
+                      alt="Logistika 2"
+                      style="
+                        width: 100%;
+                        height: 400px;
+                        object-fit: cover;
+                        display: block;
+                      "
+                    />
+                  </div>
+
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/trucks.png"
+                      alt="Logistika 3"
+                      style="
+                        width: 100%;
+                        height: 400px;
+                        object-fit: cover;
+                        display: block;
+                      "
+                    />
+                  </div>
+                </div>
+
+                <!-- Left Arrow -->
+      <!-- <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#logisticsCarousel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    style="
+                      background-color: rgba(0, 0, 0, 0.45);
+                      border-radius: 50%;
+                      padding: 18px;
+                    "
+                  ></span>
+                </button>
+
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#logisticsCarousel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    style="
+                      background-color: rgba(0, 0, 0, 0.45);
+                      border-radius: 50%;
+                      padding: 18px;
+                    "
+                  ></span>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-6 order-lg-1"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
+              <span class="section-label" data-i18n="about.log.label"
+                >Etibarlı Təchizat və Xarici Əməkdaşlıq</span
+              >
+              <h2 data-i18n="about.log.h2">Logistika və Qlobal Tərəfdaşlar</h2>
+
+              <p data-i18n-html="about.log.p1">
+                Məhsullarımız Qazaxıstan, Özbəkistan, Türkmənistan, Rusiya, Çin
+                və Avropa ölkələrindəki etibarlı istehsalçılardan birbaşa
+                tədarük olunur. Bu isə məhsulların sifarişçi tələblərinə, sahə
+                standartlarına və bəyan edilmiş texniki göstəricilərə tam
+                uyğunluğunu təmin edir.
+              </p>
+
+              <div class="about-text-block">
+                <p data-i18n-html="about.log.block">
+                  Optimal çatdırılma müddətlərinə nail olmaq üçün logistika
+                  tərəfdaşlarımızla birlikdə bütün nəqliyyat növlərindən —
+                  dəniz, avtomobil, dəmir yolu və hava daşımalarından — istifadə
+                  edirik.
+                </p>
+              </div>
+
+              <div class="row g-3 mt-2">
+                <div class="col-6">
+                  <div class="cert-item">
+                    <i class="bi bi-water"></i>
+                    <div>
+                      <h5 data-i18n="about.log.sea">Dəniz</h5>
+                      <p data-i18n="about.log.sea.d">FCL / LCL çatdırılma</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="cert-item">
+                    <i class="bi bi-truck"></i>
+                    <div>
+                      <h5 data-i18n="about.log.road">Avtomobil</h5>
+                      <p data-i18n="about.log.road.d">DDP / FCA şərtlər</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="cert-item">
+                    <i class="bi bi-train-front"></i>
+                    <div>
+                      <h5 data-i18n="about.log.rail">Dəmir yolu</h5>
+                      <p data-i18n="about.log.rail.d">Uzaq məsafə yükü</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="cert-item">
+                    <i class="bi bi-airplane"></i>
+                    <div>
+                      <h5 data-i18n="about.log.air">Hava</h5>
+                      <p data-i18n="about.log.air.d">Təcili sifariş</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- </section> -->
+
+      <!-- ══ Oil & Industrial ═════════════════════════════════ -->
+      <section class="about-section" data-aos="fade-up">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="50">
+              <div class="about-image">
+                <img
+                  src="assets/img/neftcixaran.jpeg"
+                  alt="Neft-Servis və Sənaye"
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+              <span class="section-label" data-i18n="about.oilsvc.label"
+                >Sənaye Həlləri</span
+              >
+              <h2 data-i18n="about.oilsvc.h2">Neft-Servis</h2>
+
+              <p data-i18n-html="about.oilsvc.p1">
+                Şirkət neft-servis texnologiyaları istiqamətini aktiv şəkildə
+                inkişaf etdirir və quyuların istismarında etibarlılığın,
+                səmərəliliyin və texniki dayanıqlığın artırılması üçün müasir
+                həllər təqdim edir. Fəaliyyətimizin əsas istiqamətlərindən biri
+                nasos-kompressor borularının korroziyadan, parafin
+                çöküntülərindən və vaxtından əvvəl aşınmadan qorunmasıdır. Bu
+                məqsədlə NKT-nin daxili səthinə xüsusi qoruyucu örtüklərin
+                tətbiqi üzrə texnoloji həllər təklif edirik.
+              </p>
+
+              <div class="about-text-block">
+                <p data-i18n-html="about.oilsvc.block">
+                  Şirkət həmçinin dərinlik video-kameraları vasitəsilə quyuların
+                  diaqnostikasını həyata keçirir. Bu texnologiya quyu lüləsinin,
+                  NKT-nin və quyudaxili avadanlıqların faktiki texniki vəziyyəti
+                  haqqında vizual məlumat əldə etməyə imkan verir. Nəticədə
+                  nasazlıqlar, texniki qüsurlar, istismar çətinlikləri və
+                  məhsuldarlığın azalmasına səbəb olan amillər vaxtında müəyyən
+                  edilir. Bundan əlavə, şirkət ştanqlı dərinlik nasosları üçün
+                  müasir avtomatlaşdırma və idarəetmə sistemlərinin tətbiqini
+                  həyata keçirir. Ağıllı idarəetmə stansiyaları SCADA sistemi,
+                  uzaqdan monitorinq, məlumatların analizi və süni intellekt
+                  əsaslı alqoritmlər vasitəsilə nasos avadanlığının iş rejimini
+                  daha effektiv idarə etməyə imkan verir. Bu yanaşma avadanlığın
+                  yüklənməsinə nəzarət etməyə, nasazlıqların qarşısını
+                  əvvəlcədən almağa, enerji sərfiyyatını optimallaşdırmağa və
+                  hasilat prosesinin dayanıqlığını artırmağa xidmət edir.
+                </p>
+              </div>
+
+              <p data-i18n-html="about.oilsvc.p2">
+                Məqsədimiz sadəcə ayrı-ayrı məhsullar təqdim etmək deyil,
+                müştərilərimiz üçün kompleks və praktiki həllər
+                formalaşdırmaqdır. Təklif etdiyimiz texnologiyalar quyuların
+                dayanma müddətinin azaldılmasına, təmirarası dövrün
+                uzadılmasına, avadanlığın daha səmərəli istismarına və ümumi
+                hasilat göstəricilərinin yaxşılaşdırılmasına yönəlib.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ Mission / Values ════════════════════════════════ -->
+      <section class="mission-section" data-aos="fade-up">
+        <div class="container">
+          <span class="sec-tag" data-i18n="about.mv.tag">Dəyərlərimiz</span>
+          <h2 data-i18n="about.mv.title">Missiyamız və Dəyərlərimiz</h2>
+
+          <div class="row g-4">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="50">
+              <div class="mission-card">
+                <div class="icon-wrap"><i class="bi bi-bullseye"></i></div>
+                <h4 data-i18n="about.mv.c1.h4">Missiya</h4>
+                <p data-i18n-html="about.mv.c1.p">
+                  Neft hasilatının artırılması, quyuların texniki vəziyyətinin
+                  dəqiq tədqiqi və neft-qaz müəssisələri üçün innovativ servis
+                  texnologiyalarının tətbiqi.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="mission-card">
+                <div class="icon-wrap"><i class="bi bi-eye"></i></div>
+                <h4 data-i18n="about.mv.c2.h4">Görüş</h4>
+                <p data-i18n-html="about.mv.c2.p">
+                  Qazaxıstan və regionun neft-qaz sektorunda patentli
+                  texnologiyalar, quyuların diaqnostikası və hasilat
+                  proseslərinin avtomatlaşdırılması üzrə etibarlı texnoloji
+                  tərəfdaş olmaq.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+              <div class="mission-card">
+                <div class="icon-wrap"><i class="bi bi-shield-check"></i></div>
+                <h4 data-i18n="about.mv.c3.h4">Dəyərlər</h4>
+                <p data-i18n-html="about.mv.c3.p">
+                  Mühəndis dəqiqliyi, texnoloji etibarlılıq, təhlükəsizlik,
+                  nəticəyə yönəlmiş yanaşma və müştərinin istehsalat
+                  səmərəliliyinə real töhfə vermək.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ Certifications ══════════════════════════════════ -->
+      <section class="cert-section" data-aos="fade-up">
+        <div class="container">
+          <span class="cert-label" data-i18n="about.cert.label"
+            >Sertifikatlar</span
+          >
+          <h3 data-i18n="about.cert.h3">Keyfiyyət və Uyğunluq</h3>
+
+          <div class="row g-4">
+            <div
+              class="col-lg-6 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
+              <div class="cert-item">
+                <i class="bi bi-patch-check-fill"></i>
+                <div>
+                  <h5 data-i18n="about.cert1.h5">ISO 9001:2015</h5>
+                  <p data-i18n="about.cert1.p">Keyfiyyət İdarəetmə Sistemi</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- hidden — not applicable to Global Oil & Gas Innovations, kept for future use
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="cert-item">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <div>
+                  <h5 data-i18n="about.cert2.h5">Prekursor Lisenziyası</h5>
+                  <p data-i18n="about.cert2.p">İdxal icazəsi və nəzarəti</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <div class="cert-item">
+                <i class="bi bi-globe2"></i>
+                <div>
+                  <h5 data-i18n="about.cert3.h5">INCOTERMS Uyğunluğu</h5>
+                  <p data-i18n="about.cert3.p">DDP, FCA, CIF şərtlər</p>
+                </div>
+              </div>
+            </div>
+            -->
+
+            <div
+              class="col-lg-6 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="cert-item">
+                <i class="bi bi-award-fill"></i>
+                <div>
+                  <h5 data-i18n="about.cert4.h5">API Standartları</h5>
+                  <p data-i18n="about.cert4.p">Neft-qaz sektoru uyğunluğu</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ CTA ════════════════════════════════════════════ -->
+      <section class="cta-section">
+        <div class="container" data-aos="fade-up">
+          <div class="cta-box">
+            <div class="cta-text">
+              <h3 data-i18n="about.cta.title">
+                Bizimlə Tərəfdaş Olmağa Hazırsınız?
+              </h3>
+              <p data-i18n-html="about.cta.p">
+                Neft-qaz sektorunda daha səmərəli və etibarlı istehsalat
+                prosesləri üçün innovativ texnologiyalarımızla tanış olun.
+              </p>
+            </div>
+            <div class="cta-buttons">
+              <a
+                href="contact.html"
+                class="btn-primary"
+                data-i18n="about.cta.btn1"
+                >Əlaqə Saxlayın</a
+              >
+              <a
+                href="services.html"
+                class="btn-outline-dark"
+                data-i18n="about.cta.btn2"
+                >Xidmətlərimiz</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ══ Footer ══════════════════════════════════════════ -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h4>GLOBAL OIL &amp; GAS INNOVATIONS</h4>
+          <p data-i18n-html="footer.about_desc">
+            Neft-qaz sənayesi üçün innovativ mühəndis həlləri və
+            patentləşdirilmiş texnologiyalar hazırlayan neft-servis şirkəti.
+          </p>
+          <div class="socials">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5 data-i18n="footer.quick_links">Tez Əlaqələr</h5>
+          <ul>
+            <li>
+              <a href="index.html" data-i18n="footer.home">Əsas Səhifə</a>
+            </li>
+            <li>
+              <a href="about.html" data-i18n="footer.about">Haqqımızda</a>
+            </li>
+            <li>
+              <a href="products.html" data-i18n="footer.products">Məhsullar</a>
+            </li>
+            <li>
+              <a href="services.html" data-i18n="footer.services">Xidmətlər</a>
+            </li>
+            <li>
+              <a href="contact.html" data-i18n="footer.contact_link">Əlaqə</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 data-i18n="footer.industries">Əsas Sənaye Sahələri</h5>
+          <ul>
+            <li data-i18n="footer.oil_gas">NKT və muftaların qorunması</li>
+            <li data-i18n="footer.petrochemicals">
+              Quyuların geofiziki tədqiqi (Karotaj)
+            </li>
+            <li data-i18n="footer.manufacturing">Ağıllı Nasos Stansiyaları</li>
+            <li data-i18n="footer.oil_extraction">
+              Texniki Dəstək və Konsultasiya
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 data-i18n="footer.contact_title">Əlaqə</h5>
+          <ul>
+            <li>
+              130000, Qazaxıstan Respublikası,<br />Mangistau vilayəti, Aktau
+              şəhəri
+            </li>
+            <li>Aktau, Qazaxıstan</li>
+            <li>+7 778 385 71 35</li>
+            <li>
+              <a href="mailto:office@globaloilgas.kz">office@globaloilgas.kz</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-copy">
+          <p>
+            © Copyright 2026 Global Oil & Gas Innovations. All Rights Reserved
+          </p>
+          <p class="credit">
+            Created by:
+            <a href="https://penne.media">
+              <img
+                src="assets/img/penne_transparent.png"
+                alt="Penne Media"
+                style="height: 40px; width: auto"
+              />
+              <strong style="color: #fff">Penne Media</strong>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top"></a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 700,
+        easing: "ease-in-out",
+        once: true,
+        mirror: false,
+      });
+
+      (function () {
+        const header = document.getElementById("header");
+        function onScroll() {
+          header.classList.toggle("scrolled", window.scrollY > 10);
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+      })();
+
+      (function () {
+        const btn = document.getElementById("scroll-top");
+        window.addEventListener("scroll", () => {
+          btn.classList.toggle("active", window.scrollY > 300);
+        });
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      })();
+
+      (function () {
+        const toggle = document.querySelector(".mobile-nav-toggle");
+        if (!toggle) return;
+        toggle.addEventListener("click", () => {
+          document.body.classList.toggle("mobile-nav-active");
+          toggle.classList.toggle("bi-list");
+          toggle.classList.toggle("bi-x");
+        });
+      })();
+    </script>
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/lang.js"></script>
+  </body>
+</html>

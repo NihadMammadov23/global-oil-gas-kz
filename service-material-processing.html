@@ -1,0 +1,1137 @@
+<!doctype html>
+<html lang="az">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Daşların və Materialların Emalı – Global Oil &amp; Gas Innovations</title>
+    <meta
+      name="description"
+      content="Barit, mərmər və digər sənaye materiallarının yüksək həcmli üyüdülməsi və emalı üçün xüsusi həllər."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Raleway:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <style>
+      .hero-product {
+        position: relative;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        padding: 140px 0 90px;
+        overflow: hidden;
+      }
+      .hero-product .hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+      .hero-product::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 9, 16, 0.92) 0%,
+          rgba(13, 31, 45, 0.8) 100%
+        );
+        z-index: 1;
+      }
+      .hero-product .container {
+        position: relative;
+        z-index: 2;
+      }
+      .hero-product h1 {
+        font-family: var(--heading-font);
+        font-size: clamp(34px, 5vw, 58px);
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.12;
+        margin-bottom: 18px;
+      }
+      .hero-product h1 span {
+        color: var(--accent-color);
+      }
+      .hero-product p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 17px;
+        max-width: 620px;
+        line-height: 1.75;
+      }
+      .breadcrumb-bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--nav-font);
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 28px;
+      }
+      .breadcrumb-bar a {
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .breadcrumb-bar a:hover {
+        color: var(--accent-color);
+      }
+      .breadcrumb-bar .sep {
+        color: rgba(255, 255, 255, 0.3);
+      }
+      .breadcrumb-bar .current {
+        color: var(--accent-color);
+      }
+      .hero-btns {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-top: 32px;
+      }
+      .btn-primary {
+        background: var(--accent-color);
+        color: #000;
+        font-family: var(--nav-font);
+        font-size: 14px;
+        font-weight: 700;
+        padding: 13px 28px;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: 0.3s;
+        border: none;
+        display: inline-block;
+      }
+      .btn-primary:hover {
+        background: #ca8a04;
+        color: #000;
+        transform: translateY(-2px);
+      }
+      .btn-outline-light-c {
+        background: transparent;
+        color: #fff;
+        font-family: var(--nav-font);
+        font-size: 14px;
+        font-weight: 600;
+        padding: 12px 28px;
+        border-radius: 6px;
+        text-decoration: none;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        transition: 0.3s;
+        display: inline-block;
+      }
+      .btn-outline-light-c:hover {
+        border-color: #fff;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .sec-tag {
+        display: inline-block;
+        font-family: var(--nav-font);
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--accent-color);
+        margin-bottom: 12px;
+      }
+      .section-h2 {
+        font-family: var(--heading-font);
+        font-size: clamp(24px, 3vw, 36px);
+        font-weight: 800;
+        color: var(--heading-color);
+        margin-bottom: 16px;
+        line-height: 1.2;
+      }
+      .section-h2-white {
+        font-family: var(--heading-font);
+        font-size: clamp(24px, 3vw, 36px);
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 16px;
+        line-height: 1.2;
+      }
+      .section-p {
+        color: var(--default-color);
+        font-size: 15px;
+        line-height: 1.8;
+      }
+      .section-p-white {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 15px;
+        line-height: 1.8;
+      }
+      .materials-section {
+        padding: 80px 0;
+        background: #f1f4fa;
+      }
+      .mat-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 28px 24px;
+        height: 100%;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+        border: 1.5px solid transparent;
+        transition: 0.35s;
+        position: relative;
+        overflow: hidden;
+      }
+      .mat-card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--accent-color);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: 0.35s;
+      }
+      .mat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+        border-color: rgba(250, 204, 21, 0.25);
+      }
+      .mat-card:hover::after {
+        transform: scaleX(1);
+      }
+      .mat-card .icon-wrap {
+        width: 52px;
+        height: 52px;
+        background: rgba(250, 204, 21, 0.1);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: var(--accent-color);
+        margin-bottom: 16px;
+        transition: 0.3s;
+      }
+      .mat-card:hover .icon-wrap {
+        background: var(--accent-color);
+        color: #000;
+      }
+      .mat-card h5 {
+        font-family: var(--heading-font);
+        font-size: 17px;
+        font-weight: 700;
+        color: var(--heading-color);
+        margin-bottom: 10px;
+      }
+      .mat-card p {
+        font-size: 14px;
+        color: var(--default-color);
+        line-height: 1.65;
+        margin-bottom: 14px;
+      }
+      .mat-card .spec-tag {
+        font-family: var(--nav-font);
+        font-size: 11px;
+        font-weight: 600;
+        background: rgba(250, 204, 21, 0.1);
+        color: #b07d00;
+        padding: 3px 10px;
+        border-radius: 20px;
+        display: inline-block;
+      }
+      .solution-section {
+        padding: 80px 0;
+      }
+      .solution-image {
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+      }
+      .solution-image img {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s;
+      }
+      .solution-image:hover img {
+        transform: scale(1.03);
+      }
+      .detect-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .detect-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(39, 61, 78, 0.07);
+        font-size: 14px;
+        color: var(--default-color);
+        line-height: 1.6;
+      }
+      .detect-list li:last-child {
+        border: none;
+      }
+      .detect-list li i {
+        color: var(--accent-color);
+        margin-top: 2px;
+        flex-shrink: 0;
+        font-size: 15px;
+      }
+      .features-section {
+        padding: 80px 0;
+        background: var(--heading-color);
+      }
+      .feat-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 28px 24px;
+        height: 100%;
+        transition: 0.35s;
+        text-align: center;
+      }
+      .feat-card:hover {
+        background: rgba(255, 255, 255, 0.09);
+        transform: translateY(-5px);
+      }
+      .feat-card .icon-wrap {
+        width: 56px;
+        height: 56px;
+        background: rgba(250, 204, 21, 0.12);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: var(--accent-color);
+        margin: 0 auto 16px;
+        transition: 0.3s;
+      }
+      .feat-card:hover .icon-wrap {
+        background: var(--accent-color);
+        color: #000;
+      }
+      .feat-card h5 {
+        font-family: var(--heading-font);
+        font-size: 16px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 8px;
+      }
+      .feat-card p {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.65);
+        margin: 0;
+        line-height: 1.65;
+      }
+      .feat-card .spec-val {
+        font-family: var(--heading-font);
+        font-size: 26px;
+        font-weight: 900;
+        color: var(--accent-color);
+        display: block;
+        margin-bottom: 4px;
+      }
+      .specs-section {
+        background: #f1f4fa;
+        padding: 70px 0;
+      }
+      .spec-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+      .spec-table th {
+        background: var(--heading-color);
+        color: var(--accent-color);
+        font-family: var(--nav-font);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        padding: 12px 16px;
+        text-align: left;
+        border-bottom: 2px solid rgba(250, 204, 21, 0.3);
+      }
+      .spec-table td {
+        padding: 12px 16px;
+        color: var(--default-color);
+        border-bottom: 1px solid rgba(39, 61, 78, 0.07);
+        background: #fff;
+      }
+      .spec-table tr:last-child td {
+        border-bottom: none;
+      }
+      .spec-table tr:hover td {
+        background: #f8f9ff;
+      }
+      .cta-section {
+        padding: 80px 0;
+        background: #fff;
+      }
+      .cta-box {
+        background: var(--heading-color);
+        border-radius: 16px;
+        padding: 56px 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-box::before {
+        content: "";
+        position: absolute;
+        right: -80px;
+        top: -80px;
+        width: 300px;
+        height: 300px;
+        background: rgba(250, 204, 21, 0.07);
+        border-radius: 50%;
+      }
+      .cta-box::after {
+        content: "";
+        position: absolute;
+        right: 60px;
+        bottom: -100px;
+        width: 200px;
+        height: 200px;
+        background: rgba(250, 204, 21, 0.05);
+        border-radius: 50%;
+      }
+      .cta-text h3 {
+        font-family: var(--heading-font);
+        font-size: 28px;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+      .cta-text p {
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0;
+      }
+      .cta-buttons {
+        display: flex;
+        gap: 14px;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 2;
+      }
+      .btn-outline-dark {
+        background: transparent;
+        color: #fff;
+        font-family: var(--nav-font);
+        font-size: 14px;
+        font-weight: 600;
+        padding: 12px 28px;
+        border-radius: 6px;
+        text-decoration: none;
+        border: 2px solid rgba(255, 255, 255, 0.35);
+        transition: 0.3s;
+        display: inline-block;
+      }
+      .btn-outline-dark:hover {
+        border-color: #fff;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .footer {
+        background: #0d1a26;
+        color: rgba(255, 255, 255, 0.65);
+        padding: 60px 0 0;
+        font-size: 14px;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        gap: 40px;
+        padding-bottom: 48px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .footer-col h4,
+      .footer-col h5 {
+        color: #fff;
+        font-family: var(--heading-font);
+        margin-bottom: 16px;
+      }
+      .footer-col h5 {
+        font-size: 15px;
+      }
+      .footer-col p {
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+      .footer-col ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer-col ul li {
+        padding: 5px 0;
+        color: rgba(255, 255, 255, 0.55);
+      }
+      .footer-col ul li a {
+        color: rgba(255, 255, 255, 0.55);
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .footer-col ul li a:hover {
+        color: var(--accent-color);
+      }
+      .socials a {
+        color: #fff;
+        font-size: 18px;
+        margin-right: 14px;
+        transition: 0.3s;
+      }
+      .socials a:hover {
+        color: var(--accent-color);
+      }
+      .footer-bottom {
+        padding: 20px 0;
+      }
+      .footer-copy {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 13px;
+        color: #cbd5e1;
+      }
+      .footer-copy p {
+        margin: 0;
+      }
+      .credit a {
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      #scroll-top {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        width: 42px;
+        height: 42px;
+        background: var(--accent-color);
+        border-radius: 50%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        text-decoration: none;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+        transition: 0.3s;
+      }
+      #scroll-top.active {
+        display: flex;
+      }
+      #scroll-top::after {
+        content: "↑";
+        color: #000;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1;
+      }
+      #scroll-top:hover {
+        background: #ca8a04;
+        transform: translateY(-3px);
+      }
+      @media (max-width: 992px) {
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .cta-box {
+          flex-direction: column;
+          text-align: center;
+          padding: 40px 28px;
+        }
+        .cta-buttons {
+          justify-content: center;
+        }
+      }
+      @media (max-width: 768px) {
+        .hero-product {
+          padding: 110px 0 60px;
+          min-height: auto;
+        }
+        .solution-image img {
+          height: 280px;
+        }
+      }
+      @media (max-width: 575px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .cta-box {
+          padding: 32px 20px;
+        }
+        .cta-buttons {
+          flex-direction: column;
+          width: 100%;
+        }
+        .cta-buttons a {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header" class="header fixed-top">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-between"
+      >
+        <div class="d-flex align-items-center">
+          <div class="logo-box me-2">
+            <img
+              src="assets/img/global_white.png"
+              alt="Global Oil & Gas Innovations Logo"
+              style="height: 46px; width: auto"
+            />
+          </div>
+        </div>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Ana Səhifə</a></li>
+            <li><a href="about.html" data-i18n="nav.about">Haqqımızda</a></li>
+            <!-- <li><a href="products.html" data-i18n="nav.products">Məhsullar</a></li> -->
+            <li><a href="services.html" class="active" data-i18n="nav.services">Xidmətlər</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Əlaqə</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+        <div class="d-flex align-items-center">
+          <div class="lang-switcher d-none d-lg-flex me-3">
+            <button class="lang-selected" type="button">
+              <span class="fi fi-az lang-flag"></span>
+              <span class="lang-name">AZ</span>
+              <i class="bi bi-chevron-down lang-chevron"></i>
+            </button>
+            <div class="lang-dropdown">
+              <button class="lang-option" data-lang="az" type="button">
+                <span class="fi fi-az lang-flag"></span>
+                <span>Azərbaycan</span>
+              </button>
+              <button class="lang-option" data-lang="en" type="button">
+                <span class="fi fi-gb lang-flag"></span>
+                <span>English</span>
+              </button>
+              <button class="lang-option" data-lang="ru" type="button">
+                <span class="fi fi-ru lang-flag"></span>
+                <span>Русский</span>
+              </button>
+            </div>
+          </div>
+          <span class="me-4 phone d-none d-lg-inline"
+            ><i class="bi bi-telephone" style="padding-right: 5px"></i> +7 778 385 71 35</span
+          ><a class="btn btn-warning" href="contact.html" data-i18n="nav.cta"
+            >Qiymət Təklifi İstəyin</a
+          >
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero-product dark-background">
+        <img src="assets/img/background.png" class="hero-bg" alt="" />
+        <div class="container">
+          <div class="breadcrumb-bar">
+            <a href="index.html" data-i18n="bc.home">Ana Səhifə</a><span class="sep">/</span
+            ><a href="services.html" data-i18n="bc.services">Xidmətlər</a><span class="sep">/</span
+            ><span class="current" data-i18n="mat.bc.current">Materialların Emalı</span>
+          </div>
+          <span class="badge bg-warning text-dark mb-4" data-i18n="mat.hero.badge"
+            >SƏNAYE MATERİAL EMALI</span
+          >
+          <h1 data-i18n-html="mat.hero.title_html">Yüksək Həcmli<br /><span>Material Üyüdülməsi</span> və Emalı</h1>
+          <p data-i18n-html="mat.hero.desc">
+            Barit, mərmər, kalsit və digər sənaye minerallarının dəqiq ölçüdə
+            üyüdülməsi üçün ixtisaslaşmış emal xidməti. API standartına uyğun
+            keyfiyyət nəzarəti ilə.
+          </p>
+          <div class="hero-btns">
+            <a href="contact.html" class="btn-primary"
+              ><span data-i18n="mat.hero.btn1">Texniki Sifariş Verin</span> <i class="bi bi-arrow-right ms-1"></i
+            ></a>
+            <a href="contact.html" class="btn-outline-light-c" data-i18n="mat.hero.btn2"
+              >Qiymət Soruşun</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="materials-section" data-aos="fade-up">
+        <div class="container">
+          <div class="text-center mb-5">
+            <span class="sec-tag" data-i18n="mat.materials.tag">Emal Edilən Materiallar</span>
+            <h2 class="section-h2" data-i18n="mat.materials.h2">İşlədiyimiz Sənaye Mineralları</h2>
+            <p class="section-p mx-auto" style="max-width: 580px" data-i18n="mat.materials.p">
+              Neft-qaz, tikinti, kimya və digər sənaye sahələri üçün ehtiyac
+              duyulan geniş çeşidli minerallar üyüdülür və emal edilir.
+            </p>
+          </div>
+          <div class="row g-4">
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
+              <div class="mat-card">
+                <div class="icon-wrap">
+                  <i class="bi bi-distribute-vertical"></i>
+                </div>
+                <h5 data-i18n="mat.mat1.h5">Barit (BaSO₄)</h5>
+                <p data-i18n="mat.mat1.p">
+                  Qazma mayelərinin sıxlığını artırmaq üçün API 13A standartına
+                  uyğun barit tozu. ≥4.20 g/cm³ spesifik çəki.
+                </p>
+                <span class="spec-tag" data-i18n="mat.mat1.tag">API 13A Sertifikatlı</span>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="mat-card">
+                <div class="icon-wrap"><i class="bi bi-gem"></i></div>
+                <h5 data-i18n="mat.mat2.h5">Mərmər (CaCO₃)</h5>
+                <p data-i18n="mat.mat2.p">
+                  Tikinti, boyaqçılıq, plastik və kağız sənayesi üçün müxtəlif
+                  incəlik dərəcələrində mərmər tozu.
+                </p>
+                <span class="spec-tag" data-i18n="mat.mat2.tag">Çoxsahəli İstifadə</span>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <div class="mat-card">
+                <div class="icon-wrap"><i class="bi bi-layers-fill"></i></div>
+                <h5 data-i18n="mat.mat3.h5">Kalsit</h5>
+                <p data-i18n="mat.mat3.p">
+                  Sement, boyaq, plastik sənayesi üçün yüksək keyfiyyətli kalsit
+                  tozu. Müxtəlif fraksiya ölçüləri mövcuddur.
+                </p>
+                <span class="spec-tag" data-i18n="mat.mat3.tag">Yüksək Keyfiyyət</span>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="mat-card">
+                <div class="icon-wrap"><i class="bi bi-hexagon-fill"></i></div>
+                <h5 data-i18n="mat.mat4.h5">Digər Minerallar</h5>
+                <p data-i18n="mat.mat4.p">
+                  Dolomit, silikat, feldspat, talk və digər sənaye
+                  minerallarının xüsusi tələblərə uyğun emalı.
+                </p>
+                <span class="spec-tag" data-i18n="mat.mat4.tag">Fərdi Sifariş</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="solution-section" data-aos="fade-up">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="50">
+              <div
+                id="logisticsCarousel"
+                class="carousel slide about-image"
+                data-bs-ride="carousel"
+                data-bs-interval="3000"
+                style="
+                  border-radius: 14px;
+                  overflow: hidden;
+                  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.13);
+                  position: relative;
+                "
+              >
+                <div class="carousel-inner" style="height: 420px;">
+                  <div class="carousel-item active" style="height: 100%;">
+                    <img
+                      src="assets/img/Başdan-başa Emal Xidməti 1.jpeg"
+                      alt="Logistika 1"
+                      style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        display: block;
+                      "
+                    />
+                  </div>
+                  <div class="carousel-item" style="height: 100%;">
+                    <img
+                      src="assets/img/Başdan-başa Emal Xidməti 2.jpeg"
+                      alt="Logistika 2"
+                      style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        display: block;
+                      "
+                    />
+                  </div>
+                  <div class="carousel-item" style="height: 100%;">
+                    <img
+                      src="assets/img/Daşların və Materialların Emalı.jpeg"
+                      alt="Logistika 3"
+                      style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        display: block;
+                      "
+                    />
+                  </div>
+                </div>
+
+                <!-- Left Arrow -->
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#logisticsCarousel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    style="
+                      background-color: rgba(0, 0, 0, 0.45);
+                      border-radius: 50%;
+                      padding: 18px;
+                    "
+                  ></span>
+                </button>
+
+                <!-- Right Arrow -->
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#logisticsCarousel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    style="
+                      background-color: rgba(0, 0, 0, 0.45);
+                      border-radius: 50%;
+                      padding: 18px;
+                    "
+                  ></span>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+              <span class="sec-tag" data-i18n="mat.process.tag">Proses</span>
+              <h2 class="section-h2" data-i18n="mat.process.h2">Başdan-başa Emal Xidməti</h2>
+              <p class="section-p mb-4" data-i18n="mat.process.p1">
+                İstehsalat istiqamətinin genişləndirilməsi çərçivəsində şirkət 2026-cı ilin ikinci yarısında neft-servis, tikinti, sənaye və digər əlaqəli sahələrdə istifadə olunan sənaye materiallarının üyüdülməsi üzrə istehsal xəttini işə salır. Əsas diqqət barit, mərmər və digər mineral xammalların emalı və tələb olunan texniki göstəricilərə uyğun hazırlanmasına yönəldiləcək.
+              </p>
+              <ul class="detect-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span data-i18n="mat.process.li1">İstehsal prosesi sifarişçilərin tələblərinə uyğun fraksiyada, stabil texniki xüsusiyyətlərə və yüksək keyfiyyət göstəricilərinə malik materialların əldə edilməsinə istiqamətlənəcək. Bizim üçün xammalın seçilməsindən və üyüdülməsindən başlayaraq, hazır məhsulun qablaşdırılması və çatdırılmasına qədər hər bir mərhələdə keyfiyyətə nəzarət xüsusi əhəmiyyət daşıyır.</span>
+                </li>
+              </ul><br>
+              <p class="section-p mb-4" data-i18n="mat.process.p2">
+                Bu istiqamətin işə salınması şirkətə istehsal imkanlarını genişləndirməyə, müştəriləri tələb olunan sənaye materialları ilə təmin etməyə və təchizat prosesində daha çevik yanaşma təqdim etməyə imkan verəcək. Sənaye materiallarının üyüdülməsi və hazırlanması üzrə sifarişlər artıq qəbul olunur. Biz sifarişçilərin ehtiyaclarını əvvəlcədən nəzərdən keçirməyə, texniki tələbləri razılaşdırmağa və neft-qaz, sənaye və regional layihələr üçün optimal əməkdaşlıq şərtləri formalaşdırmağa hazırıq.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features-section" data-aos="fade-up">
+        <div class="container">
+          <div class="text-center mb-5">
+            <span class="sec-tag" style="color: var(--accent-color)" data-i18n="mat.adv.tag"
+              >Üstünlüklər</span
+            >
+            <h2 class="section-h2-white" data-i18n="mat.adv.h2">Niyə SAM Supply Emalı?</h2>
+          </div>
+          <div class="row g-4">
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
+              <div class="feat-card">
+                <div class="icon-wrap">
+                  <i class="bi bi-patch-check-fill"></i>
+                </div>
+                <span class="spec-val" data-i18n="mat.adv.c1.val">API</span>
+                <h5 data-i18n="mat.adv.c1.h5">API Standartı</h5>
+                <p data-i18n="mat.adv.c1.p">
+                  Barit üçün API 13A spesifikasiyasına uyğun istehsal. Neft-qaz
+                  sektoru üçün etibarlı keyfiyyət.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="feat-card">
+                <div class="icon-wrap"><i class="bi bi-speedometer"></i></div>
+                <span class="spec-val" data-i18n="mat.adv.c2.val">Tez</span>
+                <h5 data-i18n="mat.adv.c2.h5">Sürətli Çatdırılma</h5>
+                <p data-i18n="mat.adv.c2.p">
+                  Stokda olan materiallar 24–48 saat ərzində hazır. Böyük
+                  sifarişlər üçün ayrıca istehsal planı.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <div class="feat-card">
+                <div class="icon-wrap"><i class="bi bi-sliders"></i></div>
+                <span class="spec-val" data-i18n="mat.adv.c3.val">Fərdi</span>
+                <h5 data-i18n="mat.adv.c3.h5">Xüsusi Fraksiya</h5>
+                <p data-i18n="mat.adv.c3.p">
+                  Müştərinin texniki tələblərinə uyğun istənilən dənə ölçüsü —
+                  mikrondan milimetrə qədər.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="feat-card">
+                <div class="icon-wrap">
+                  <i class="bi bi-file-earmark-check-fill"></i>
+                </div>
+                <span class="spec-val" data-i18n="mat.adv.c4.val">COA</span>
+                <h5 data-i18n="mat.adv.c4.h5">Keyfiyyət Sertifikatı</h5>
+                <p data-i18n="mat.adv.c4.p">
+                  Hər partiya üçün analiz sertifikatı (COA) verilir. Tam
+                  izlənilə bilən keyfiyyət sistemi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="specs-section" data-aos="fade-up">
+        <div class="container">
+          <div class="row align-items-start g-5">
+            <div class="col-lg-4">
+              <span class="sec-tag" data-i18n="mat.spec.tag">Texniki Cədvəl</span>
+              <h2 class="section-h2" data-i18n="mat.spec.h2">Material Spesifikasiyaları</h2>
+              <p class="section-p" data-i18n="mat.spec.p">
+                Standart çeşid aşağıda göstərilmişdir. Xüsusi tələblər üçün
+                bizimlə əlaqə saxlayın.
+              </p>
+              <a href="contact.html" class="btn-primary mt-3" data-i18n="mat.spec.btn">Sifariş Verin</a>
+            </div>
+            <div class="col-lg-8">
+              <table class="spec-table">
+                <thead>
+                  <tr>
+                    <th data-i18n="mat.spec.th1">Material</th>
+                    <th data-i18n="mat.spec.th2">Fraksiya</th>
+                    <th data-i18n="mat.spec.th3">Standart</th>
+                    <th data-i18n="mat.spec.th4">Qablaşdırma</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-i18n="mat.spec.r1.mat">Barit (BaSO₄)</td>
+                    <td data-i18n="mat.spec.r1.frac">d₉₀ ≤ 74 µm</td>
+                    <td data-i18n="mat.spec.r1.std">API 13A</td>
+                    <td data-i18n="mat.spec.r1.pkg">25 kq / Bigbag</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="mat.spec.r2.mat">Mərmər (CaCO₃)</td>
+                    <td data-i18n="mat.spec.r2.frac">3–1500 mesh</td>
+                    <td data-i18n="mat.spec.r2.std">GOST / ISO</td>
+                    <td data-i18n="mat.spec.r2.pkg">25 kq / Bigbag / Bulk</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="mat.spec.r3.mat">Kalsit</td>
+                    <td data-i18n="mat.spec.r3.frac">5–800 mesh</td>
+                    <td data-i18n="mat.spec.r3.std">İstehsalçı spec.</td>
+                    <td data-i18n="mat.spec.r3.pkg">25 kq / IBC</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="mat.spec.r4.mat">Dolomit</td>
+                    <td data-i18n="mat.spec.r4.frac">Xüsusi tələbə görə</td>
+                    <td data-i18n="mat.spec.r4.std">Müştəri spec.</td>
+                    <td data-i18n="mat.spec.r4.pkg">Razılaşma ilə</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="mat.spec.r5.mat">Silikat qumu</td>
+                    <td data-i18n="mat.spec.r5.frac">0.1–2.0 mm</td>
+                    <td data-i18n="mat.spec.r5.std">GOST 22551</td>
+                    <td data-i18n="mat.spec.r5.pkg">25 kq / 50 kq / Bulk</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="mat.spec.r6.mat">Talk</td>
+                    <td data-i18n="mat.spec.r6.frac">200–1250 mesh</td>
+                    <td data-i18n="mat.spec.r6.std">İstehsalçı spec.</td>
+                    <td data-i18n="mat.spec.r6.pkg">20 kq / 25 kq çuval</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container" data-aos="fade-up">
+          <div class="cta-box">
+            <div class="cta-text">
+              <h3 data-i18n="mat.cta.h3">Sifariş Verin və ya Qiymət Soruşun</h3>
+              <p data-i18n="mat.cta.desc">
+                Tələb etdiyiniz materialı, fraksiyasını və miqdarını bildirin —
+                komandamız qiymət təklifi hazırlayacaq.
+              </p>
+            </div>
+            <div class="cta-buttons">
+              <a href="contact.html" class="btn-primary" data-i18n="mat.cta.btn1">Müraciət Edin</a
+              ><a href="services.html" class="btn-outline-dark" data-i18n="mat.cta.btn2"
+                >Bütün Xidmətlər</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h4>GLOBAL OIL &amp; GAS INNOVATIONS</h4>
+          <p data-i18n-html="footer.about_desc">Neft-qaz sənayesi üçün innovativ neft-servis şirkəti.</p>
+          <div class="socials">
+            <a href="#"><i class="bi bi-linkedin"></i></a
+            ><a href="#"><i class="bi bi-facebook"></i></a
+            ><a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footer.quick_links">Tez Əlaqələr</h5>
+          <ul>
+            <li><a href="index.html" data-i18n="footer.home">Əsas Səhifə</a></li>
+            <li><a href="about.html" data-i18n="footer.about">Haqqımızda</a></li>
+            <li><a href="products.html" data-i18n="footer.products">Məhsullar</a></li>
+            <li><a href="services.html" data-i18n="footer.services">Xidmətlər</a></li>
+            <li><a href="contact.html" data-i18n="footer.contact_link">Əlaqə</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footer.industries">Sənaye Sahələri</h5>
+          <ul>
+            <li data-i18n="footer.oil_gas">NKT və muftaların qorunması</li>
+            <li data-i18n="footer.petrochemicals">
+              Quyuların geofiziki tədqiqi (Karotaj)
+            </li>
+            <li data-i18n="footer.manufacturing">Ağıllı Nasos Stansiyaları</li>
+            <li data-i18n="footer.construction">
+              Texniki Dəstək və Konsultasiya
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footer.contact_title">Əlaqə</h5>
+          <ul>
+            <li>
+              130000, Qazaxıstan Respublikası,<br />Mangistau vilayəti, Aktau
+              şəhəri
+            </li>
+            <li>+7 778 385 71 35</li>
+            <li>
+              <a href="mailto:office@globaloilgas.kz"
+                >office@globaloilgas.kz</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-copy">
+          <p>© Copyright 2026 Global Oil & Gas Innovations. All Rights Reserved</p>
+          <p class="credit">
+            <a href="https://penne.media"
+              ><img
+                src="assets/img/penne_transparent.png"
+                alt="Penne Media"
+                style="height: 40px; width: auto"
+              /><strong style="color: #fff">Penne Media</strong></a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <a href="#" id="scroll-top"></a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 700, easing: "ease-in-out", once: true });
+      (function () {
+        const h = document.getElementById("header");
+        function s() {
+          h.classList.toggle("scrolled", window.scrollY > 10);
+        }
+        window.addEventListener("scroll", s, { passive: true });
+        s();
+      })();
+      (function () {
+        const b = document.getElementById("scroll-top");
+        window.addEventListener("scroll", () => {
+          b.classList.toggle("active", window.scrollY > 300);
+        });
+        b.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      })();
+      (function () {
+        const t = document.querySelector(".mobile-nav-toggle");
+        if (!t) return;
+        t.addEventListener("click", () => {
+          document.body.classList.toggle("mobile-nav-active");
+          t.classList.toggle("bi-list");
+          t.classList.toggle("bi-x");
+        });
+      })();
+    </script>
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/lang.js"></script>
+  </body>
+</html>
