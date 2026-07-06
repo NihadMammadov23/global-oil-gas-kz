@@ -1,6 +1,6 @@
 (function () {
   var LANGS = ['az', 'en', 'ru'];
-  var DEFAULT = 'az';
+  var DEFAULT = 'en';
   var LANG_META = {
     az: { code: 'az', name: 'AZ' },
     en: { code: 'gb', name: 'EN' },
