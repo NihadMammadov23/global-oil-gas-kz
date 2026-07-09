@@ -1,10 +1,13 @@
 (function () {
-  var LANGS = ['az', 'en', 'ru'];
+  // 'az' temporarily disabled in the switcher — kept for future use.
+  // Full list was: ['az', 'en', 'ru', 'kk']
+  var LANGS = ['en', 'ru', 'kk'];
   var DEFAULT = 'en';
   var LANG_META = {
-    az: { code: 'az', name: 'AZ' },
+    // az: { code: 'az', name: 'AZ' }, // disabled — kept for future use
     en: { code: 'gb', name: 'EN' },
-    ru: { code: 'ru', name: 'RU' }
+    ru: { code: 'ru', name: 'RU' },
+    kk: { code: 'kz', name: 'KK' }
   };
 
   function getLang() {
@@ -14,7 +17,7 @@
   function applyLang(lang) {
     var t = (window.translations && window.translations[lang]) || {};
 
-    document.documentElement.lang = lang === 'ru' ? 'ru' : lang === 'en' ? 'en' : 'az';
+    document.documentElement.lang = lang === 'ru' ? 'ru' : lang === 'kk' ? 'kk' : lang === 'az' ? 'az' : 'en';
 
     // text content nodes
     document.querySelectorAll('[data-i18n]').forEach(function (el) {

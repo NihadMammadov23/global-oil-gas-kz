@@ -947,10 +947,12 @@
               <i class="bi bi-chevron-down lang-chevron"></i>
             </button>
             <div class="lang-dropdown">
+              <!-- disabled — kept for future use
               <button class="lang-option" data-lang="az" type="button">
                 <span class="fi fi-az lang-flag"></span>
                 <span>Azərbaycan</span>
               </button>
+              -->
               <button class="lang-option" data-lang="en" type="button">
                 <span class="fi fi-gb lang-flag"></span>
                 <span>English</span>
@@ -958,6 +960,10 @@
               <button class="lang-option" data-lang="ru" type="button">
                 <span class="fi fi-ru lang-flag"></span>
                 <span>Русский</span>
+              </button>
+              <button class="lang-option" data-lang="kk" type="button">
+                <span class="fi fi-kz lang-flag"></span>
+                <span>Қазақша</span>
               </button>
             </div>
           </div>
@@ -1032,7 +1038,7 @@
             <div class="col-lg-6" data-aos="fade-right" data-aos-delay="50">
               <div class="about-image">
                 <img
-                  src="assets/img/meeting.jpeg"
+                  src="assets/img/bizkimik.jpeg"
                   alt="Global Oil &amp; Gas Innovations komanda görüşü"
                 />
                 <div class="about-badge">
@@ -1256,7 +1262,7 @@
         </div>
       </section>
 
-      <!-- ══ Trusted Partners ════════════════════════════════ -->
+      <!-- ══ Trusted Partners (hidden — kept for future use) ══
       <section class="trusted-section" data-aos="fade-up">
         <div class="container">
           <div class="section-header">
@@ -1331,7 +1337,7 @@
                 />
               </div>
               <!-- duplicates for infinite loop -->
-              <div class="swiper-slide">
+      <!-- <div class="swiper-slide">
                 <img
                   src="assets/img/clients/client-1.png"
                   class="img-fluid"
@@ -1390,7 +1396,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- ══ CTA ════════════════════════════════════════════ -->
       <section class="cta-section">
@@ -1561,26 +1567,28 @@
         });
       })();
 
-      /* Partners Swiper */
-      new Swiper(".partners-swiper", {
-        loop: true,
-        speed: 800,
-        autoplay: {
-          delay: 0,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        },
-        freeMode: true,
-        slidesPerView: "auto",
-        spaceBetween: 0,
-        breakpoints: {
-          0: { slidesPerView: 2 },
-          480: { slidesPerView: 3 },
-          768: { slidesPerView: 4 },
-          992: { slidesPerView: 5 },
-          1200: { slidesPerView: 6 },
-        },
-      });
+      /* Partners Swiper (hidden — kept for future use) */
+      if (document.querySelector(".partners-swiper")) {
+        new Swiper(".partners-swiper", {
+          loop: true,
+          speed: 800,
+          autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
+          freeMode: true,
+          slidesPerView: "auto",
+          spaceBetween: 0,
+          breakpoints: {
+            0: { slidesPerView: 2 },
+            480: { slidesPerView: 3 },
+            768: { slidesPerView: 4 },
+            992: { slidesPerView: 5 },
+            1200: { slidesPerView: 6 },
+          },
+        });
+      }
     </script>
     <script src="assets/js/translations.js"></script>
     <script src="assets/js/lang.js"></script>
