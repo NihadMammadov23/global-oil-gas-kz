@@ -11,7 +11,14 @@
   };
 
   function getLang() {
-    return localStorage.getItem('sam-lang') || DEFAULT;
+    var stored = localStorage.getItem('sam-lang');
+    // Guard against a stale/disabled value (e.g. 'az' saved before it was
+    // removed from the switcher) silently overriding the current default.
+    if (stored && LANGS.indexOf(stored) === -1) {
+      localStorage.removeItem('sam-lang');
+      stored = null;
+    }
+    return stored || DEFAULT;
   }
 
   function applyLang(lang) {
