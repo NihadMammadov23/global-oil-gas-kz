@@ -22,6 +22,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css"
+      rel="stylesheet"
+    />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link href="assets/css/main.css" rel="stylesheet" />
     <style>
@@ -744,11 +748,17 @@
         </div>
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="index.html">Ana Səhifə</a></li>
-            <li><a href="about.html">Haqqımızda</a></li>
-            <li><a href="products.html">Məhsullar</a></li>
-            <li><a href="services.html" class="active">Xidmətlər</a></li>
-            <li><a href="contact.html">Əlaqə</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Ana Səhifə</a></li>
+            <li><a href="about.html" data-i18n="nav.about">Haqqımızda</a></li>
+            <!-- <li>
+              <a href="products.html" data-i18n="nav.products">Məhsullar</a>
+            </li> -->
+            <li>
+              <a href="services.html" class="active" data-i18n="nav.services"
+                >Xidmətlər</a
+              >
+            </li>
+            <li><a href="contact.html" data-i18n="nav.contact">Əlaqə</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -756,7 +766,34 @@
           <span class="me-4 phone d-none d-lg-inline"
             ><i class="bi bi-telephone" style="padding-right: 5px"></i> +7 778 385 71 35</span
           >
-          <a class="btn btn-warning" href="contact.html"
+          <div class="lang-switcher d-none d-lg-flex me-3">
+            <button class="lang-selected" type="button">
+              <span class="fi fi-gb lang-flag"></span>
+              <span class="lang-name">EN</span>
+              <i class="bi bi-chevron-down lang-chevron"></i>
+            </button>
+            <div class="lang-dropdown">
+              <!-- disabled — kept for future use
+              <button class="lang-option" data-lang="az" type="button">
+                <span class="fi fi-az lang-flag"></span>
+                <span>Azərbaycan</span>
+              </button>
+              -->
+              <button class="lang-option" data-lang="en" type="button">
+                <span class="fi fi-gb lang-flag"></span>
+                <span>English</span>
+              </button>
+              <button class="lang-option" data-lang="ru" type="button">
+                <span class="fi fi-ru lang-flag"></span>
+                <span>Русский</span>
+              </button>
+              <button class="lang-option" data-lang="kk" type="button">
+                <span class="fi fi-kz lang-flag"></span>
+                <span>Қазақша</span>
+              </button>
+            </div>
+          </div>
+          <a class="btn btn-warning" href="contact.html" data-i18n="nav.cta"
             >Qiymət Təklifi İstəyin</a
           >
         </div>
@@ -769,14 +806,14 @@
         <img src="assets/img/background.png" class="hero-bg" alt="" />
         <div class="container">
           <div class="breadcrumb-bar">
-            <a href="index.html">Ana Səhifə</a><span class="sep">/</span>
-            <a href="services.html">Xidmətlər</a><span class="sep">/</span>
-            <span class="current">NKT-nin Qorunması</span>
+            <a href="index.html" data-i18n="bc.home">Ana Səhifə</a><span class="sep">/</span>
+            <a href="services.html" data-i18n="bc.services">Xidmətlər</a><span class="sep">/</span>
+            <span class="current" data-i18n="nkt.bc.current">NKT-nin Qorunması</span>
           </div>
           <span class="badge bg-warning text-dark mb-4"
             >NKT MÜHAFİZƏ SİSTEMİ</span
           >
-          <h1>NKT Ömrünü<br /><span>20–25 Dəfə</span> Artırın</h1>
+          <h1 data-i18n-html="nkt.hero.title_html">NKT Ömrünü<br /><span>20–25 Dəfə</span> Artırın</h1>
           <p>
             Polimer-kompozit örtük sistemi NKT avadanlıqlarını korroziyadan,
             parафindən, duz çöküntülərindən və mexaniki aşınmadan qoruyur.
@@ -797,9 +834,9 @@
       <section class="problem-section" data-aos="fade-up">
         <div class="container">
           <div class="text-center mb-5">
-            <span class="sec-tag">Problem</span>
-            <h2 class="section-h2">NKT nasazlıqlarının əsas səbəbləri</h2>
-            <p class="section-p mx-auto" style="max-width: 580px">
+            <span class="sec-tag" data-i18n="nkt.problem.tag">Problem</span>
+            <h2 class="section-h2" data-i18n="nkt.problem.h2">NKT nasazlıqlarının əsas səbəbləri</h2>
+            <p class="section-p mx-auto" style="max-width: 580px" data-i18n="nkt.problem.p">
               30–90 günlük qısa təmir arası intervallı quyular iqtisadi cəhətdən
               sərfəsiz olur — tez-tez kapital təmiri istehsalı pozur və
               gəlirliyi azaldır.
@@ -813,8 +850,8 @@
             >
               <div class="problem-card">
                 <i class="bi bi-droplet-fill icon"></i>
-                <h5>Daxili Korroziya</h5>
-                <p>
+                <h5 data-i18n="nkt.problem.c1.h5">Daxili Korroziya</h5>
+                <p data-i18n="nkt.problem.c1.p">
                   H₂S, CO₂ və xloridlər ehtiva edən aqressiv maye NKT divarını
                   incəldərək pit korroziyasına səbəb olur.
                 </p>
@@ -827,8 +864,8 @@
             >
               <div class="problem-card">
                 <i class="bi bi-snow icon"></i>
-                <h5>Parafin və Duz Çöküntüsü</h5>
-                <p>
+                <h5 data-i18n="nkt.problem.c2.h5">Parafin və Duz Çöküntüsü</h5>
+                <p data-i18n="nkt.problem.c2.p">
                   Duz çöküntüləri və parafin yığılması NKT-nin keçiricilik
                   sahəsini daraldır, nasos yükünü artırır, debitin azalmasına
                   gətirir.
@@ -842,8 +879,8 @@
             >
               <div class="problem-card">
                 <i class="bi bi-arrows-move icon"></i>
-                <h5>Mexaniki Aşınma</h5>
-                <p>
+                <h5 data-i18n="nkt.problem.c3.h5">Mexaniki Aşınma</h5>
+                <p data-i18n="nkt.problem.c3.p">
                   Nasos tsikllərində ştanq-NKT daimi təması sürtünmə yaradır,
                   xüsusən əyilmiş quyu hissələrində sürətlənmiş aşınmaya səbəb
                   olur.
@@ -857,8 +894,8 @@
             >
               <div class="problem-card">
                 <i class="bi bi-currency-dollar icon"></i>
-                <h5>İqtisadi Zərər</h5>
-                <p>
+                <h5 data-i18n="nkt.problem.c4.h5">İqtisadi Zərər</h5>
+                <p data-i18n="nkt.problem.c4.p">
                   Planlaşdırılmamış dayanmalar, itirilen istehsal və artan
                   texniki xidmət xərcləri gəlirliyi əhəmiyyətli dərəcədə
                   azaldır.
@@ -963,9 +1000,9 @@
               </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-              <span class="sec-tag">Həll</span>
-              <h2 class="section-h2">Xüsusi Polimer-Kompozit Örtük Sistemi</h2>
-              <p class="section-p mb-3">
+              <span class="sec-tag" data-i18n="nkt.solution.tag">Həll</span>
+              <h2 class="section-h2" data-i18n="nkt.solution.h2">Xüsusi Polimer-Kompozit Örtük Sistemi</h2>
+              <p class="section-p mb-3" data-i18n="nkt.solution.p">
                 Patentli PPA (poliakrilamid) matris, neylon armaturlama lifi və
                 ebonit toz kompozitindən ibarət üçqatlı örtük NKT-nin daxili
                 səthinə tətbiq edilir.
@@ -973,28 +1010,38 @@
               <ul class="detect-list">
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
-                  <strong>Sürtünmədən müdafiə:</strong> Aşağı sürtünmə əmsalı
-                  ştanq-NKT kontakt yüklərini minimuma endirir
+                  <span data-i18n-html="nkt.solution.li1"
+                    ><strong>Sürtünmədən müdafiə:</strong> Aşağı sürtünmə əmsalı
+                  ştanq-NKT kontakt yüklərini minimuma endirir</span
+                  >
                 </li>
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
-                  <strong>Korroziyadan müdafiə:</strong> Keçirimsiz polimer qatı
-                  polad NKT-ni aqressiv mayedən tam təcrid edir
+                  <span data-i18n-html="nkt.solution.li2"
+                    ><strong>Korroziyadan müdafiə:</strong> Keçirimsiz polimer qatı
+                  polad NKT-ni aqressiv mayedən tam təcrid edir</span
+                  >
                 </li>
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
-                  <strong>Çöküntüdən müdafiə:</strong> Hidrofob səth duz
-                  kristallaşmasını və parafin yapışmasını əngəlləyir
+                  <span data-i18n-html="nkt.solution.li3"
+                    ><strong>Çöküntüdən müdafiə:</strong> Hidrofob səth duz
+                  kristallaşmasını və parafin yapışmasını əngəlləyir</span
+                  >
                 </li>
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
-                  <strong>Abraziv aşınmadan müdafiə:</strong> Bərk ebonit
-                  doldurucu qum hissəciklərinin eroziyasına müqavimət göstərir
+                  <span data-i18n-html="nkt.solution.li4"
+                    ><strong>Abraziv aşınmadan müdafiə:</strong> Bərk ebonit
+                  doldurucu qum hissəciklərinin eroziyasına müqavimət göstərir</span
+                  >
                 </li>
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
-                  <strong>Adi polad borularla uyğun:</strong> Bahalı
-                  antikorroziv materiallar əvəzinə mövcud NKT-yə tətbiq olunur
+                  <span data-i18n-html="nkt.solution.li5"
+                    ><strong>Adi polad borularla uyğun:</strong> Bahalı
+                  antikorroziv materiallar əvəzinə mövcud NKT-yə tətbiq olunur</span
+                  >
                 </li>
               </ul>
             </div>
@@ -1006,8 +1053,8 @@
       <section class="features-section" data-aos="fade-up">
         <div class="container">
           <div class="text-center mb-5">
-            <span class="sec-tag">Üstünlüklər</span>
-            <h2 class="section-h2">Ölçülmüş Əməliyyat Effekti</h2>
+            <span class="sec-tag" data-i18n="nkt.feat.tag">Üstünlüklər</span>
+            <h2 class="section-h2" data-i18n="nkt.feat.h2">Ölçülmüş Əməliyyat Effekti</h2>
           </div>
           <div class="row g-4">
             <div
@@ -1019,9 +1066,9 @@
                 <div class="icon-wrap mx-auto">
                   <i class="bi bi-calendar-check"></i>
                 </div>
-                <span class="spec-val">20–25×</span>
-                <h5>Artan Ömür Müddəti</h5>
-                <p>
+                <span class="spec-val" data-i18n="nkt.feat.c1.val">20–25×</span>
+                <h5 data-i18n="nkt.feat.c1.h5">Artan Ömür Müddəti</h5>
+                <p data-i18n="nkt.feat.c1.p">
                   Suraxanı yatağında 14 gündən 383+ günə çatdı. Bütün tətbiq
                   edilmiş quyularda sıfır dayanma.
                 </p>
@@ -1034,9 +1081,9 @@
             >
               <div class="feat-card text-center">
                 <div class="icon-wrap mx-auto"><i class="bi bi-tools"></i></div>
-                <span class="spec-val">~90%</span>
-                <h5>Azalan Kapital Təmiri</h5>
-                <p>
+                <span class="spec-val" data-i18n="nkt.feat.c2.val">~90%</span>
+                <h5 data-i18n="nkt.feat.c2.h5">Azalan Kapital Təmiri</h5>
+                <p data-i18n="nkt.feat.c2.p">
                   Tətbiqdən sonra aylıq kapital təmiri ehtiyacı illik tezliyə
                   endi.
                 </p>
@@ -1051,9 +1098,9 @@
                 <div class="icon-wrap mx-auto">
                   <i class="bi bi-graph-up-arrow"></i>
                 </div>
-                <span class="spec-val">260k+</span>
-                <h5>Metr Örtülmüş Boru</h5>
-                <p>
+                <span class="spec-val" data-i18n="nkt.feat.c3.val">260k+</span>
+                <h5 data-i18n="nkt.feat.c3.h5">Metr Örtülmüş Boru</h5>
+                <p data-i18n="nkt.feat.c3.p">
                   TOC, BOC, SOOC yataqlarda 260,000+ metr NKT sübut edilmiş
                   nəticələrlə qorunur.
                 </p>
@@ -1089,10 +1136,10 @@
             <span class="sec-tag" style="color: var(--accent-color)"
               >Sahə Nəticələri</span
             >
-            <h2 class="section-h2-white">
+            <h2 class="section-h2-white" data-i18n="nkt.result.h2">
               Suraxanı Yatağında Sübut Edilmiş Nəticələr
             </h2>
-            <p class="section-p-white mx-auto" style="max-width: 540px">
+            <p class="section-p-white mx-auto" style="max-width: 540px" data-i18n="nkt.result.p">
               «Surakhani Oil Operating Company» yatağında tətbiq — öncəsi və
               sonrası müqayisəsi.
             </p>
@@ -1100,35 +1147,35 @@
           <div class="row g-4 mb-5">
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="50">
               <div class="result-stat">
-                <div class="before">Təmirəqədər orta interval</div>
-                <div class="num-before">14–16 gün</div>
+                <div class="before" data-i18n="nkt.result.s1.before">Təmirəqədər orta interval</div>
+                <div class="num-before" data-i18n="nkt.result.s1.num_before">14–16 gün</div>
                 <div class="arrow">
                   <i class="bi bi-arrow-down-circle-fill"></i>
                 </div>
-                <div class="num-after">383+</div>
-                <div class="after-lbl">gün fasiləsiz işləmə</div>
+                <div class="num-after" data-i18n="nkt.result.s1.num_after">383+</div>
+                <div class="after-lbl" data-i18n="nkt.result.s1.after_lbl">gün fasiləsiz işləmə</div>
               </div>
             </div>
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
               <div class="result-stat">
-                <div class="before">Kapital təmiri sayı</div>
-                <div class="num-before">Hər 2–3 həftə</div>
+                <div class="before" data-i18n="nkt.result.s2.before">Kapital təmiri sayı</div>
+                <div class="num-before" data-i18n="nkt.result.s2.num_before">Hər 2–3 həftə</div>
                 <div class="arrow">
                   <i class="bi bi-arrow-down-circle-fill"></i>
                 </div>
-                <div class="num-after">~95%</div>
-                <div class="after-lbl">kapital təmiri azalması</div>
+                <div class="num-after" data-i18n="nkt.result.s2.num_after">~95%</div>
+                <div class="after-lbl" data-i18n="nkt.result.s2.after_lbl">kapital təmiri azalması</div>
               </div>
             </div>
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
               <div class="result-stat">
-                <div class="before">İstehsal sabitliyi</div>
-                <div class="num-before">Davamlı dayanmalar</div>
+                <div class="before" data-i18n="nkt.result.s3.before">İstehsal sabitliyi</div>
+                <div class="num-before" data-i18n="nkt.result.s3.num_before">Davamlı dayanmalar</div>
                 <div class="arrow">
                   <i class="bi bi-arrow-down-circle-fill"></i>
                 </div>
-                <div class="num-after">Yüksək</div>
-                <div class="after-lbl">
+                <div class="num-after" data-i18n="nkt.result.s3.num_after">Yüksək</div>
+                <div class="after-lbl" data-i18n="nkt.result.s3.after_lbl">
                   sabit və proqnozlaşdırıla bilən istehsal
                 </div>
               </div>
@@ -1139,19 +1186,19 @@
           <div class="row g-4 mt-2">
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="50">
               <div class="case-card">
-                <span class="case-num">TOC Yatağı</span>
-                <h5>«TOC» — 77,600 m örtülmüş NKT</h5>
+                <span class="case-num" data-i18n="nkt.case1.num">TOC Yatağı</span>
+                <h5 data-i18n="nkt.case1.h5">«TOC» — 77,600 m örtülmüş NKT</h5>
                 <div class="case-row">
                   <div class="case-box">
-                    <span class="lbl">Boru sayı</span
-                    ><span class="val">~8,255</span>
+                    <span class="lbl" data-i18n="nkt.case1.lbl1">Boru sayı</span
+                    ><span class="val" data-i18n="nkt.case1.val1">~8,255</span>
                   </div>
                   <div class="case-box accent">
-                    <span class="lbl">Nəticə</span
-                    ><span class="val">0 dayanma</span>
+                    <span class="lbl" data-i18n="nkt.case1.lbl2">Nəticə</span
+                    ><span class="val" data-i18n="nkt.case1.val2">0 dayanma</span>
                   </div>
                 </div>
-                <p>
+                <p data-i18n="nkt.case1.p">
                   Tətbiqdən sonra bütün quyularda planlaşdırılmamış dayanma qeyd
                   edilmədi. İstehsal sabit qaldı.
                 </p>
@@ -1159,19 +1206,19 @@
             </div>
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
               <div class="case-card">
-                <span class="case-num">BOC Yatağı</span>
-                <h5>«BOC» — 83,000 m örtülmüş NKT</h5>
+                <span class="case-num" data-i18n="nkt.case2.num">BOC Yatağı</span>
+                <h5 data-i18n="nkt.case2.h5">«BOC» — 83,000 m örtülmüş NKT</h5>
                 <div class="case-row">
                   <div class="case-box">
-                    <span class="lbl">Boru sayı</span
-                    ><span class="val">~8,830</span>
+                    <span class="lbl" data-i18n="nkt.case2.lbl1">Boru sayı</span
+                    ><span class="val" data-i18n="nkt.case2.val1">~8,830</span>
                   </div>
                   <div class="case-box accent">
-                    <span class="lbl">Nəticə</span
-                    ><span class="val">0 dayanma</span>
+                    <span class="lbl" data-i18n="nkt.case2.lbl2">Nəticə</span
+                    ><span class="val" data-i18n="nkt.case2.val2">0 dayanma</span>
                   </div>
                 </div>
-                <p>
+                <p data-i18n="nkt.case2.p">
                   Yüksək duzluluğu olan quyularda korroziyaya qarşı tam müdafiə.
                   Kapital təmiri xərcləri əhəmiyyətli dərəcədə azaldı.
                 </p>
@@ -1179,18 +1226,18 @@
             </div>
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
               <div class="case-card">
-                <span class="case-num">SOOC Yatağı</span>
-                <h5>«SOOC» — 100,000 m örtülmüş NKT</h5>
+                <span class="case-num" data-i18n="nkt.case3.num">SOOC Yatağı</span>
+                <h5 data-i18n="nkt.case3.h5">«SOOC» — 100,000 m örtülmüş NKT</h5>
                 <div class="case-row">
                   <div class="case-box">
-                    <span class="lbl">Boru sayı</span
-                    ><span class="val">~10,368</span>
+                    <span class="lbl" data-i18n="nkt.case3.lbl1">Boru sayı</span
+                    ><span class="val" data-i18n="nkt.case3.val1">~10,368</span>
                   </div>
                   <div class="case-box accent">
-                    <span class="lbl">Artım</span><span class="val">20×+</span>
+                    <span class="lbl" data-i18n="nkt.case3.lbl2">Artım</span><span class="val" data-i18n="nkt.case3.val2">20×+</span>
                   </div>
                 </div>
-                <p>
+                <p data-i18n="nkt.case3.p">
                   16 gündən 383+ günə qədər. İşləmə müddəti bugün də davam edir.
                   İqtisadi səmərəlilik dramatik şəkildə yaxşılaşdı.
                 </p>
@@ -1205,13 +1252,13 @@
         <div class="container">
           <div class="row align-items-start g-5">
             <div class="col-lg-4">
-              <span class="section-tag">Texniki Xüsusiyyətlər</span>
-              <h2 class="section-h2-white">Örtük Sistemi Parametrləri</h2>
-              <p class="section-p-white">
+              <span class="section-tag" data-i18n="nkt.specs.tag">Texniki Xüsusiyyətlər</span>
+              <h2 class="section-h2-white" data-i18n="nkt.specs.h2">Örtük Sistemi Parametrləri</h2>
+              <p class="section-p-white" data-i18n="nkt.specs.p">
                 Patentli formula sahə şəraitinin ən aqressiv şərtlərini ödəmək
                 üçün hazırlanmışdır.
               </p>
-              <a href="contact.html" class="btn-primary mt-3"
+              <a href="contact.html" class="btn-primary mt-3" data-i18n="nkt.specs.btn"
                 >Texniki Pasport İstəyin</a
               >
             </div>
@@ -1225,32 +1272,32 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Əsas polimer komponenti</td>
-                    <td>Poliakrilamid (PPA) matrisi</td>
+                    <td data-i18n="nkt.specs.r1.param">Əsas polimer komponenti</td>
+                    <td data-i18n="nkt.specs.r1.val">Poliakrilamid (PPA) matrisi</td>
                   </tr>
                   <tr>
-                    <td>Armaturlama komponenti</td>
-                    <td>Neylon liflər</td>
+                    <td data-i18n="nkt.specs.r2.param">Armaturlama komponenti</td>
+                    <td data-i18n="nkt.specs.r2.val">Neylon liflər</td>
                   </tr>
                   <tr>
-                    <td>Doldurucu komponenti</td>
-                    <td>Ebonit toz kompoziti</td>
+                    <td data-i18n="nkt.specs.r3.param">Doldurucu komponenti</td>
+                    <td data-i18n="nkt.specs.r3.val">Ebonit toz kompoziti</td>
                   </tr>
                   <tr>
-                    <td>Tətbiq metodu</td>
-                    <td>NKT-nin daxili səthinə tətbiq</td>
+                    <td data-i18n="nkt.specs.r4.param">Tətbiq metodu</td>
+                    <td data-i18n="nkt.specs.r4.val">NKT-nin daxili səthinə tətbiq</td>
                   </tr>
                   <tr>
-                    <td>Temperatura davamlılığı</td>
-                    <td>Yüksək temp. quyu şəraitinə uyğun</td>
+                    <td data-i18n="nkt.specs.r5.param">Temperatura davamlılığı</td>
+                    <td data-i18n="nkt.specs.r5.val">Yüksək temp. quyu şəraitinə uyğun</td>
                   </tr>
                   <tr>
-                    <td>Kimyəvi müqavimət</td>
-                    <td>H₂S, CO₂, xloridlər, turşular</td>
+                    <td data-i18n="nkt.specs.r6.param">Kimyəvi müqavimət</td>
+                    <td data-i18n="nkt.specs.r6.val">H₂S, CO₂, xloridlər, turşular</td>
                   </tr>
                   <tr>
-                    <td>Uyğun boru ölçüləri</td>
-                    <td>73 mm / 89 mm / 114 mm NKT</td>
+                    <td data-i18n="nkt.specs.r7.param">Uyğun boru ölçüləri</td>
+                    <td data-i18n="nkt.specs.r7.val">73 mm / 89 mm / 114 mm NKT</td>
                   </tr>
                   <!-- hidden — ISO/AZS certifications not currently held, kept for future use
                   <tr>
@@ -1259,12 +1306,12 @@
                   </tr>
                   -->
                   <tr>
-                    <td>Patentlər</td>
-                    <td>Polimer-kompozit formula patentli</td>
+                    <td data-i18n="nkt.specs.r9.param">Patentlər</td>
+                    <td data-i18n="nkt.specs.r9.val">Polimer-kompozit formula patentli</td>
                   </tr>
                   <tr>
-                    <td>Sübut edilmiş müddət artımı</td>
-                    <td>14 gündən 383+ günə (25× artım)</td>
+                    <td data-i18n="nkt.specs.r10.param">Sübut edilmiş müddət artımı</td>
+                    <td data-i18n="nkt.specs.r10.val">14 gündən 383+ günə (25× artım)</td>
                   </tr>
                 </tbody>
               </table>
@@ -1279,14 +1326,14 @@
           <div class="cta-box">
             <div class="cta-text">
               <h3>Texniki Təklif Alın</h3>
-              <p>
+              <p data-i18n="nkt.cta.desc">
                 Mütəxəssislərimiz quyunuzun şəraitinə uyğun həll hazırlayacaq və
                 xərc-fayda hesablamasını sizinlə bölüşəcək.
               </p>
             </div>
             <div class="cta-buttons">
               <a href="contact.html" class="btn-primary">Müraciət Edin</a>
-              <a href="services.html" class="btn-outline-dark"
+              <a href="services.html" class="btn-outline-dark" data-i18n="nkt.cta.btn2"
                 >Bütün Xidmətlər</a
               >
             </div>
@@ -1299,7 +1346,7 @@
       <div class="container footer-grid">
         <div class="footer-col">
           <h4>GLOBAL OIL &amp; GAS INNOVATIONS</h4>
-          <p>
+          <p data-i18n-html="footer.about_desc">
             Neft-qaz sənayesi üçün innovativ mühəndis həlləri və
             patentləşdirilmiş texnologiyalar hazırlayan neft-servis şirkəti.
           </p>
@@ -1310,26 +1357,40 @@
           </div>
         </div>
         <div class="footer-col">
-          <h5>Tez Əlaqələr</h5>
+          <h5 data-i18n="footer.quick_links">Tez Əlaqələr</h5>
           <ul>
-            <li><a href="index.html">Əsas Səhifə</a></li>
-            <li><a href="about.html">Haqqımızda</a></li>
-            <li><a href="products.html">Məhsullar</a></li>
-            <li><a href="services.html">Xidmətlər</a></li>
-            <li><a href="contact.html">Əlaqə</a></li>
+            <li>
+              <a href="index.html" data-i18n="footer.home">Əsas Səhifə</a>
+            </li>
+            <li>
+              <a href="about.html" data-i18n="footer.about">Haqqımızda</a>
+            </li>
+            <li>
+              <a href="products.html" data-i18n="footer.products">Məhsullar</a>
+            </li>
+            <li>
+              <a href="services.html" data-i18n="footer.services">Xidmətlər</a>
+            </li>
+            <li>
+              <a href="contact.html" data-i18n="footer.contact_link">Əlaqə</a>
+            </li>
           </ul>
         </div>
         <div class="footer-col">
-          <h5>Əsas Sənaye Sahələri</h5>
+          <h5 data-i18n="footer.industries">Əsas Sənaye Sahələri</h5>
           <ul>
-            <li>NKT və muftaların qorunması</li>
-            <li>Quyuların geofiziki tədqiqi (Karotaj)</li>
-            <li>Ağıllı Nasos Stansiyaları</li>
-            <li>Texniki Dəstək və Konsultasiya</li>
+            <li data-i18n="footer.oil_gas">NKT və muftaların qorunması</li>
+            <li data-i18n="footer.petrochemicals">
+              Quyuların geofiziki tədqiqi (Karotaj)
+            </li>
+            <li data-i18n="footer.manufacturing">Ağıllı Nasos Stansiyaları</li>
+            <li data-i18n="footer.construction">
+              Texniki Dəstək və Konsultasiya
+            </li>
           </ul>
         </div>
         <div class="footer-col">
-          <h5>Əlaqə</h5>
+          <h5 data-i18n="footer.contact_title">Əlaqə</h5>
           <ul>
             <li>
               130000, Qazaxıstan Respublikası,<br />Mangistau vilayəti, Aktau
@@ -1392,5 +1453,7 @@
         });
       })();
     </script>
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/lang.js"></script>
   </body>
 </html>

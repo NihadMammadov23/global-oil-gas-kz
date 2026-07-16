@@ -20,6 +20,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css"
+      rel="stylesheet"
+    />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link href="assets/css/main.css" rel="stylesheet" />
     <style>
@@ -700,18 +704,52 @@
         </div>
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="index.html">Ana Səhifə</a></li>
-            <li><a href="about.html">Haqqımızda</a></li>
-            <li><a href="products.html">Məhsullar</a></li>
-            <li><a href="services.html" class="active">Xidmətlər</a></li>
-            <li><a href="contact.html">Əlaqə</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Ana Səhifə</a></li>
+            <li><a href="about.html" data-i18n="nav.about">Haqqımızda</a></li>
+            <!-- <li>
+              <a href="products.html" data-i18n="nav.products">Məhsullar</a>
+            </li> -->
+            <li>
+              <a href="services.html" class="active" data-i18n="nav.services"
+                >Xidmətlər</a
+              >
+            </li>
+            <li><a href="contact.html" data-i18n="nav.contact">Əlaqə</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
         <div class="d-flex align-items-center">
           <span class="me-4 phone d-none d-lg-inline"
             ><i class="bi bi-telephone" style="padding-right: 5px"></i> +7 778 385 71 35</span
-          ><a class="btn btn-warning" href="contact.html"
+          >
+          <div class="lang-switcher d-none d-lg-flex me-3">
+            <button class="lang-selected" type="button">
+              <span class="fi fi-gb lang-flag"></span>
+              <span class="lang-name">EN</span>
+              <i class="bi bi-chevron-down lang-chevron"></i>
+            </button>
+            <div class="lang-dropdown">
+              <!-- disabled — kept for future use
+              <button class="lang-option" data-lang="az" type="button">
+                <span class="fi fi-az lang-flag"></span>
+                <span>Azərbaycan</span>
+              </button>
+              -->
+              <button class="lang-option" data-lang="en" type="button">
+                <span class="fi fi-gb lang-flag"></span>
+                <span>English</span>
+              </button>
+              <button class="lang-option" data-lang="ru" type="button">
+                <span class="fi fi-ru lang-flag"></span>
+                <span>Русский</span>
+              </button>
+              <button class="lang-option" data-lang="kk" type="button">
+                <span class="fi fi-kz lang-flag"></span>
+                <span>Қазақша</span>
+              </button>
+            </div>
+          </div>
+          <a class="btn btn-warning" href="contact.html" data-i18n="nav.cta"
             >Qiymət Təklifi İstəyin</a
           >
         </div>
@@ -722,27 +760,37 @@
         <img src="assets/img/background.png" class="hero-bg" alt="" />
         <div class="container">
           <div class="breadcrumb-bar">
-            <a href="index.html">Ana Səhifə</a><span class="sep">/</span
-            ><a href="services.html">Xidmətlər</a><span class="sep">/</span
-            ><span class="current">Ağıllı Nasos Stansiyaları</span>
+            <a href="index.html" data-i18n="bc.home">Ana Səhifə</a
+            ><span class="sep">/</span
+            ><a href="services.html" data-i18n="bc.services">Xidmətlər</a
+            ><span class="sep">/</span
+            ><span class="current" data-i18n="pump.bc.current"
+              >Ağıllı Nasos Stansiyaları</span
+            >
           </div>
-          <span class="badge bg-warning text-dark mb-4"
+          <span
+            class="badge bg-warning text-dark mb-4"
+            data-i18n="pump.hero.badge"
             >ŞGN İDARƏETMƏ SİSTEMİ</span
           >
-          <h1>
+          <h1 data-i18n-html="pump.hero.title_html">
             Quyu Əməliyyatlarını<br /><span>Avtomatlaşdırın</span> və
             Optimallaşdırın
           </h1>
-          <p>
+          <p data-i18n="pump.hero.desc">
             ŞGN stansiyaları üçün avtomatlaşdırma sistemi — istehsal
             məhsuldarlığını artırır, enerji istehlakını azaldır, dayanmaları
             minimuma endirir. SCADA inteqrasiyası ilə.
           </p>
           <div class="hero-btns">
             <a href="contact.html" class="btn-primary"
-              >Konsultasiya Rezerv Edin <i class="bi bi-arrow-right ms-1"></i
+              ><span data-i18n="pump.hero.btn1">Konsultasiya Rezerv Edin</span>
+              <i class="bi bi-arrow-right ms-1"></i
             ></a>
-            <a href="contact.html" class="btn-outline-light-c"
+            <a
+              href="contact.html"
+              class="btn-outline-light-c"
+              data-i18n="pump.hero.btn2"
               >Texniki Suallar</a
             >
           </div>
@@ -752,9 +800,15 @@
       <section class="problem-section" data-aos="fade-up">
         <div class="container">
           <div class="text-center mb-5">
-            <span class="sec-tag">Problem</span>
-            <h2 class="section-h2">Əl idarəetməsinin gizli xərcləri</h2>
-            <p class="section-p mx-auto" style="max-width: 580px">
+            <span class="sec-tag" data-i18n="pump.problem.tag">Problem</span>
+            <h2 class="section-h2" data-i18n="pump.problem.title">
+              Əl idarəetməsinin gizli xərcləri
+            </h2>
+            <p
+              class="section-p mx-auto"
+              style="max-width: 580px"
+              data-i18n="pump.problem.p"
+            >
               Operatorların daimi iştirakı, gecikmişlər üçün reaksiya, enerji
               israfı — bunlar avtomatlaşdırma olmadan qaçılmazdır.
             </p>
@@ -767,8 +821,8 @@
             >
               <div class="problem-card">
                 <i class="bi bi-person-x icon"></i>
-                <h5>Operatora Yüksək Yük</h5>
-                <p>
+                <h5 data-i18n="pump.problem.c1.h5">Operatora Yüksək Yük</h5>
+                <p data-i18n="pump.problem.c1.p">
                   Hər quyu üçün ayrıca operator tələb olunur — insan resursuna
                   böyük yük, xəta riski yüksəkdir.
                 </p>
@@ -781,8 +835,8 @@
             >
               <div class="problem-card">
                 <i class="bi bi-lightning icon"></i>
-                <h5>Enerji İsrafı</h5>
-                <p>
+                <h5 data-i18n="pump.problem.c2.h5">Enerji İsrafı</h5>
+                <p data-i18n="pump.problem.c2.p">
                   Optimallaşdırılmamış nasos tsikllərinin idarə edilməsi
                   lazımsız enerji istehlakına gətirib çıxarır.
                 </p>
@@ -795,8 +849,8 @@
             >
               <div class="problem-card">
                 <i class="bi bi-exclamation-triangle icon"></i>
-                <h5>Gec Reaksiya</h5>
-                <p>
+                <h5 data-i18n="pump.problem.c3.h5">Gec Reaksiya</h5>
+                <p data-i18n="pump.problem.c3.p">
                   Nasazlıq aşkarlandıqda çox vaxt artıq ciddi ziyan baş
                   vermişdir — profilaktika yoxdur.
                 </p>
@@ -809,8 +863,8 @@
             >
               <div class="problem-card">
                 <i class="bi bi-bar-chart-line icon"></i>
-                <h5>Optimallaşdırma Yoxdur</h5>
-                <p>
+                <h5 data-i18n="pump.problem.c4.h5">Optimallaşdırma Yoxdur</h5>
+                <p data-i18n="pump.problem.c4.p">
                   Quyu şəraitinə uyğun dinamik tənzimləmə əl rejimində faktiki
                   olaraq mümkün deyil.
                 </p>
@@ -925,11 +979,11 @@
               </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-              <span class="sec-tag">Həll</span>
-              <h2 class="section-h2">
+              <span class="sec-tag" data-i18n="pump.solution.tag">Həll</span>
+              <h2 class="section-h2" data-i18n="pump.solution.h2">
                 ŞGN Stansiyası — Kompleks Avtomatlaşdırma
               </h2>
-              <p class="section-p mb-4">
+              <p class="section-p mb-4" data-i18n="pump.solution.p">
                 İdarəetmə stansiyası stanok-kacalkaların tam idarəetməsini
                 həyata keçirir: effektivliyi artırır, dayanmaları minimuma
                 endirir, operatorun yükünü azaldır.
@@ -937,33 +991,45 @@
               <ul class="detect-list">
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
-                  <strong>Real vaxtda monitorinq:</strong> Yük, enerji
-                  istehlakı, iş/dayanma vaxtı — anında bildirişlərlə
+                  <span data-i18n-html="pump.solution.li1"
+                    ><strong>Real vaxtda monitorinq:</strong> Yük, enerji
+                    istehlakı, iş/dayanma vaxtı — anında bildirişlərlə</span
+                  >
                 </li>
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
-                  <strong>Proqnozlaşdırıcı texniki xidmət:</strong> Nasazlıqdan
-                  əvvəl xəbərdarlıq sistemi
+                  <span data-i18n-html="pump.solution.li2"
+                    ><strong>Proqnozlaşdırıcı texniki xidmət:</strong>
+                    Nasazlıqdan əvvəl xəbərdarlıq sistemi</span
+                  >
                 </li>
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
-                  <strong>GSM / SCADA inteqrasiyası:</strong> Mövcud sistemlərə
-                  qoşulma, uzaqdan idarə
+                  <span data-i18n-html="pump.solution.li3"
+                    ><strong>GSM / SCADA inteqrasiyası:</strong> Mövcud
+                    sistemlərə qoşulma, uzaqdan idarə</span
+                  >
                 </li>
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
-                  <strong>Modbus TCP dəstəyi:</strong> Sənaye protokolları ilə
-                  tam uyğunluq
+                  <span data-i18n-html="pump.solution.li4"
+                    ><strong>Modbus TCP dəstəyi:</strong> Sənaye protokolları
+                    ilə tam uyğunluq</span
+                  >
                 </li>
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
-                  <strong>Avtomatik/əl rejimi:</strong> Hər tapşırıq üçün çevik
-                  idarəetmə variantları
+                  <span data-i18n-html="pump.solution.li5"
+                    ><strong>Avtomatik/əl rejimi:</strong> Hər tapşırıq üçün
+                    çevik idarəetmə variantları</span
+                  >
                 </li>
                 <li>
                   <i class="bi bi-check-circle-fill"></i>
-                  <strong>Genişləndirilə bilən:</strong> 1-dən 1000+ quyuya
-                  qədər eyni sistemdə
+                  <span data-i18n-html="pump.solution.li6"
+                    ><strong>Genişləndirilə bilən:</strong> 1-dən 1000+ quyuya
+                    qədər eyni sistemdə</span
+                  >
                 </li>
               </ul>
             </div>
@@ -974,8 +1040,8 @@
       <section class="features-section" data-aos="fade-up">
         <div class="container">
           <div class="text-center mb-5">
-            <span class="sec-tag">İqtisadi Effekt</span>
-            <h2 class="section-h2">Ölçülmüş Faydalar</h2>
+            <span class="sec-tag" data-i18n="pump.feat.tag">İqtisadi Effekt</span>
+            <h2 class="section-h2" data-i18n="pump.feat.h2">Ölçülmüş Faydalar</h2>
           </div>
           <div class="row g-4">
             <div
@@ -987,9 +1053,9 @@
                 <div class="icon-wrap mx-auto">
                   <i class="bi bi-lightning-charge-fill"></i>
                 </div>
-                <span class="spec-val">40%</span>
-                <h5>Enerji Qənaəti</h5>
-                <p>
+                <span class="spec-val" data-i18n="pump.feat.c1.val">40%</span>
+                <h5 data-i18n="pump.feat.c1.h5">Enerji Qənaəti</h5>
+                <p data-i18n="pump.feat.c1.p">
                   Enerji istehlakının 40%-ə qədər azaldılması — birbaşa
                   əməliyyat xərclərinin azalması.
                 </p>
@@ -1002,9 +1068,9 @@
             >
               <div class="feat-card text-center">
                 <div class="icon-wrap mx-auto"><i class="bi bi-tools"></i></div>
-                <span class="spec-val">30%</span>
-                <h5>Texniki Xidmət Azalması</h5>
-                <p>
+                <span class="spec-val" data-i18n="pump.feat.c2.val">30%</span>
+                <h5 data-i18n="pump.feat.c2.h5">Texniki Xidmət Azalması</h5>
+                <p data-i18n="pump.feat.c2.p">
                   Texniki xidmət xərclərinin 30% azaldılması — profilaktik
                   idarəetmə sayəsində.
                 </p>
@@ -1019,9 +1085,9 @@
                 <div class="icon-wrap mx-auto">
                   <i class="bi bi-shield-check"></i>
                 </div>
-                <span class="spec-val">24/7</span>
-                <h5>Uzaqdan Nəzarət</h5>
-                <p>
+                <span class="spec-val" data-i18n="pump.feat.c3.val">24/7</span>
+                <h5 data-i18n="pump.feat.c3.h5">Uzaqdan Nəzarət</h5>
+                <p data-i18n="pump.feat.c3.p">
                   Bütün quyuların statusunu, dinamoqramları və hasilat
                   parametrlərini 24/7 izləmə.
                 </p>
@@ -1036,9 +1102,9 @@
                 <div class="icon-wrap mx-auto">
                   <i class="bi bi-diagram-3-fill"></i>
                 </div>
-                <span class="spec-val">1000+</span>
-                <h5>Quyu Dəstəyi</h5>
-                <p>
+                <span class="spec-val" data-i18n="pump.feat.c4.val">1000+</span>
+                <h5 data-i18n="pump.feat.c4.h5">Quyu Dəstəyi</h5>
+                <p data-i18n="pump.feat.c4.p">
                   Eyni SCADA platformasında 1-dən 1000+ quyuya qədər
                   miqyaslanabilən həll.
                 </p>
@@ -1052,11 +1118,16 @@
         <div class="container">
           <div class="row g-5 align-items-center">
             <div class="col-lg-5">
-              <span class="sec-tag" style="color: var(--accent-color)"
+              <span
+                class="sec-tag"
+                style="color: var(--accent-color)"
+                data-i18n="pump.arch.tag"
                 >Sistem Arxitekturası</span
               >
-              <h2 class="section-h2-white">Məlumat Emalı Arxitekturası</h2>
-              <p class="section-p-white">
+              <h2 class="section-h2-white" data-i18n="pump.arch.h2">
+                Məlumat Emalı Arxitekturası
+              </h2>
+              <p class="section-p-white" data-i18n="pump.arch.p">
                 Sensorlardan SCADA-ya qədər — effektiv və təhlükəsiz məlumat
                 mübadiləsi əsaslandırılmış qərarların qəbulunu təmin edir.
               </p>
@@ -1065,8 +1136,8 @@
               <div class="arch-step">
                 <div class="arch-num">01</div>
                 <div>
-                  <h6>Sensorlar</h6>
-                  <p>
+                  <h6 data-i18n="pump.arch.s1.h6">Sensorlar</h6>
+                  <p data-i18n="pump.arch.s1.p">
                     Real vaxtda məlumat toplama — gərginlik, cərəyan, tezlik,
                     güc, hasilat intensivliyi.
                   </p>
@@ -1075,8 +1146,8 @@
               <div class="arch-step">
                 <div class="arch-num">02</div>
                 <div>
-                  <h6>Kontroler</h6>
-                  <p>
+                  <h6 data-i18n="pump.arch.s2.h6">Kontroler</h6>
+                  <p data-i18n="pump.arch.s2.p">
                     Lokal məlumat emalı və idarəetmə — anında reaksiya, lokal
                     qərar qəbulu.
                   </p>
@@ -1085,8 +1156,8 @@
               <div class="arch-step">
                 <div class="arch-num">03</div>
                 <div>
-                  <h6>Məlumat Analizi</h6>
-                  <p>
+                  <h6 data-i18n="pump.arch.s3.h6">Məlumat Analizi</h6>
+                  <p data-i18n="pump.arch.s3.p">
                     Qəbul edilmiş məlumatların analizi — avtomatik qərar qəbulu,
                     anomaliyaların aşkarlanması.
                   </p>
@@ -1095,8 +1166,8 @@
               <div class="arch-step">
                 <div class="arch-num">04</div>
                 <div>
-                  <h6>SCADA Sistemi</h6>
-                  <p>
+                  <h6 data-i18n="pump.arch.s4.h6">SCADA Sistemi</h6>
+                  <p data-i18n="pump.arch.s4.p">
                     Uzaqdan monitorinq və idarəetmə — bütün quyu filosu üçün
                     mərkəzləşdirilmiş platforma.
                   </p>
@@ -1110,15 +1181,15 @@
       <section class="modes-section" data-aos="fade-up">
         <div class="container">
           <div class="text-center mb-5">
-            <span class="sec-tag">İş Rejimləri</span>
-            <h2 class="section-h2">Üç Çevik İdarəetmə Rejimi</h2>
+            <span class="sec-tag" data-i18n="pump.modes.tag">İş Rejimləri</span>
+            <h2 class="section-h2" data-i18n="pump.modes.h2">Üç Çevik İdarəetmə Rejimi</h2>
           </div>
           <div class="row g-4">
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="50">
               <div class="mode-card">
                 <i class="bi bi-robot mode-icon"></i>
-                <h5>Avtomatik Rejim</h5>
-                <p>
+                <h5 data-i18n="pump.mode1.h5">Avtomatik Rejim</h5>
+                <p data-i18n="pump.mode1.p">
                   Dayanmaları minimuma endirir, operatorların yükünü azaldır.
                   Quyu şəraitinə əsaslanan dinamik optimallaşdırma.
                 </p>
@@ -1127,8 +1198,8 @@
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
               <div class="mode-card">
                 <i class="bi bi-hand-index-thumb mode-icon"></i>
-                <h5>Əl Rejimi</h5>
-                <p>
+                <h5 data-i18n="pump.mode2.h5">Əl Rejimi</h5>
+                <p data-i18n="pump.mode2.p">
                   Operator tərəfindən birbaşa idarəetmə. Müdaxilə tələb edən
                   xüsusi vəziyyətlər üçün tam nəzarət.
                 </p>
@@ -1137,8 +1208,8 @@
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
               <div class="mode-card">
                 <i class="bi bi-wifi mode-icon"></i>
-                <h5>Uzaqdan İdarəetmə</h5>
-                <p>
+                <h5 data-i18n="pump.mode3.h5">Uzaqdan İdarəetmə</h5>
+                <p data-i18n="pump.mode3.p">
                   Quraşdırmanın vəziyyətini, dinamoqramları və hasilat
                   parametrlərini 24/7 izlə. Sapma zamanı ani bildirişlər.
                 </p>
@@ -1152,13 +1223,16 @@
         <div class="container">
           <div class="row align-items-start g-5">
             <div class="col-lg-4">
-              <span class="section-tag">Spesifikasiyalar</span>
-              <h2 class="section-h2-white">Texniki Xüsusiyyətlər</h2>
-              <p class="section-p-white">
+              <span class="section-tag" data-i18n="pump.specs.tag">Spesifikasiyalar</span>
+              <h2 class="section-h2-white" data-i18n="pump.specs.h2v">Texniki Xüsusiyyətlər</h2>
+              <p class="section-p-white" data-i18n="pump.specs.p">
                 Stanoya IP sertifikatlı, sənaye mühitinə davamlı konstruksiya
                 ilə hazırlanmışdır.
               </p>
-              <a href="contact.html" class="btn-primary mt-3"
+              <a
+                href="contact.html"
+                class="btn-primary mt-3"
+                data-i18n="pump.specs.btn"
                 >Konsultasiya Alın</a
               >
             </div>
@@ -1172,44 +1246,44 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>İdarəetmə rejimləri</td>
-                    <td>Avtomatik, Əl, Uzaqdan</td>
+                    <td data-i18n="pump.specs.r1.param">İdarəetmə rejimləri</td>
+                    <td data-i18n="pump.specs.r1.val">Avtomatik, Əl, Uzaqdan</td>
                   </tr>
                   <tr>
-                    <td>Kommunikasiya protokolları</td>
-                    <td>GSM, Modbus TCP, SCADA</td>
+                    <td data-i18n="pump.specs.r2.param">Kommunikasiya protokolları</td>
+                    <td data-i18n="pump.specs.r2.val">GSM, Modbus TCP, SCADA</td>
                   </tr>
                   <tr>
-                    <td>Uzaqdan konfiqurasiya</td>
-                    <td>Bəli — tam parametr tənzimləməsi</td>
+                    <td data-i18n="pump.specs.r3.param">Uzaqdan konfiqurasiya</td>
+                    <td data-i18n="pump.specs.r3.val">Bəli — tam parametr tənzimləməsi</td>
                   </tr>
                   <tr>
-                    <td>Monitorinq parametrləri</td>
-                    <td>Gərginlik, cərəyan, tezlik, güc, hasilat</td>
+                    <td data-i18n="pump.specs.r4.param">Monitorinq parametrləri</td>
+                    <td data-i18n="pump.specs.r4.val">Gərginlik, cərəyan, tezlik, güc, hasilat</td>
                   </tr>
                   <tr>
-                    <td>Alarm sistemi</td>
-                    <td>Yüklənmə, az yüklənmə, qidalanma kəsilməsi</td>
+                    <td data-i18n="pump.specs.r5.param">Alarm sistemi</td>
+                    <td data-i18n="pump.specs.r5.val">Yüklənmə, az yüklənmə, qidalanma kəsilməsi</td>
                   </tr>
                   <tr>
-                    <td>SCADA miqyası</td>
-                    <td>1-dən 1000+ quyuya</td>
+                    <td data-i18n="pump.specs.r6.param">SCADA miqyası</td>
+                    <td data-i18n="pump.specs.r6.val">1-dən 1000+ quyuya</td>
                   </tr>
                   <tr>
-                    <td>Məlumat şifrələməsi</td>
-                    <td>GOST R 34.10-2012</td>
+                    <td data-i18n="pump.specs.r7.param">Məlumat şifrələməsi</td>
+                    <td data-i18n="pump.specs.r7.val">GOST R 34.10-2012</td>
                   </tr>
                   <tr>
-                    <td>Enerji qənaəti</td>
-                    <td>40%-ə qədər</td>
+                    <td data-i18n="pump.specs.r8.param">Enerji qənaəti</td>
+                    <td data-i18n="pump.specs.r8.val">40%-ə qədər</td>
                   </tr>
                   <tr>
-                    <td>Texniki xidmət azalması</td>
-                    <td>~30%</td>
+                    <td data-i18n="pump.specs.r9.param">Texniki xidmət azalması</td>
+                    <td data-i18n="pump.specs.r9.val">~30%</td>
                   </tr>
                   <tr>
-                    <td>Vizual interfeys</td>
-                    <td>Dinamoqramlar, yük qrafiki, enerji istehlakı</td>
+                    <td data-i18n="pump.specs.r10.param">Vizual interfeys</td>
+                    <td data-i18n="pump.specs.r10.val">Dinamoqramlar, yük qrafiki, enerji istehlakı</td>
                   </tr>
                 </tbody>
               </table>
@@ -1222,15 +1296,18 @@
         <div class="container" data-aos="fade-up">
           <div class="cta-box">
             <div class="cta-text">
-              <h3>Konsultasiya Rezerv Edin</h3>
-              <p>
+              <h3 data-i18n="pump.cta.h3">Konsultasiya Rezerv Edin</h3>
+              <p data-i18n="pump.cta.desc">
                 Mühəndislərimiz quyularınızın sayına və şəraitinə uyğun
                 avtomatlaşdırma planını hazırlayacaq.
               </p>
             </div>
             <div class="cta-buttons">
               <a href="contact.html" class="btn-primary">Müraciət Edin</a
-              ><a href="services.html" class="btn-outline-dark"
+              ><a
+                href="services.html"
+                class="btn-outline-dark"
+                data-i18n="pump.cta.btn2"
                 >Bütün Xidmətlər</a
               >
             </div>
@@ -1242,7 +1319,9 @@
       <div class="container footer-grid">
         <div class="footer-col">
           <h4>GLOBAL OIL &amp; GAS INNOVATIONS</h4>
-          <p>Neft-qaz sənayesi üçün innovativ neft-servis şirkəti.</p>
+          <p data-i18n-html="footer.about_desc">
+            Neft-qaz sənayesi üçün innovativ neft-servis şirkəti.
+          </p>
           <div class="socials">
             <a href="#"><i class="bi bi-linkedin"></i></a
             ><a href="#"><i class="bi bi-facebook"></i></a
@@ -1250,26 +1329,40 @@
           </div>
         </div>
         <div class="footer-col">
-          <h5>Tez Əlaqələr</h5>
+          <h5 data-i18n="footer.quick_links">Tez Əlaqələr</h5>
           <ul>
-            <li><a href="index.html">Əsas Səhifə</a></li>
-            <li><a href="about.html">Haqqımızda</a></li>
-            <li><a href="products.html">Məhsullar</a></li>
-            <li><a href="services.html">Xidmətlər</a></li>
-            <li><a href="contact.html">Əlaqə</a></li>
+            <li>
+              <a href="index.html" data-i18n="footer.home">Əsas Səhifə</a>
+            </li>
+            <li>
+              <a href="about.html" data-i18n="footer.about">Haqqımızda</a>
+            </li>
+            <li>
+              <a href="products.html" data-i18n="footer.products">Məhsullar</a>
+            </li>
+            <li>
+              <a href="services.html" data-i18n="footer.services">Xidmətlər</a>
+            </li>
+            <li>
+              <a href="contact.html" data-i18n="footer.contact_link">Əlaqə</a>
+            </li>
           </ul>
         </div>
         <div class="footer-col">
-          <h5>Sənaye Sahələri</h5>
+          <h5 data-i18n="footer.industries">Sənaye Sahələri</h5>
           <ul>
-            <li>NKT və muftaların qorunması</li>
-            <li>Quyuların geofiziki tədqiqi (Karotaj)</li>
-            <li>Ağıllı Nasos Stansiyaları</li>
-            <li>Texniki Dəstək və Konsultasiya</li>
+            <li data-i18n="footer.oil_gas">NKT və muftaların qorunması</li>
+            <li data-i18n="footer.petrochemicals">
+              Quyuların geofiziki tədqiqi (Karotaj)
+            </li>
+            <li data-i18n="footer.manufacturing">Ağıllı Nasos Stansiyaları</li>
+            <li data-i18n="footer.construction">
+              Texniki Dəstək və Konsultasiya
+            </li>
           </ul>
         </div>
         <div class="footer-col">
-          <h5>Əlaqə</h5>
+          <h5 data-i18n="footer.contact_title">Əlaqə</h5>
           <ul>
             <li>
               130000, Qazaxıstan Respublikası,<br />Mangistau vilayəti, Aktau
@@ -1332,5 +1425,7 @@
         });
       })();
     </script>
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/lang.js"></script>
   </body>
 </html>

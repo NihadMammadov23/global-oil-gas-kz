@@ -22,6 +22,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css"
+      rel="stylesheet"
+    />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link href="assets/css/main.css" rel="stylesheet" />
     <style>
@@ -685,18 +689,52 @@
         </div>
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="index.html">Ana Səhifə</a></li>
-            <li><a href="about.html">Haqqımızda</a></li>
-            <li><a href="products.html">Məhsullar</a></li>
-            <li><a href="services.html" class="active">Xidmətlər</a></li>
-            <li><a href="contact.html">Əlaqə</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Ana Səhifə</a></li>
+            <li><a href="about.html" data-i18n="nav.about">Haqqımızda</a></li>
+            <!-- <li>
+              <a href="products.html" data-i18n="nav.products">Məhsullar</a>
+            </li> -->
+            <li>
+              <a href="services.html" class="active" data-i18n="nav.services"
+                >Xidmətlər</a
+              >
+            </li>
+            <li><a href="contact.html" data-i18n="nav.contact">Əlaqə</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
         <div class="d-flex align-items-center">
           <span class="me-4 phone d-none d-lg-inline"
             ><i class="bi bi-telephone" style="padding-right: 5px"></i> +7 778 385 71 35</span
-          ><a class="btn btn-warning" href="contact.html"
+          >
+          <div class="lang-switcher d-none d-lg-flex me-3">
+            <button class="lang-selected" type="button">
+              <span class="fi fi-gb lang-flag"></span>
+              <span class="lang-name">EN</span>
+              <i class="bi bi-chevron-down lang-chevron"></i>
+            </button>
+            <div class="lang-dropdown">
+              <!-- disabled — kept for future use
+              <button class="lang-option" data-lang="az" type="button">
+                <span class="fi fi-az lang-flag"></span>
+                <span>Azərbaycan</span>
+              </button>
+              -->
+              <button class="lang-option" data-lang="en" type="button">
+                <span class="fi fi-gb lang-flag"></span>
+                <span>English</span>
+              </button>
+              <button class="lang-option" data-lang="ru" type="button">
+                <span class="fi fi-ru lang-flag"></span>
+                <span>Русский</span>
+              </button>
+              <button class="lang-option" data-lang="kk" type="button">
+                <span class="fi fi-kz lang-flag"></span>
+                <span>Қазақша</span>
+              </button>
+            </div>
+          </div>
+          <a class="btn btn-warning" href="contact.html" data-i18n="nav.cta"
             >Qiymət Təklifi İstəyin</a
           >
         </div>
@@ -709,8 +747,10 @@
         <img src="assets/img/background.png" class="hero-bg" alt="" />
         <div class="container">
           <div class="breadcrumb-bar">
-            <a href="index.html">Ana Səhifə</a><span class="sep">/</span
-            ><a href="services.html">Xidmətlər</a><span class="sep">/</span
+            <a href="index.html" data-i18n="bc.home">Ana Səhifə</a
+            ><span class="sep">/</span
+            ><a href="services.html" data-i18n="bc.services">Xidmətlər</a
+            ><span class="sep">/</span
             ><span class="current">Kameralı Diaqnostika</span>
           </div>
           <span class="badge bg-warning text-dark mb-4"
@@ -737,11 +777,15 @@
       <section class="problem-section" data-aos="fade-up">
         <div class="container">
           <div class="text-center mb-5">
-            <span class="sec-tag">Problem</span>
-            <h2 class="section-h2">
+            <span class="sec-tag" data-i18n="cam.problem.tag">Problem</span>
+            <h2 class="section-h2" data-i18n="cam.problem.h2">
               Görünürlük olmadan baha başa gələn səhvlər
             </h2>
-            <p class="section-p mx-auto" style="max-width: 580px">
+            <p
+              class="section-p mx-auto"
+              style="max-width: 580px"
+              data-i18n="cam.problem.p"
+            >
               Ənənəvi diaqnostika dolayı əlamətlərə əsaslanır. Nəticə — səhv
               qərarlar, 20+ gün quyu dayanması və milyonlarla itki.
             </p>
@@ -754,8 +798,8 @@
             >
               <div class="problem-card">
                 <i class="bi bi-eye-slash icon"></i>
-                <h5>Sıfır Görünürlük</h5>
-                <p>
+                <h5 data-i18n="cam.problem.c1.h5">Sıfır Görünürlük</h5>
+                <p data-i18n="cam.problem.c1.p">
                   NKT-nin daxili vəziyyəti borunun fiziki qaldırılması olmadan
                   qiymətləndirilə bilmir.
                 </p>
@@ -768,8 +812,8 @@
             >
               <div class="problem-card">
                 <i class="bi bi-x-circle icon"></i>
-                <h5>Yanlış Diaqnostika</h5>
-                <p>
+                <h5 data-i18n="cam.problem.c2.h5">Yanlış Diaqnostika</h5>
+                <p data-i18n="cam.problem.c2.p">
                   Dolayı metodlar yanlış nəticə verir — lazımsız NKT qaldırma,
                   artıq xərclər.
                 </p>
@@ -782,8 +826,8 @@
             >
               <div class="problem-card">
                 <i class="bi bi-clock-history icon"></i>
-                <h5>20+ Gün Dayanma</h5>
-                <p>
+                <h5 data-i18n="cam.problem.c3.h5">20+ Gün Dayanma</h5>
+                <p data-i18n="cam.problem.c3.p">
                   Video sübutu olmadan qərar qəbul edildi — quyular həftələrlə
                   dayandı (I və II hallar).
                 </p>
@@ -796,8 +840,8 @@
             >
               <div class="problem-card">
                 <i class="bi bi-currency-dollar icon"></i>
-                <h5>Gizli Xərclər</h5>
-                <p>
+                <h5 data-i18n="cam.problem.c4.h5">Gizli Xərclər</h5>
+                <p data-i18n="cam.problem.c4.p">
                   Real ehtiyac olmadan qaldırma: briqada, avadanlıq, itirilen
                   istehsal — hamısı milyonlarla.
                 </p>
@@ -913,48 +957,69 @@
               </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-              <span class="sec-tag">Həll</span>
-              <h2 class="section-h2">
+              <span class="sec-tag" data-i18n="cam.solution.tag">Həll</span>
+              <h2 class="section-h2" data-i18n="cam.solution.h2">
                 Qərar vermədən əvvəl quyu daxilindən video
               </h2>
-              <p class="section-p mb-4">
+              <p class="section-p mb-4" data-i18n="cam.solution.p1">
                 Kamera quyuya endirilir və real vaxtda video ötürür. Siz
                 avadanlığın vəziyyətinin dəqiq mənzərəsini görür və fərziyyə
                 deyil, fakt əsasında qərar qəbul edirsiniz.
               </p>
-              <p class="section-p mb-3">
+              <p class="section-p mb-3" data-i18n-html="cam.solution.p2">
                 <strong>Sistem nələri aşkar edir:</strong>
               </p>
               <ul class="detect-list">
                 <li>
-                  <i class="bi bi-check-circle-fill"></i> Bütün quyu dərinliyinə
-                  video inspeksiya (ağızdan dibanə)
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span data-i18n="cam.solution.li1"
+                    >Bütün quyu dərinliyinə
+                  video inspeksiya (ağızdan dibanə)</span
+                  >
                 </li>
                 <li>
-                  <i class="bi bi-check-circle-fill"></i> Perforasiya
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span data-i18n="cam.solution.li2"
+                    >Perforasiya
                   intervalının vizual nəzarəti və dəqiq dərinlik
-                  müəyyənləşdirilməsi
+                  müəyyənləşdirilməsi</span
+                  >
                 </li>
                 <li>
-                  <i class="bi bi-check-circle-fill"></i> İşlək kolonun
-                  korroziya və qüsurlarının aşkarlanması
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span data-i18n="cam.solution.li3"
+                    >İşlək kolonun
+                  korroziya və qüsurlarının aşkarlanması</span
+                  >
                 </li>
                 <li>
-                  <i class="bi bi-check-circle-fill"></i> Kolona axının
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span data-i18n="cam.solution.li4"
+                    >Kolona axının
                   müəyyənləşdirilməsi: su, neft, qaz — interval lokallaşdırması
-                  ilə
+                  ilə</span
+                  >
                 </li>
                 <li>
-                  <i class="bi bi-check-circle-fill"></i> Neft-su kontakt
-                  səviyyəsinin müəyyənləşdirilməsi
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span data-i18n="cam.solution.li5"
+                    >Neft-su kontakt
+                  səviyyəsinin müəyyənləşdirilməsi</span
+                  >
                 </li>
                 <li>
-                  <i class="bi bi-check-circle-fill"></i> Qum keçidi, duz
-                  çöküntüsü, əyilmə, deformasiya, çatlar
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span data-i18n="cam.solution.li6"
+                    >Qum keçidi, duz
+                  çöküntüsü, əyilmə, deformasiya, çatlar</span
+                  >
                 </li>
                 <li>
-                  <i class="bi bi-check-circle-fill"></i> Real vaxtda təzyiq və
-                  temperatur qeydiyyatı
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span data-i18n="cam.solution.li7"
+                    >Real vaxtda təzyiq və
+                  temperatur qeydiyyatı</span
+                  >
                 </li>
               </ul>
             </div>
@@ -966,8 +1031,8 @@
       <section class="features-section" data-aos="fade-up">
         <div class="container">
           <div class="text-center mb-5">
-            <span class="sec-tag">Texniki Parametrlər</span>
-            <h2 class="section-h2">Sistemin əsas xüsusiyyətləri</h2>
+            <span class="sec-tag" data-i18n="cam.feat.tag">Texniki Parametrlər</span>
+            <h2 class="section-h2" data-i18n="cam.feat.h2">Sistemin əsas xüsusiyyətləri</h2>
           </div>
           <div class="row g-4">
             <div
@@ -979,9 +1044,9 @@
                 <div class="icon-wrap mx-auto">
                   <i class="bi bi-speedometer2"></i>
                 </div>
-                <span class="spec-val">50 MPa</span>
-                <h5>İş Təzyiqi</h5>
-                <p>
+                <span class="spec-val" data-i18n="cam.feat.c1.val">50 MPa</span>
+                <h5 data-i18n="cam.feat.c1.h5">İş Təzyiqi</h5>
+                <p data-i18n="cam.feat.c1.p">
                   7250 psi — dərin quyuların ekstremal şəraitinə uyğun
                   davamlılıq.
                 </p>
@@ -996,9 +1061,9 @@
                 <div class="icon-wrap mx-auto">
                   <i class="bi bi-thermometer-high"></i>
                 </div>
-                <span class="spec-val">85 °C</span>
-                <h5>Temperatura Davamlılıq</h5>
-                <p>185°F — yüksək temperaturlu lay mühitində sabit işləmə.</p>
+                <span class="spec-val" data-i18n="cam.feat.c2.val">85 °C</span>
+                <h5 data-i18n="cam.feat.c2.h5">Temperatura Davamlılıq</h5>
+                <p data-i18n="cam.feat.c2.p">185°F — yüksək temperaturlu lay mühitində sabit işləmə.</p>
               </div>
             </div>
             <div
@@ -1010,9 +1075,9 @@
                 <div class="icon-wrap mx-auto">
                   <i class="bi bi-camera-video-fill"></i>
                 </div>
-                <span class="spec-val">110°</span>
-                <h5>Kamera Baxış Bucağı</h5>
-                <p>
+                <span class="spec-val" data-i18n="cam.feat.c3.val">110°</span>
+                <h5 data-i18n="cam.feat.c3.h5">Kamera Baxış Bucağı</h5>
+                <p data-i18n="cam.feat.c3.p">
                   Geniş 110° baxış bucağı NKT-nin daxili səthinə tam əhatə təmin
                   edir.
                 </p>
@@ -1027,9 +1092,9 @@
                 <div class="icon-wrap mx-auto">
                   <i class="bi bi-broadcast"></i>
                 </div>
-                <span class="spec-val">Canlı</span>
-                <h5>Real Vaxtda Video</h5>
-                <p>
+                <span class="spec-val" data-i18n="cam.feat.c4.val">Canlı</span>
+                <h5 data-i18n="cam.feat.c4.h5">Real Vaxtda Video</h5>
+                <p data-i18n="cam.feat.c4.p">
                   Gecikməsiz birbaşa video siqnalı səthdə ötürülür — "sonra"
                   yazı yoxdur.
                 </p>
@@ -1043,11 +1108,20 @@
       <section class="cases-section" data-aos="fade-up">
         <div class="container">
           <div class="text-center mb-5">
-            <span class="sec-tag" style="color: var(--accent-color)"
+            <span
+              class="sec-tag"
+              style="color: var(--accent-color)"
+              data-i18n="cam.cases.tag"
               >Real Hallar</span
             >
-            <h2 class="section-h2-white">Üç real hal — üç önlənmiş səhv</h2>
-            <p class="section-p-white mx-auto" style="max-width: 560px">
+            <h2 class="section-h2-white" data-i18n="cam.cases.h2">
+              Üç real hal — üç önlənmiş səhv
+            </h2>
+            <p
+              class="section-p-white mx-auto"
+              style="max-width: 560px"
+              data-i18n="cam.cases.p"
+            >
               Video inspeksiya qərar qəbulunu kökündən dəyişir: baha başa gələn
               NKT qaldırma əvəzinə — dəqiq diaqnostika və məqsədli müdaxilə.
             </p>
@@ -1055,19 +1129,23 @@
           <div class="row g-4">
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="50">
               <div class="case-card">
-                <span class="case-num">I Hal – «Kurovdağ» Yatağı</span>
-                <h5>Şablon maneəyə rast gəldi — qəlib göstərdi: "əzilmə"</h5>
+                <span class="case-num" data-i18n="cam.case1.num"
+                  >I Hal – «Kurovdağ» Yatağı</span
+                >
+                <h5 data-i18n="cam.case1.h5">
+                  Şablon maneəyə rast gəldi — qəlib göstərdi: "əzilmə"
+                </h5>
                 <div class="case-row">
                   <div class="case-box">
-                    <span class="lbl">KTS briqadası</span
-                    ><span class="val">20 gün</span>
+                    <span class="lbl" data-i18n="cam.case1.lbl1">KTS briqadası</span
+                    ><span class="val" data-i18n="cam.case1.val1">20 gün</span>
                   </div>
                   <div class="case-box accent">
-                    <span class="lbl">Video sonrası</span
-                    ><span class="val">ŞGN endirildi</span>
+                    <span class="lbl" data-i18n="cam.case1.lbl2">Video sonrası</span
+                    ><span class="val" data-i18n="cam.case1.val2">ŞGN endirildi</span>
                   </div>
                 </div>
-                <p>
+                <p data-i18n="cam.case1.p">
                   Video inspeksiya göstərdi: bu, kolondakı keçid qovşağıdır —
                   əzilmə deyil. ŞGN endirildi, quyu işə salındı. 20 günlük boş
                   iş sahəyə çıxdı.
@@ -1076,19 +1154,23 @@
             </div>
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
               <div class="case-card">
-                <span class="case-num">II Hal – «Mişovdağ» Yatağı</span>
-                <h5>NKT qırığını çıxarmaq üçün 21 gün — yanlış alət seçimi</h5>
+                <span class="case-num" data-i18n="cam.case2.num"
+                  >II Hal – «Mişovdağ» Yatağı</span
+                >
+                <h5 data-i18n="cam.case2.h5">
+                  NKT qırığını çıxarmaq üçün 21 gün — yanlış alət seçimi
+                </h5>
                 <div class="case-row">
                   <div class="case-box">
-                    <span class="lbl">Planlanan</span
-                    ><span class="val">6" kolon</span>
+                    <span class="lbl" data-i18n="cam.case2.lbl1">Planlanan</span
+                    ><span class="val" data-i18n="cam.case2.val1">6" kolon</span>
                   </div>
                   <div class="case-box accent">
-                    <span class="lbl">Real</span
-                    ><span class="val">5" keçid</span>
+                    <span class="lbl" data-i18n="cam.case2.lbl2">Real</span
+                    ><span class="val" data-i18n="cam.case2.val2">5" keçid</span>
                   </div>
                 </div>
-                <p>
+                <p data-i18n="cam.case2.p">
                   Video inspeksiya sənədlərə uyğun olmayan kolon keçidinin
                   dərinliyini dəqiqləşdirdi. Düzgün alət seçildi — qırıq uğurla
                   çıxarıldı.
@@ -1097,19 +1179,23 @@
             </div>
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
               <div class="case-card">
-                <span class="case-num">III Hal – «Pirallahı» Yatağı</span>
-                <h5>50–65 m qum tıxacı — qum haradandır?</h5>
+                <span class="case-num" data-i18n="cam.case3.num"
+                  >III Hal – «Pirallahı» Yatağı</span
+                >
+                <h5 data-i18n="cam.case3.h5">
+                  50–65 m qum tıxacı — qum haradandır?
+                </h5>
                 <div class="case-row">
                   <div class="case-box">
-                    <span class="lbl">Fərziyyə</span
-                    ><span class="val">Yuxarı hissə</span>
+                    <span class="lbl" data-i18n="cam.case3.lbl1">Fərziyyə</span
+                    ><span class="val" data-i18n="cam.case3.val1">Yuxarı hissə</span>
                   </div>
                   <div class="case-box accent">
-                    <span class="lbl">Video</span
-                    ><span class="val">Qırıq zonası</span>
+                    <span class="lbl" data-i18n="cam.case3.lbl2">Video</span
+                    ><span class="val" data-i18n="cam.case3.val2">Qırıq zonası</span>
                   </div>
                 </div>
-                <p>
+                <p data-i18n="cam.case3.p">
                   Video kol NKT qırığının yerini dəqiq müəyyənləşdirdi — qum
                   axını məhz oradan idi. Briqada üçün düzgün iş planı
                   hazırlandı.
@@ -1126,12 +1212,12 @@
           <div class="row align-items-start g-5">
             <div class="col-lg-4">
               <span class="section-tag">Spesifikasiyalar</span>
-              <h2 class="section-h2-white">Texniki Xüsusiyyətlər</h2>
-              <p class="section-p-white">
+              <h2 class="section-h2-white" data-i18n="cam.specs.h2">Texniki Xüsusiyyətlər</h2>
+              <p class="section-p-white" data-i18n="cam.specs.p">
                 Sistem ağır quyu şəraitinə uyğun hazırlanmış, əksər NKT
                 konfiqurasiyaları ilə uyğundur.
               </p>
-              <a href="contact.html" class="btn-primary mt-3"
+              <a href="contact.html" class="btn-primary mt-3" data-i18n="cam.specs.btn"
                 >Texniki Pasport İstəyin</a
               >
             </div>
@@ -1145,48 +1231,48 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>İş Təzyiqi</td>
-                    <td>50 MPa / 7250 psi</td>
+                    <td data-i18n="cam.specs.r1.param">İş Təzyiqi</td>
+                    <td data-i18n="cam.specs.r1.val">50 MPa / 7250 psi</td>
                   </tr>
                   <tr>
-                    <td>İş Temperaturu</td>
-                    <td>+85 °C / 185 °F</td>
+                    <td data-i18n="cam.specs.r2.param">İş Temperaturu</td>
+                    <td data-i18n="cam.specs.r2.val">+85 °C / 185 °F</td>
                   </tr>
                   <tr>
-                    <td>Diametr</td>
-                    <td>Ø 54 mm / 2.13"</td>
+                    <td data-i18n="cam.specs.r3.param">Diametr</td>
+                    <td data-i18n="cam.specs.r3.val">Ø 54 mm / 2.13"</td>
                   </tr>
                   <tr>
-                    <td>Uzunluq</td>
-                    <td>1250 mm / 49.2"</td>
+                    <td data-i18n="cam.specs.r4.param">Uzunluq</td>
+                    <td data-i18n="cam.specs.r4.val">1250 mm / 49.2"</td>
                   </tr>
                   <tr>
-                    <td>Çəki</td>
-                    <td>15 kq / 33 lbs</td>
+                    <td data-i18n="cam.specs.r5.param">Çəki</td>
+                    <td data-i18n="cam.specs.r5.val">15 kq / 33 lbs</td>
                   </tr>
                   <tr>
-                    <td>Gərilmə müqaviməti</td>
-                    <td>40 kN / 9000 lbf</td>
+                    <td data-i18n="cam.specs.r6.param">Gərilmə müqaviməti</td>
+                    <td data-i18n="cam.specs.r6.val">40 kN / 9000 lbf</td>
                   </tr>
                   <tr>
-                    <td>Baxış bucağı</td>
-                    <td>110°</td>
+                    <td data-i18n="cam.specs.r7.param">Baxış bucağı</td>
+                    <td data-i18n="cam.specs.r7.val">110°</td>
                   </tr>
                   <tr>
-                    <td>Kadr tezliyi</td>
-                    <td>1–25 fps (kabelə görə)</td>
+                    <td data-i18n="cam.specs.r8.param">Kadr tezliyi</td>
+                    <td data-i18n="cam.specs.r8.val">1–25 fps (kabelə görə)</td>
                   </tr>
                   <tr>
-                    <td>Video həlli</td>
-                    <td>720 × 576px</td>
+                    <td data-i18n="cam.specs.r9.param">Video həlli</td>
+                    <td data-i18n="cam.specs.r9.val">720 × 576px</td>
                   </tr>
                   <tr>
-                    <td>Qoşulma növü</td>
-                    <td>NKB-3-36</td>
+                    <td data-i18n="cam.specs.r10.param">Qoşulma növü</td>
+                    <td data-i18n="cam.specs.r10.val">NKB-3-36</td>
                   </tr>
                   <tr>
-                    <td>Maksimal eniş dərinliyi</td>
-                    <td>3 000 m-ə qədər</td>
+                    <td data-i18n="cam.specs.r11.param">Maksimal eniş dərinliyi</td>
+                    <td data-i18n="cam.specs.r11.val">3 000 m-ə qədər</td>
                   </tr>
                 </tbody>
               </table>
@@ -1200,15 +1286,15 @@
         <div class="container" data-aos="fade-up">
           <div class="cta-box">
             <div class="cta-text">
-              <h3>Demo İstəyin və ya Hesabat Nümunəsi Alın</h3>
-              <p>
+              <h3 data-i18n="cam.cta.h3">Demo İstəyin və ya Hesabat Nümunəsi Alın</h3>
+              <p data-i18n="cam.cta.desc">
                 Mühəndislərimiz sistemi əməldə göstərəcək və quyunuz üçün
                 texniki təklif hazırlayacaq.
               </p>
             </div>
             <div class="cta-buttons">
               <a href="contact.html" class="btn-primary">Demo İstəyin</a
-              ><a href="services.html" class="btn-outline-dark"
+              ><a href="services.html" class="btn-outline-dark" data-i18n="cam.cta.btn2"
                 >Bütün Xidmətlər</a
               >
             </div>
@@ -1221,7 +1307,7 @@
       <div class="container footer-grid">
         <div class="footer-col">
           <h4>GLOBAL OIL &amp; GAS INNOVATIONS</h4>
-          <p>
+          <p data-i18n-html="footer.about_desc">
             Neft-qaz sənayesi üçün innovativ mühəndis həlləri və
             patentləşdirilmiş texnologiyalar hazırlayan neft-servis şirkəti.
           </p>
@@ -1232,26 +1318,40 @@
           </div>
         </div>
         <div class="footer-col">
-          <h5>Tez Əlaqələr</h5>
+          <h5 data-i18n="footer.quick_links">Tez Əlaqələr</h5>
           <ul>
-            <li><a href="index.html">Əsas Səhifə</a></li>
-            <li><a href="about.html">Haqqımızda</a></li>
-            <li><a href="products.html">Məhsullar</a></li>
-            <li><a href="services.html">Xidmətlər</a></li>
-            <li><a href="contact.html">Əlaqə</a></li>
+            <li>
+              <a href="index.html" data-i18n="footer.home">Əsas Səhifə</a>
+            </li>
+            <li>
+              <a href="about.html" data-i18n="footer.about">Haqqımızda</a>
+            </li>
+            <li>
+              <a href="products.html" data-i18n="footer.products">Məhsullar</a>
+            </li>
+            <li>
+              <a href="services.html" data-i18n="footer.services">Xidmətlər</a>
+            </li>
+            <li>
+              <a href="contact.html" data-i18n="footer.contact_link">Əlaqə</a>
+            </li>
           </ul>
         </div>
         <div class="footer-col">
-          <h5>Əsas Sənaye Sahələri</h5>
+          <h5 data-i18n="footer.industries">Əsas Sənaye Sahələri</h5>
           <ul>
-            <li>NKT və muftaların qorunması</li>
-            <li>Quyuların geofiziki tədqiqi (Karotaj)</li>
-            <li>Ağıllı Nasos Stansiyaları</li>
-            <li>Texniki Dəstək və Konsultasiya</li>
+            <li data-i18n="footer.oil_gas">NKT və muftaların qorunması</li>
+            <li data-i18n="footer.petrochemicals">
+              Quyuların geofiziki tədqiqi (Karotaj)
+            </li>
+            <li data-i18n="footer.manufacturing">Ağıllı Nasos Stansiyaları</li>
+            <li data-i18n="footer.construction">
+              Texniki Dəstək və Konsultasiya
+            </li>
           </ul>
         </div>
         <div class="footer-col">
-          <h5>Əlaqə</h5>
+          <h5 data-i18n="footer.contact_title">Əlaqə</h5>
           <ul>
             <li>
               130000, Qazaxıstan Respublikası,<br />Mangistau vilayəti, Aktau
@@ -1314,5 +1414,7 @@
         });
       })();
     </script>
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/lang.js"></script>
   </body>
 </html>
