@@ -893,11 +893,6 @@
                 <form id="contact-form">
                   <input
                     type="hidden"
-                    name="access_key"
-                    value="WEB3FORMS_ACCESS_KEY"
-                  />
-                  <input
-                    type="hidden"
                     name="from_name"
                     value="Global Oil & Gas Innovations — Contact Form"
                   />
@@ -1178,6 +1173,7 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <script>
       AOS.init({
@@ -1217,8 +1213,12 @@
         });
       })();
 
-      /* Contact form → Web3Forms (static hosting, no backend needed) */
+      /* Contact form -> EmailJS */
       (function () {
+        const EMAILJS_SERVICE_ID = "service_dnalzdq";
+        const EMAILJS_TEMPLATE_ID = "template_owo90ie";
+        const EMAILJS_PUBLIC_KEY = "8cxYfYEb8A8AsPJsp";
+
         const form = document.getElementById("contact-form");
         if (!form) return;
         const btn = form.querySelector(".btn-submit");
@@ -1230,41 +1230,58 @@
           status.style.color = isError ? "#dc3545" : "#198754";
         }
 
+        if (window.emailjs) {
+          emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+        }
+
         form.addEventListener("submit", async (e) => {
           e.preventDefault();
           setStatus("", false);
+
+          if (form.botcheck && form.botcheck.checked) return;
+
+          if (!window.emailjs) {
+            setStatus(
+              "Email service could not load. Please refresh the page or write directly to office@globaloilgas.kz.",
+              true,
+            );
+            return;
+          }
+
+          if (EMAILJS_TEMPLATE_ID === "YOUR_TEMPLATE_ID") {
+            setStatus(
+              "EmailJS template ID is missing. Add your template ID in contact.html before sending.",
+              true,
+            );
+            return;
+          }
+
           btn.disabled = true;
           btn.innerHTML = "Göndərilir...";
 
           try {
-            const res = await fetch("https://api.web3forms.com/submit", {
-              method: "POST",
-              headers: { Accept: "application/json" },
-              body: new FormData(form),
-            });
-            const result = await res.json();
-
-            if (result.success) {
-              btn.innerHTML =
-                '<i class="bi bi-check-circle-fill"></i> Göndərildi!';
-              btn.style.background = "#198754";
-              btn.style.color = "#fff";
-              form.reset();
-              setTimeout(() => {
-                btn.innerHTML = btnDefaultHTML;
-                btn.style.background = "";
-                btn.style.color = "";
-                btn.disabled = false;
-              }, 3000);
-            } else {
-              throw new Error(result.message || "Submission failed");
-            }
+            await emailjs.sendForm(
+              EMAILJS_SERVICE_ID,
+              EMAILJS_TEMPLATE_ID,
+              form,
+            );
+            btn.innerHTML =
+              '<i class="bi bi-check-circle-fill"></i> Göndərildi!';
+            btn.style.background = "#198754";
+            btn.style.color = "#fff";
+            form.reset();
+            setTimeout(() => {
+              btn.innerHTML = btnDefaultHTML;
+              btn.style.background = "";
+              btn.style.color = "";
+              btn.disabled = false;
+            }, 3000);
           } catch (err) {
             btn.innerHTML = btnDefaultHTML;
             btn.disabled = false;
             setStatus(
               "Xəta baş verdi. Zəhmət olmasa yenidən cəhd edin və ya birbaşa office@globaloilgas.kz ünvanına yazın.",
-              true
+              true,
             );
           }
         });
